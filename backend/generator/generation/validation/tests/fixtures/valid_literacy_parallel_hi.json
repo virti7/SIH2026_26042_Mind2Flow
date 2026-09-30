@@ -1,0 +1,50 @@
+{
+  "schema_version": "generated_content_v1",
+  "content_id": "GC-G1-LIT-015-01-hi-v1",
+  "blueprint_id": "BP-G1-LIT-015-01",
+  "curriculum_id": "G1-LIT-015",
+  "curriculum_version": "curriculum_master_v1",
+  "blueprint_version": "content_blueprint_v1",
+  "grade": 1,
+  "domain": "literacy",
+  "content_type": "audio_activity",
+  "language_mode": "parallel_monolingual",
+  "languages": ["hi"],
+  "scripts": {"hi": "Deva"},
+  "generation_method": "native",
+  "title": {"hi": "तुक वाला शब्द चुनो"},
+  "instructions": {"learner": {"hi": "शब्द सुनो। जो शब्द उससे तुक मिलाता है, उसे चुनो।"}},
+  "stimulus": {"asset_refs": ["img_intro"]},
+  "items": [
+    {"item_id": "q1", "item_type": "listen_and_choose", "prompt": {"hi": "मोर"}, "asset_refs": ["aud_q1"],
+     "options": [{"option_id": "a", "text": {"hi": "चोर"}}, {"option_id": "b", "text": {"hi": "आम"}}, {"option_id": "c", "text": {"hi": "घर"}}]},
+    {"item_id": "q2", "item_type": "listen_and_choose", "prompt": {"hi": "दाल"}, "asset_refs": ["aud_q2"],
+     "options": [{"option_id": "a", "text": {"hi": "पेड़"}}, {"option_id": "b", "text": {"hi": "बाल"}}, {"option_id": "c", "text": {"hi": "दूध"}}]},
+    {"item_id": "q3", "item_type": "listen_and_choose", "prompt": {"hi": "खेल"}, "asset_refs": ["aud_q3"],
+     "options": [{"option_id": "a", "text": {"hi": "फूल"}}, {"option_id": "b", "text": {"hi": "हाथ"}}, {"option_id": "c", "text": {"hi": "मेल"}}]},
+    {"item_id": "q4", "item_type": "listen_and_choose", "prompt": {"hi": "गाना"}, "asset_refs": ["aud_q4"],
+     "options": [{"option_id": "a", "text": {"hi": "खाना"}}, {"option_id": "b", "text": {"hi": "पानी"}}, {"option_id": "c", "text": {"hi": "बकरी"}}]},
+    {"item_id": "q5", "item_type": "listen_and_choose", "prompt": {"hi": "रात"}, "asset_refs": ["aud_q5"],
+     "options": [{"option_id": "a", "text": {"hi": "आम"}}, {"option_id": "b", "text": {"hi": "बात"}}, {"option_id": "c", "text": {"hi": "पेड़"}}]},
+    {"item_id": "q6", "item_type": "listen_and_choose", "prompt": {"hi": "नाव"}, "asset_refs": ["aud_q6"],
+     "options": [{"option_id": "a", "text": {"hi": "दूध"}}, {"option_id": "b", "text": {"hi": "नाक"}}, {"option_id": "c", "text": {"hi": "गाँव"}}]}
+  ],
+  "answer_key": [
+    {"item_id": "q1", "answer": "a"}, {"item_id": "q2", "answer": "b"}, {"item_id": "q3", "answer": "c"},
+    {"item_id": "q4", "answer": "a"}, {"item_id": "q5", "answer": "b"}, {"item_id": "q6", "answer": "c"}
+  ],
+  "assets_required": [
+    {"asset_id": "img_intro", "type": "image", "description_en": "A child listening with a hand behind the ear, simple friendly style.", "for_items": ["stimulus"]},
+    {"asset_id": "aud_q1", "type": "audio", "language": "hi", "spoken_text": {"hi": "मोर। चोर, आम, घर।"}, "description_en": "Target word, pause, then three options.", "for_items": ["q1"]},
+    {"asset_id": "aud_q2", "type": "audio", "language": "hi", "spoken_text": {"hi": "दाल। पेड़, बाल, दूध।"}, "description_en": "Target word, pause, then three options.", "for_items": ["q2"]},
+    {"asset_id": "aud_q3", "type": "audio", "language": "hi", "spoken_text": {"hi": "खेल। फूल, हाथ, मेल।"}, "description_en": "Target word, pause, then three options.", "for_items": ["q3"]},
+    {"asset_id": "aud_q4", "type": "audio", "language": "hi", "spoken_text": {"hi": "गाना। खाना, पानी, बकरी।"}, "description_en": "Target word, pause, then three options.", "for_items": ["q4"]},
+    {"asset_id": "aud_q5", "type": "audio", "language": "hi", "spoken_text": {"hi": "रात। आम, बात, पेड़।"}, "description_en": "Target word, pause, then three options.", "for_items": ["q5"]},
+    {"asset_id": "aud_q6", "type": "audio", "language": "hi", "spoken_text": {"hi": "नाव। दूध, नाक, गाँव।"}, "description_en": "Target word, pause, then three options.", "for_items": ["q6"]}
+  ],
+  "provisional": false,
+  "conflict_refs": ["X_C101_TRAJECTORY"],
+  "review_gates": ["hindi_transcription"],
+  "generation_notes": "TEST FIXTURE ONLY: exercises the validators; Hindi still requires human review before any use.",
+  "origin_type": "AI_GENERATED"
+}

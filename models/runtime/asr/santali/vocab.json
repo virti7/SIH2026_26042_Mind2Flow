@@ -1,0 +1,476 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-09-26T17:45:37+05:30",
+  "language": "santali",
+  "language_code": "sat",
+  "script": "Ol Chiki",
+  "source_nemo_model": "models/indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+  "source_model_class": "EncDecHybridRNNTCTCBPEModel",
+  "decoder_used_for_export": "ctc",
+  "audio_input": {
+    "sample_rate_hz": 16000,
+    "channels": 1,
+    "encoding": "float32 PCM in [-1, 1]"
+  },
+  "features": {
+    "sample_rate": 16000,
+    "n_fft": 512,
+    "win_length": 400,
+    "hop_length": 160,
+    "n_mels": 80,
+    "window": "hann",
+    "window_periodic": false,
+    "center": true,
+    "pad_mode": "reflect",
+    "fmin": 0.0,
+    "fmax": 8000.0,
+    "mel_norm": "slaney",
+    "mag_power": 2.0,
+    "use_log": true,
+    "log_zero_guard_type": "add",
+    "log_zero_guard_value": 5.960464477539063e-08,
+    "preemph": 0.97,
+    "dither": 0.0,
+    "normalize": "per_feature",
+    "normalize_eps": 1e-05,
+    "frame_splicing": 1,
+    "pad_to": 0,
+    "pad_value": 0.0
+  },
+  "feature_notes": {
+    "reference": "nemo.collections.asr.parts.preprocessing.features.FilterbankFeatures",
+    "order": "preemphasis -> STFT(center=True, reflect pad) -> power magnitude -> mel filterbank -> log(+2^-24) -> per-feature mean/std normalisation -> zero fill past the valid length",
+    "dither": "NeMo applies dither only in training mode, so inference is deterministic (dither=0)",
+    "frame_count": "n_frames = num_samples // hop_length + 1"
+  },
+  "encoder": {
+    "feat_in": 80,
+    "n_layers": 17,
+    "d_model": 512,
+    "subsampling": "striding",
+    "subsampling_factor": 4
+  },
+  "ctc": {
+    "n_global_classes": 5633,
+    "blank_index_global": 5632,
+    "blank_index_after_language_selection": 256,
+    "n_languages_in_checkpoint": 22,
+    "decode": "argmax over the selected columns, then NeMo's fold (drop blank, collapse repeats)",
+    "notes": "logits are log-softmax over ALL 22 languages at once; select your language's columns"
+  },
+  "all_languages": {
+    "as": {
+      "offset": 0,
+      "size": 256
+    },
+    "bn": {
+      "offset": 256,
+      "size": 256
+    },
+    "brx": {
+      "offset": 512,
+      "size": 256
+    },
+    "doi": {
+      "offset": 768,
+      "size": 256
+    },
+    "kok": {
+      "offset": 1024,
+      "size": 256
+    },
+    "gu": {
+      "offset": 1280,
+      "size": 256
+    },
+    "hi": {
+      "offset": 1536,
+      "size": 256
+    },
+    "kn": {
+      "offset": 1792,
+      "size": 256
+    },
+    "ks": {
+      "offset": 2048,
+      "size": 256
+    },
+    "mai": {
+      "offset": 2304,
+      "size": 256
+    },
+    "ml": {
+      "offset": 2560,
+      "size": 256
+    },
+    "mr": {
+      "offset": 2816,
+      "size": 256
+    },
+    "mni": {
+      "offset": 3072,
+      "size": 256
+    },
+    "ne": {
+      "offset": 3328,
+      "size": 256
+    },
+    "or": {
+      "offset": 3584,
+      "size": 256
+    },
+    "pa": {
+      "offset": 3840,
+      "size": 256
+    },
+    "sa": {
+      "offset": 4096,
+      "size": 256
+    },
+    "sat": {
+      "offset": 4352,
+      "size": 256
+    },
+    "sd": {
+      "offset": 4608,
+      "size": 256
+    },
+    "ta": {
+      "offset": 4864,
+      "size": 256
+    },
+    "te": {
+      "offset": 5120,
+      "size": 256
+    },
+    "ur": {
+      "offset": 5376,
+      "size": 256
+    }
+  },
+  "language_columns": {
+    "offset": 4352,
+    "size": 256,
+    "select": "columns 4352..4607 plus column 5632 (blank); blank is index 256 in the selected block"
+  },
+  "vocab": [
+    "<unk>",
+    "▁ᱠ",
+    "ᱱᱟ",
+    "▁ᱨ",
+    "▁ᱟ",
+    "▁ᱥ",
+    "▁ᱨᱮ",
+    "▁ᱫ",
+    "▁ᱵ",
+    "ᱟᱹ",
+    "▁ᱢ",
+    "▁ᱦ",
+    "ᱚᱱ",
+    "▁ᱛ",
+    "ᱟᱨ",
+    "▁ᱯ",
+    "▁ᱡ",
+    "▁᱾",
+    "▁ᱞ",
+    "▁ᱫᱚ",
+    "ᱭᱟ",
+    "▁ᱜ",
+    "▁ᱠᱚ",
+    "▁ᱠᱟ",
+    "▁ᱮ",
+    "ᱚᱨ",
+    "ᱷᱟ",
+    "ᱠᱟ",
+    "ᱱᱟᱜ",
+    "▁ᱱ",
+    "ᱚᱛ",
+    "▁ᱟᱨ",
+    "▁ᱥᱟ",
+    "ᱟᱦ",
+    "ᱤᱫ",
+    "ᱣᱟ",
+    "▁ᱞᱮ",
+    "▁ᱚ",
+    "▁ᱦᱚ",
+    "ᱢᱟ",
+    "▁ᱵᱟ",
+    "▁ᱠᱟᱱᱟ",
+    "▁ᱪ",
+    "ᱤᱱ",
+    "▁ᱢᱮ",
+    "▁ᱱᱚ",
+    "▁ᱥᱮ",
+    "ᱚᱢ",
+    "ᱩᱨ",
+    "ᱞᱟ",
+    "▁ᱩ",
+    "▁ᱨᱮᱱᱟᱜ",
+    "ᱛᱮ",
+    "▁ᱠᱷ",
+    "ᱟᱭ",
+    "ᱤᱥ",
+    "ᱭᱟᱜ",
+    "ᱼᱟ",
+    "ᱚᱱᱚᱛ",
+    "ᱤᱭ",
+    "ᱟᱜ",
+    "▁ᱛᱮ",
+    "ᱤᱨ",
+    "ᱟᱱ",
+    "ᱮᱫ",
+    "ᱚᱜ",
+    "ᱰᱤ",
+    "▁ᱨᱮᱭᱟᱜ",
+    "ᱟᱦᱮ",
+    "▁ᱴ",
+    "▁ᱛᱟᱦᱮ",
+    "ᱨᱤ",
+    "▁ᱦᱚᱲ",
+    "▁ᱠᱷᱚᱱ",
+    "▁᱑",
+    "ᱤᱡ",
+    "ᱤᱞ",
+    "▁ᱧ",
+    "▁ᱢᱤᱫ",
+    "▁ᱦᱚᱱᱚᱛ",
+    "ᱟᱲ",
+    "▁ᱥᱤ",
+    "ᱩᱭ",
+    "▁ᱜᱮ",
+    "ᱟᱣ",
+    "▁ᱟᱠᱟ",
+    "▁ᱛᱟᱦᱮᱸ",
+    "ᱥᱤ",
+    "ᱚᱸ",
+    "ᱟᱢ",
+    "▁ᱟᱹ",
+    "▁ᱢᱮᱱᱟᱜ",
+    "▁᱒",
+    "ᱟᱝ",
+    "▁ᱱᱚᱣᱟ",
+    "ᱚᱦ",
+    "ᱡᱽ",
+    "ᱨᱮ",
+    "▁ᱵᱮ",
+    "ᱟᱸ",
+    "ᱱᱤ",
+    "ᱟᱞ",
+    "▁ᱞᱮᱠᱟ",
+    "ᱠᱷᱟ",
+    "ᱠᱚ",
+    "ᱩᱜ",
+    "ᱚᱞ",
+    "ᱤᱛ",
+    "ᱟᱹᱨ",
+    "ᱤᱭᱟ",
+    "ᱟᱹᱜ",
+    "ᱮᱥ",
+    "ᱚᱵ",
+    "ᱩᱢ",
+    "ᱚᱴ",
+    "▁ᱰ",
+    "ᱟᱥ",
+    "▁ᱵᱷ",
+    "ᱮᱞ",
+    "▁ᱡᱚ",
+    "ᱮᱱ",
+    "ᱤᱭᱟᱹ",
+    "▁ᱨᱟ",
+    "▁ᱱᱟ",
+    "ᱠᱷ",
+    "ᱨᱚ",
+    "▁ᱟᱡ",
+    "▁ᱦᱩᱭ",
+    "ᱨᱟ",
+    "▁᱒᱐",
+    "ᱫᱟ",
+    "ᱛᱤ",
+    "ᱫᱽ",
+    "ᱤᱠ",
+    "▁ᱦᱚᱸ",
+    "ᱶᱟ",
+    "▁ᱚᱱᱟ",
+    "▁ᱥᱟᱶ",
+    "▁ᱢᱮᱱᱟᱜᱼᱟ",
+    "ᱩᱞ",
+    "ᱚᱲ",
+    "ᱩᱛ",
+    "ᱢᱤ",
+    "▁ᱯᱷ",
+    "ᱮᱛ",
+    "ᱯᱩᱨ",
+    "▁ᱢᱩ",
+    "▁ᱥᱤᱧ",
+    "ᱲᱟ",
+    "▁ᱠᱟᱹ",
+    "ᱜᱟ",
+    "ᱷᱟᱨ",
+    "▁ᱢᱟ",
+    "▁ᱠᱟᱛᱮ",
+    "▁ᱱᱚᱶᱟ",
+    "▁ᱡᱟ",
+    "▁ᱥᱤᱧᱚᱛ",
+    "▁ᱞᱟ",
+    "▁᱑᱙",
+    "▁ᱞᱟᱹᱜ",
+    "▁ᱨᱤᱱ",
+    "▁ᱩᱱᱤ",
+    "ᱱᱟᱣ",
+    "᱐ᱮ",
+    "ᱢᱟᱱ",
+    "▁ᱥᱮᱨ",
+    "▁ᱟᱠᱟᱱᱟ",
+    "ᱫᱚ",
+    "▁ᱵᱟᱝ",
+    "▁ᱯᱟ",
+    "▁ᱟᱭ",
+    "ᱚᱠ",
+    "▁ᱥᱮᱨᱢᱟ",
+    "ᱷᱤ",
+    "ᱵᱟ",
+    "ᱞᱮ",
+    "▁ᱞᱮᱠᱟᱛᱮ",
+    "ᱩᱱ",
+    "ᱴᱤ",
+    "▁ᱡᱮ",
+    "▁ᱠᱚᱣᱟ",
+    "▁ᱤ",
+    "▁ᱡᱟᱦ",
+    "▁ᱫᱤᱥ",
+    "▁ᱞᱮᱱᱟ",
+    "▁ᱫᱷ",
+    "▁ᱦᱟ",
+    "▁ᱮᱱᱟ",
+    "▁ᱯᱚᱱᱚᱛ",
+    "▁ᱜᱟ",
+    "ᱮᱨ",
+    "▁ᱞᱟᱹᱜᱤᱫ",
+    "ᱮᱡ",
+    "ᱷᱟᱱ",
+    "▁ᱢᱟᱨ",
+    "▁ᱠᱩ",
+    "ᱛᱟ",
+    "▁ᱯᱟᱹᱨ",
+    "▁᱒᱐᱑",
+    "ᱚᱥ",
+    "▁ᱛᱟᱭ",
+    "▁ᱞᱮᱠᱷᱟ",
+    "ᱚᱭ",
+    "▁ᱧᱩᱛ",
+    "▁ᱛᱟ",
+    "▁ᱯᱟᱹᱨᱥᱤ",
+    "ᱰᱟ",
+    "▁",
+    "ᱟ",
+    "ᱚ",
+    "ᱮ",
+    "ᱨ",
+    "ᱱ",
+    "ᱤ",
+    "ᱠ",
+    "ᱜ",
+    "ᱥ",
+    "ᱫ",
+    "ᱛ",
+    "ᱢ",
+    "ᱞ",
+    "ᱩ",
+    "ᱭ",
+    "ᱦ",
+    "ᱵ",
+    "ᱷ",
+    "ᱡ",
+    "ᱯ",
+    "ᱹ",
+    "᱾",
+    "ᱴ",
+    "ᱣ",
+    "ᱲ",
+    "ᱸ",
+    "ᱰ",
+    "ᱪ",
+    "ᱝ",
+    "ᱽ",
+    "᱐",
+    "ᱧ",
+    "᱑",
+    "ᱼ",
+    "ᱳ",
+    "ᱶ",
+    "᱒",
+    "᱙",
+    "ᱬ",
+    "᱕",
+    "᱘",
+    "᱔",
+    "᱓",
+    "᱖",
+    "᱗",
+    "ᱺ",
+    "ᱻ",
+    "᱿"
+  ],
+  "script_notes": "ids decode to Ol Chiki text (U+1C5A..U+1C7F).",
+  "onnx": {
+    "fp32": {
+      "file": "model_fp32.onnx",
+      "bytes": 493060285
+    },
+    "int8": {
+      "file": "model.int8.onnx",
+      "bytes": 197677727
+    },
+    "input": [
+      "audio_signal",
+      "length"
+    ],
+    "input_shapes": [
+      {
+        "name": "audio_signal",
+        "shape": [
+          "audio_signal_dynamic_axes_1",
+          "80",
+          "audio_signal_dynamic_axes_2"
+        ],
+        "type": "tensor(float)"
+      },
+      {
+        "name": "length",
+        "shape": [
+          "length_dynamic_axes_1"
+        ],
+        "type": "tensor(int64)"
+      }
+    ],
+    "output": [
+      "logprobs"
+    ],
+    "output_shapes": [
+      {
+        "name": "logprobs",
+        "shape": [
+          "logprobs_dynamic_axes_1",
+          "logprobs_dynamic_axes_2",
+          "5633"
+        ],
+        "type": "tensor(float)"
+      }
+    ],
+    "dynamic_axes": {
+      "audio_signal": {
+        "0": "audio_signal_dynamic_axes_1",
+        "2": "audio_signal_dynamic_axes_2"
+      },
+      "length": {
+        "0": "length_dynamic_axes_1"
+      },
+      "logprobs": {
+        "0": "logprobs_dynamic_axes_1",
+        "1": "logprobs_dynamic_axes_2"
+      }
+    },
+    "opset": 16,
+    "exported_with": "torch.onnx.export(dynamo=False)"
+  }
+}

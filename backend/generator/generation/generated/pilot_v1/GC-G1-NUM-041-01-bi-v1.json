@@ -1,0 +1,614 @@
+{
+  "schema_version": "generated_content_v1",
+  "content_id": "GC-G1-NUM-041-01-bi-v1",
+  "blueprint_id": "BP-G1-NUM-041-01",
+  "curriculum_id": "G1-NUM-041",
+  "curriculum_version": "curriculum_master_v1",
+  "blueprint_version": "content_blueprint_v1",
+  "grade": 1,
+  "domain": "numeracy",
+  "content_type": "flashcard",
+  "language_mode": "bilingual",
+  "languages": [
+    "hi",
+    "sat"
+  ],
+  "scripts": {
+    "hi": "Deva",
+    "sat": "Olck"
+  },
+  "generation_method": "native",
+  "title": {
+    "hi": "संख्या कार्ड 0-20",
+    "sat": "ᱞᱮᱠᱷᱟ ᱠᱟᱨᱰ ᱐-᱒᱐"
+  },
+  "instructions": {
+    "learner": {
+      "hi": "संख्या देखें और बोलें।",
+      "sat": "ᱮᱞ ᱧᱮᱞᱛᱮ ᱨᱚᱲᱢᱮ᱾"
+    }
+  },
+  "items": [
+    {
+      "item_id": "card_0",
+      "item_type": "card",
+      "front": {
+        "hi": "0",
+        "sat": "᱐"
+      },
+      "back": {
+        "hi": "शून्य",
+        "sat": "ᱥᱩᱱ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 0
+      },
+      "asset_refs": [
+        "img_card_0"
+      ]
+    },
+    {
+      "item_id": "card_1",
+      "item_type": "card",
+      "front": {
+        "hi": "1",
+        "sat": "᱑"
+      },
+      "back": {
+        "hi": "एक",
+        "sat": "ᱢᱤᱫ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 1
+      },
+      "asset_refs": [
+        "img_card_1"
+      ]
+    },
+    {
+      "item_id": "card_2",
+      "item_type": "card",
+      "front": {
+        "hi": "2",
+        "sat": "᱒"
+      },
+      "back": {
+        "hi": "दो",
+        "sat": "ᱵᱟᱨ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 2
+      },
+      "asset_refs": [
+        "img_card_2"
+      ]
+    },
+    {
+      "item_id": "card_3",
+      "item_type": "card",
+      "front": {
+        "hi": "3",
+        "sat": "᱓"
+      },
+      "back": {
+        "hi": "तीन",
+        "sat": "ᱯᱮ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 3
+      },
+      "asset_refs": [
+        "img_card_3"
+      ]
+    },
+    {
+      "item_id": "card_4",
+      "item_type": "card",
+      "front": {
+        "hi": "4",
+        "sat": "᱔"
+      },
+      "back": {
+        "hi": "चार",
+        "sat": "ᱯᱩᱱ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 4
+      },
+      "asset_refs": [
+        "img_card_4"
+      ]
+    },
+    {
+      "item_id": "card_5",
+      "item_type": "card",
+      "front": {
+        "hi": "5",
+        "sat": "᱕"
+      },
+      "back": {
+        "hi": "पाँच",
+        "sat": "ᱢᱚᱬᱮ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 5
+      },
+      "asset_refs": [
+        "img_card_5"
+      ]
+    },
+    {
+      "item_id": "card_6",
+      "item_type": "card",
+      "front": {
+        "hi": "6",
+        "sat": "᱖"
+      },
+      "back": {
+        "hi": "छह",
+        "sat": "ᱛᱩᱨᱩᱭ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 6
+      },
+      "asset_refs": [
+        "img_card_6"
+      ]
+    },
+    {
+      "item_id": "card_7",
+      "item_type": "card",
+      "front": {
+        "hi": "7",
+        "sat": "᱗"
+      },
+      "back": {
+        "hi": "सात",
+        "sat": "ᱮᱭᱟᱭ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 7
+      },
+      "asset_refs": [
+        "img_card_7"
+      ]
+    },
+    {
+      "item_id": "card_8",
+      "item_type": "card",
+      "front": {
+        "hi": "8",
+        "sat": "᱘"
+      },
+      "back": {
+        "hi": "आठ",
+        "sat": "ᱤᱨᱟᱹᱞ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 8
+      },
+      "asset_refs": [
+        "img_card_8"
+      ]
+    },
+    {
+      "item_id": "card_9",
+      "item_type": "card",
+      "front": {
+        "hi": "9",
+        "sat": "᱙"
+      },
+      "back": {
+        "hi": "नौ",
+        "sat": "ᱟᱨᱮ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 9
+      },
+      "asset_refs": [
+        "img_card_9"
+      ]
+    },
+    {
+      "item_id": "card_10",
+      "item_type": "card",
+      "front": {
+        "hi": "10",
+        "sat": "᱑᱐"
+      },
+      "back": {
+        "hi": "दस",
+        "sat": "ᱜᱮᱞ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 10
+      },
+      "asset_refs": [
+        "img_card_10"
+      ]
+    },
+    {
+      "item_id": "card_11",
+      "item_type": "card",
+      "front": {
+        "hi": "11",
+        "sat": "᱑᱑"
+      },
+      "back": {
+        "hi": "ग्यारह",
+        "sat": "ᱜᱮᱞ ᱢᱤᱫ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 11
+      },
+      "asset_refs": [
+        "img_card_11"
+      ]
+    },
+    {
+      "item_id": "card_12",
+      "item_type": "card",
+      "front": {
+        "hi": "12",
+        "sat": "᱑᱒"
+      },
+      "back": {
+        "hi": "बारह",
+        "sat": "ᱜᱮᱞ ᱵᱟᱨ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 12
+      },
+      "asset_refs": [
+        "img_card_12"
+      ]
+    },
+    {
+      "item_id": "card_13",
+      "item_type": "card",
+      "front": {
+        "hi": "13",
+        "sat": "᱑᱓"
+      },
+      "back": {
+        "hi": "तेरह",
+        "sat": "ᱜᱮᱞ ᱯᱮ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 13
+      },
+      "asset_refs": [
+        "img_card_13"
+      ]
+    },
+    {
+      "item_id": "card_14",
+      "item_type": "card",
+      "front": {
+        "hi": "14",
+        "sat": "᱑᱔"
+      },
+      "back": {
+        "hi": "चौदह",
+        "sat": "ᱜᱮᱞ ᱯᱩᱱ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 14
+      },
+      "asset_refs": [
+        "img_card_14"
+      ]
+    },
+    {
+      "item_id": "card_15",
+      "item_type": "card",
+      "front": {
+        "hi": "15",
+        "sat": "᱑᱕"
+      },
+      "back": {
+        "hi": "पंद्रह",
+        "sat": "ᱜᱮᱞ ᱢᱚᱬᱮ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 15
+      },
+      "asset_refs": [
+        "img_card_15"
+      ]
+    },
+    {
+      "item_id": "card_16",
+      "item_type": "card",
+      "front": {
+        "hi": "16",
+        "sat": "᱑᱖"
+      },
+      "back": {
+        "hi": "सोलह",
+        "sat": "ᱜᱮᱞ ᱛᱩᱨᱩᱭ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 16
+      },
+      "asset_refs": [
+        "img_card_16"
+      ]
+    },
+    {
+      "item_id": "card_17",
+      "item_type": "card",
+      "front": {
+        "hi": "17",
+        "sat": "᱑᱗"
+      },
+      "back": {
+        "hi": "सत्रह",
+        "sat": "ᱜᱮᱞ ᱮᱭᱟᱭ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 17
+      },
+      "asset_refs": [
+        "img_card_17"
+      ]
+    },
+    {
+      "item_id": "card_18",
+      "item_type": "card",
+      "front": {
+        "hi": "18",
+        "sat": "᱑᱘"
+      },
+      "back": {
+        "hi": "अट्ठारह",
+        "sat": "ᱜᱮᱞ ᱤᱨᱟᱹᱞ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 18
+      },
+      "asset_refs": [
+        "img_card_18"
+      ]
+    },
+    {
+      "item_id": "card_19",
+      "item_type": "card",
+      "front": {
+        "hi": "19",
+        "sat": "᱑᱙"
+      },
+      "back": {
+        "hi": "उन्नीस",
+        "sat": "ᱜᱮᱞ ᱟᱨᱮ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 19
+      },
+      "asset_refs": [
+        "img_card_19"
+      ]
+    },
+    {
+      "item_id": "card_20",
+      "item_type": "card",
+      "front": {
+        "hi": "20",
+        "sat": "᱒᱐"
+      },
+      "back": {
+        "hi": "बीस",
+        "sat": "ᱵᱟᱨ ᱜᱮᱞ"
+      },
+      "math": {
+        "kind": "numeral",
+        "value": 20
+      },
+      "asset_refs": [
+        "img_card_20"
+      ]
+    }
+  ],
+  "answer_key": [],
+  "assets_required": [
+    {
+      "asset_id": "img_card_0",
+      "type": "image",
+      "description_en": "Illustration for number 0",
+      "for_items": [
+        "card_0"
+      ]
+    },
+    {
+      "asset_id": "img_card_1",
+      "type": "image",
+      "description_en": "Illustration for number 1",
+      "for_items": [
+        "card_1"
+      ]
+    },
+    {
+      "asset_id": "img_card_2",
+      "type": "image",
+      "description_en": "Illustration for number 2",
+      "for_items": [
+        "card_2"
+      ]
+    },
+    {
+      "asset_id": "img_card_3",
+      "type": "image",
+      "description_en": "Illustration for number 3",
+      "for_items": [
+        "card_3"
+      ]
+    },
+    {
+      "asset_id": "img_card_4",
+      "type": "image",
+      "description_en": "Illustration for number 4",
+      "for_items": [
+        "card_4"
+      ]
+    },
+    {
+      "asset_id": "img_card_5",
+      "type": "image",
+      "description_en": "Illustration for number 5",
+      "for_items": [
+        "card_5"
+      ]
+    },
+    {
+      "asset_id": "img_card_6",
+      "type": "image",
+      "description_en": "Illustration for number 6",
+      "for_items": [
+        "card_6"
+      ]
+    },
+    {
+      "asset_id": "img_card_7",
+      "type": "image",
+      "description_en": "Illustration for number 7",
+      "for_items": [
+        "card_7"
+      ]
+    },
+    {
+      "asset_id": "img_card_8",
+      "type": "image",
+      "description_en": "Illustration for number 8",
+      "for_items": [
+        "card_8"
+      ]
+    },
+    {
+      "asset_id": "img_card_9",
+      "type": "image",
+      "description_en": "Illustration for number 9",
+      "for_items": [
+        "card_9"
+      ]
+    },
+    {
+      "asset_id": "img_card_10",
+      "type": "image",
+      "description_en": "Illustration for number 10",
+      "for_items": [
+        "card_10"
+      ]
+    },
+    {
+      "asset_id": "img_card_11",
+      "type": "image",
+      "description_en": "Illustration for number 11",
+      "for_items": [
+        "card_11"
+      ]
+    },
+    {
+      "asset_id": "img_card_12",
+      "type": "image",
+      "description_en": "Illustration for number 12",
+      "for_items": [
+        "card_12"
+      ]
+    },
+    {
+      "asset_id": "img_card_13",
+      "type": "image",
+      "description_en": "Illustration for number 13",
+      "for_items": [
+        "card_13"
+      ]
+    },
+    {
+      "asset_id": "img_card_14",
+      "type": "image",
+      "description_en": "Illustration for number 14",
+      "for_items": [
+        "card_14"
+      ]
+    },
+    {
+      "asset_id": "img_card_15",
+      "type": "image",
+      "description_en": "Illustration for number 15",
+      "for_items": [
+        "card_15"
+      ]
+    },
+    {
+      "asset_id": "img_card_16",
+      "type": "image",
+      "description_en": "Illustration for number 16",
+      "for_items": [
+        "card_16"
+      ]
+    },
+    {
+      "asset_id": "img_card_17",
+      "type": "image",
+      "description_en": "Illustration for number 17",
+      "for_items": [
+        "card_17"
+      ]
+    },
+    {
+      "asset_id": "img_card_18",
+      "type": "image",
+      "description_en": "Illustration for number 18",
+      "for_items": [
+        "card_18"
+      ]
+    },
+    {
+      "asset_id": "img_card_19",
+      "type": "image",
+      "description_en": "Illustration for number 19",
+      "for_items": [
+        "card_19"
+      ]
+    },
+    {
+      "asset_id": "img_card_20",
+      "type": "image",
+      "description_en": "Illustration for number 20",
+      "for_items": [
+        "card_20"
+      ]
+    }
+  ],
+  "provisional": true,
+  "conflict_refs": [
+    "X_G1_NUMBER_RANGE"
+  ],
+  "review_gates": [
+    "santali_content",
+    "provisional_range",
+    "hindi_transcription"
+  ],
+  "generation_notes": "Canonical flashcard test fixture for BP-G1-NUM-041-01.",
+  "origin_type": "AI_GENERATED"
+}

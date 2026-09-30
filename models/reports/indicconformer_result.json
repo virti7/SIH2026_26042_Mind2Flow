@@ -1,0 +1,18 @@
+{
+  "model": "ai4bharat/indicconformer_stt_sat_hybrid_ctc_rnnt_large",
+  "audio": "samples\\sample.wav",
+  "device": "cpu",
+  "sample_rate_hz": 16000,
+  "channels": 1,
+  "duration_s": 4.86,
+  "ctc": {
+    "prediction": "[' ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾']",
+    "latency_s": 0.8834784000064246,
+    "rtf": 0.1817856790136676
+  },
+  "rnnt": {
+    "prediction": "[' ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾']",
+    "latency_s": 1.9012188000488095,
+    "rtf": 0.3911972839606604
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "language": "sat",
+  "decoder": "ctc",
+  "status": "pending-conversion",
+  "sampleRate": 16000,
+  "channels": 1,
+  "features": { "kind": "log-mel", "nMels": 80, "frameMs": 25, "shiftMs": 10 },
+  "files": { "model": "model.onnx", "tokens": "tokens.txt" },
+  "sourceCheckpoint": "indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+  "notes": "Placeholder. Run models/conversion/export_indicconformer_ctc_to_onnx.py and replace with real artifacts."
+}

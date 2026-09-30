@@ -1,0 +1,456 @@
+{
+  "report": "model_inventory",
+  "generated_at": "2026-09-27",
+  "workspace": "C:\\Users\\guess\\Downloads\\new test 2",
+  "read_only_audit": true,
+  "size_conventions": {
+    "mib": 1048576,
+    "gib": 1073741824,
+    "note": "All sizes are on-disk bytes. Disk size is NOT RAM usage. RAM was not measured."
+  },
+  "ram_measurement": "not measured",
+  "components": {
+    "asr_hindi": {
+      "source_nemo": {
+        "filename": "models/indicconformer_stt_hi_hybrid_rnnt_large.nemo",
+        "format": ".nemo",
+        "bytes": 523192320,
+        "mib": 498.99,
+        "model": "EncDecHybridRNNTCTCBPEModel",
+        "language": "hindi",
+        "language_code": "hi",
+        "script": "Devanagari",
+        "precision": "FP32",
+        "required_support_files": [],
+        "flutter_android": false,
+        "fastapi": true,
+        "development_only": true,
+        "self_contained": true
+      },
+      "onnx_int8": {
+        "filename": "models/onnx/hindi/model.int8.onnx",
+        "format": ".onnx",
+        "bytes": 197677727,
+        "mib": 188.53,
+        "opset": 16,
+        "ir_version": 8,
+        "nodes": 4788,
+        "external_data_initializers": 0,
+        "self_contained": true,
+        "onnx_data_files": [],
+        "precision": "INT8",
+        "quantization_method": "dynamic_weight_int8_matmul_gemm",
+        "inputs": {
+          "audio_signal": ["batch", 80, "time"],
+          "length": ["batch"]
+        },
+        "outputs": { "logprobs": ["batch", "time", 5633] },
+        "required_support_files": ["models/onnx/hindi/vocab.json"],
+        "flutter_android": true,
+        "fastapi": false,
+        "development_only": false,
+        "parity_vs_fp32": {
+          "mean_cer": 0.0,
+          "worst_cer": 0.0,
+          "exact_match_clips": 6,
+          "total_clips": 6,
+          "mean_argmax_frame_agreement": 1.0
+        }
+      },
+      "onnx_fp32": {
+        "filename": "models/onnx/hindi/model_fp32.onnx",
+        "format": ".onnx",
+        "bytes": 493060285,
+        "mib": 470.21,
+        "opset": 16,
+        "ir_version": 8,
+        "nodes": 4222,
+        "external_data_initializers": 0,
+        "self_contained": true,
+        "precision": "FP32",
+        "required_support_files": ["models/onnx/hindi/vocab.json"],
+        "flutter_android": true,
+        "flutter_role": "optional_int8_fallback",
+        "fastapi": false,
+        "development_only": false
+      },
+      "spec": {
+        "filename": "models/onnx/hindi/vocab.json",
+        "format": ".json",
+        "format_version": 1,
+        "bytes": 8864,
+        "mib": 0.01,
+        "vocab_entries": 256,
+        "language_column_offset": 1536,
+        "contains": [
+          "log_mel_frontend_params",
+          "encoder_shape",
+          "256_entry_vocab",
+          "all_22_language_column_offsets",
+          "blank_indices",
+          "onnx_io_contract",
+          "dynamic_axes"
+        ],
+        "separate_tokenizer_file_required": false,
+        "flutter_android": true,
+        "fastapi": false,
+        "development_only": false
+      },
+      "complete_runtime_package": {
+        "int8_plus_spec_bytes": 197686591,
+        "int8_plus_spec_mib": 188.53,
+        "fp32_plus_spec_bytes": 493069149,
+        "fp32_plus_spec_mib": 470.21
+      }
+    },
+    "asr_santali": {
+      "source_nemo": {
+        "filename": "models/indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+        "format": ".nemo",
+        "bytes": 523192320,
+        "mib": 498.99,
+        "model": "EncDecHybridRNNTCTCBPEModel",
+        "language": "santali",
+        "language_code": "sat",
+        "script": "Ol Chiki",
+        "precision": "FP32",
+        "required_support_files": [],
+        "flutter_android": false,
+        "fastapi": true,
+        "development_only": true,
+        "self_contained": true
+      },
+      "onnx_int8": {
+        "filename": "models/onnx/santali/model.int8.onnx",
+        "format": ".onnx",
+        "bytes": 197677727,
+        "mib": 188.53,
+        "opset": 16,
+        "ir_version": 8,
+        "nodes": 4788,
+        "external_data_initializers": 0,
+        "self_contained": true,
+        "onnx_data_files": [],
+        "precision": "INT8",
+        "quantization_method": "dynamic_weight_int8_matmul_gemm_reduce_range",
+        "inputs": {
+          "audio_signal": ["batch", 80, "time"],
+          "length": ["batch"]
+        },
+        "outputs": { "logprobs": ["batch", "time", 5633] },
+        "required_support_files": ["models/onnx/santali/vocab.json"],
+        "flutter_android": true,
+        "fastapi": false,
+        "development_only": false,
+        "parity_vs_fp32": {
+          "mean_cer": 0.0495,
+          "worst_cer": 0.1724,
+          "exact_match_clips": 3,
+          "total_clips": 6,
+          "mean_argmax_frame_agreement": 0.9782
+        }
+      },
+      "onnx_fp32": {
+        "filename": "models/onnx/santali/model_fp32.onnx",
+        "format": ".onnx",
+        "bytes": 493060285,
+        "mib": 470.21,
+        "opset": 16,
+        "ir_version": 8,
+        "nodes": 4222,
+        "external_data_initializers": 0,
+        "self_contained": true,
+        "precision": "FP32",
+        "required_support_files": ["models/onnx/santali/vocab.json"],
+        "flutter_android": true,
+        "flutter_role": "optional_int8_fallback",
+        "fastapi": false,
+        "development_only": false
+      },
+      "spec": {
+        "filename": "models/onnx/santali/vocab.json",
+        "format": ".json",
+        "format_version": 1,
+        "bytes": 9296,
+        "mib": 0.01,
+        "vocab_entries": 256,
+        "language_column_offset": 4352,
+        "contains": [
+          "log_mel_frontend_params",
+          "encoder_shape",
+          "256_entry_vocab",
+          "all_22_language_column_offsets",
+          "blank_indices",
+          "onnx_io_contract",
+          "dynamic_axes"
+        ],
+        "separate_tokenizer_file_required": false,
+        "flutter_android": true,
+        "fastapi": false,
+        "development_only": false
+      },
+      "complete_runtime_package": {
+        "int8_plus_spec_bytes": 197687023,
+        "int8_plus_spec_mib": 188.53,
+        "fp32_plus_spec_bytes": 493069581,
+        "fp32_plus_spec_mib": 470.21
+      }
+    },
+    "translation": {
+      "model_id": "ai4bharat/indictrans2-indic-indic-1B",
+      "hf_cache_dir": "C:\\Users\\guess\\.cache\\huggingface\\hub\\models--ai4bharat--indictrans2-indic-indic-1B",
+      "primary_file": "model.safetensors",
+      "format": ".safetensors + trust_remote_code python + binarized dict tokenizer",
+      "bytes": 4845878317,
+      "mib": 4621.39,
+      "gib": 4.51,
+      "parameters": "1B (1.23B actual)",
+      "precision": "FP32",
+      "precision_alternatives_available": [],
+      "ram": "not measured",
+      "required_support_files": [
+        { "name": "config.json", "bytes": 1380 },
+        { "name": "configuration_indictrans.py", "bytes": 14155 },
+        { "name": "dict.SRC.json", "bytes": 3391208 },
+        { "name": "dict.TGT.json", "bytes": 3390440 },
+        { "name": "generation_config.json", "bytes": 168 },
+        { "name": "model.SRC", "bytes": 3256903 },
+        { "name": "model.TGT", "bytes": 3256903 },
+        { "name": "modeling_indictrans.py", "bytes": 79782 },
+        { "name": "special_tokens_map.json", "bytes": 96 },
+        { "name": "tokenization_indictrans.py", "bytes": 8044 },
+        { "name": "tokenizer_config.json", "bytes": 1102 }
+      ],
+      "non_file_dependencies": ["youtokentome"],
+      "not_required_files": ["README.md", ".gitattributes"],
+      "loaded_by": "app/local_engine.py:83",
+      "flutter_android": false,
+      "flutter_reason": "no ONNX conversion exists; must be called server-side",
+      "fastapi": true,
+      "development_only": false
+    },
+    "tts": {
+      "model_id": "ai4bharat/indic-parler-tts-pretrained",
+      "hf_cache_dir": "C:\\Users\\guess\\.cache\\huggingface\\hub\\models--ai4bharat--indic-parler-tts-pretrained",
+      "primary_file": "model.safetensors",
+      "format": ".safetensors + .json + sentencepiece tokenizer.model",
+      "bytes": 3763398828,
+      "mib": 3589.08,
+      "gib": 3.51,
+      "precision": "FP32",
+      "precision_alternatives_available": [],
+      "ram": "not measured",
+      "languages": ["hindi", "santali"],
+      "required_support_files": [
+        { "name": "model.safetensors", "bytes": 3751321772 },
+        { "name": "tokenizer.json", "bytes": 10272460 },
+        { "name": "tokenizer.model", "bytes": 1795391 },
+        { "name": "config.json", "bytes": 7445 },
+        { "name": "generation_config.json", "bytes": 218 },
+        { "name": "tokenizer_config.json", "bytes": 990 },
+        { "name": "special_tokens_map.json", "bytes": 552 }
+      ],
+      "not_required_files": ["README.md", ".gitattributes"],
+      "loaded_by": "app/tts_engine.py:94",
+      "secondary_required_model": {
+        "model_id": "google/flan-t5-large",
+        "role": "description tokenizer for the TTS prompt",
+        "why_required": "config.description_tokenizer is null in this checkpoint, so tts_engine.py:102 falls back to config.text_encoder._name_or_path",
+        "weights_present": false,
+        "bytes": 3220460,
+        "mib": 3.07,
+        "files": [
+          { "name": "tokenizer.json", "bytes": 2424064 },
+          { "name": "spiece.model", "bytes": 791656 },
+          { "name": "tokenizer_config.json", "bytes": 2539 },
+          { "name": "special_tokens_map.json", "bytes": 2201 }
+        ],
+        "flutter_android": false,
+        "fastapi": true,
+        "development_only": false
+      },
+      "flutter_android": false,
+      "flutter_reason": "no ONNX conversion exists; must be called server-side",
+      "fastapi": true,
+      "development_only": false
+    }
+  },
+  "totals": {
+    "asr_flutter_int8_bytes": 395373614,
+    "asr_flutter_int8_mib": 377.06,
+    "asr_flutter_fp32_bytes": 986138730,
+    "asr_flutter_fp32_mib": 940.46,
+    "asr_fastapi_nemo_bytes": 1046384640,
+    "asr_fastapi_nemo_mib": 997.91,
+    "asr_on_disk_all_precisions_bytes": 2428491984,
+    "asr_on_disk_all_precisions_mib": 2316.2,
+    "translation_bytes": 4845878317,
+    "translation_mib": 4621.39,
+    "translation_gib": 4.51,
+    "tts_bytes": 3766619288,
+    "tts_mib": 3592.13,
+    "tts_gib": 3.51,
+    "combined_flutter_int8_plus_fastapi_bytes": 9007871219,
+    "combined_flutter_int8_plus_fastapi_mib": 8590.58,
+    "combined_flutter_int8_plus_fastapi_gib": 8.39,
+    "combined_flutter_fp32_plus_fastapi_bytes": 9598636335,
+    "combined_flutter_fp32_plus_fastapi_gib": 8.94,
+    "combined_everything_on_disk_bytes": 12422236439,
+    "combined_everything_on_disk_gib": 11.57
+  },
+  "duplicate_check": {
+    "method": "SHA-256 over full byte stream, with head+tail pre-pass to short-circuit",
+    "duplicate_model_copies_found": 0,
+    "same_size_but_different_content": [
+      {
+        "group": "nemo source pair",
+        "bytes_each": 523192320,
+        "sha256_prefix": [
+          "b5cbbb6574753433fe8444ebf50ead55",
+          "659404404ddaf9999821cb99b108da2f"
+        ],
+        "verdict": "different language fine-tunes, both required"
+      },
+      {
+        "group": "onnx fp32 pair",
+        "bytes_each": 493060285,
+        "sha256_prefix": [
+          "fe36cf752bcbb8d96645ced38b4a13dd",
+          "b6403fb6acaac7d9e4d2d1ecde2a3aba"
+        ],
+        "verdict": "different weights, both required despite identical architecture and 5633-class output"
+      },
+      {
+        "group": "onnx int8 pair",
+        "bytes_each": 197677727,
+        "sha256_prefix": [
+          "38216ac4faa4e07a4c7de08f849d4a7f",
+          "4604323de4b6bdd3c7adc281a33203e9"
+        ],
+        "verdict": "different weights, both required"
+      }
+    ],
+    "redundant_within_a_single_model": [
+      {
+        "model": "j-hartmann/emotion-english-distilroberta-base",
+        "issue": "holds both pytorch_model.bin and model.safetensors of the same model",
+        "wasted_bytes": 329834228,
+        "note": "model is entirely unused by this project"
+      }
+    ]
+  },
+  "unused_hf_cache": {
+    "subtotal_bytes": 1381841850,
+    "subtotal_mib": 1317.83,
+    "subtotal_gib": 1.29,
+    "entries": [
+      { "model_id": "j-hartmann/emotion-english-distilroberta-base", "bytes": 659668455, "mib": 629.11, "reason": "unused; TTS uses the flan-t5 tokenizer instead" },
+      { "model_id": "microsoft/deberta-v3-xsmall", "bytes": 485327731, "mib": 462.84, "reason": "unused; no import or model id in project" },
+      { "model_id": "facebook/mms-tts-hin", "bytes": 145256510, "mib": 138.53, "reason": "unused; no MMS fallback path exists" },
+      { "model_id": "sentence-transformers/all-MiniLM-L6-v2", "bytes": 91588869, "mib": 87.35, "reason": "unused; no embedding or retrieval code" },
+      { "model_id": "prajjwal1/bert-tiny", "bytes": 285, "mib": 0.0, "reason": "unused; config.json only, no weights" },
+      { "model_id": "thunderboltc/whisper-small-santali-sanlish", "bytes": 0, "mib": 0.0, "reason": "empty; no snapshots, failed download" }
+    ]
+  },
+  "classification": {
+    "keep_for_flutter_android": {
+      "files": [
+        "models/onnx/hindi/model.int8.onnx",
+        "models/onnx/hindi/vocab.json",
+        "models/onnx/santali/model.int8.onnx",
+        "models/onnx/santali/vocab.json"
+      ],
+      "total_bytes": 395373614,
+      "total_mib": 377.06,
+      "optional_fallback_files": [
+        "models/onnx/hindi/model_fp32.onnx",
+        "models/onnx/santali/model_fp32.onnx"
+      ],
+      "optional_fallback_bytes": 986129570,
+      "runtime_requirements_from_vocab_json": {
+        "input_audio": "16 kHz mono PCM",
+        "features": "80 log-mel bins, n_fft 512, win_length 400, hop_length 160, centered STFT, Slaney mel scale, power 2.0, log guard 2^-24, pre-emphasis 0.97, dither 0",
+        "frame_hop_ms": 10,
+        "frame_window_ms": 25,
+        "length_input": "log-mel frame count, not encoder frames",
+        "output": "logprobs [B, T, 5633]; select language offset (1536 hindi, 4352 santali) size 256 plus blank",
+        "decode": "CTC greedy, collapse repeats, drop blank",
+        "extra_files_needed": "none beyond vocab.json"
+      },
+      "excluded": ["translation", "tts"]
+    },
+    "keep_for_fastapi": {
+      "files": [
+        "models/indicconformer_stt_hi_hybrid_rnnt_large.nemo",
+        "models/indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+        "HF: ai4bharat/indictrans2-indic-indic-1B (12 files)",
+        "HF: ai4bharat/indic-parler-tts-pretrained (7 files)",
+        "HF: google/flan-t5-large tokenizer (4 files)"
+      ],
+      "total_bytes": 9134494245,
+      "total_gib": 8.71,
+      "note": "gated models; pre-seed the cache with huggingface-cli download so first run needs no network",
+      "secrets": "HF_TOKEN stays in environment only; never committed"
+    },
+    "keep_for_development_only": {
+      "files": [
+        "models/onnx/hindi/model_fp32.onnx",
+        "models/onnx/santali/model_fp32.onnx",
+        "models/indicconformer_stt_hi_hybrid_rnnt_large.nemo",
+        "models/indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+        "samples/sample.wav",
+        "generated_audio/tts_hin_Deva_*.wav",
+        "generated_audio/tts_sat_Olck_*.wav",
+        "reports/onnx_export_summary.json",
+        "reports/onnx_asr_benchmark.json"
+      ],
+      "note": "the two .nemo files appear in both fastapi and development_only; same bytes, different role (runtime engine vs parity ground truth), not a duplicate copy"
+    },
+    "do_not_copy_do_not_commit": {
+      "workspace_paths": [
+        ".venv/",
+        "NeMo/",
+        "__pycache__/",
+        "app/__pycache__/",
+        "logs/",
+        "generated_audio/",
+        "samples/",
+        "_hi2sat.json",
+        "_sat2hi2.json",
+        "reports/cross_lingual_sanity.json"
+      ],
+      "hf_cache_entries": [
+        "models--j-hartmann--emotion-english-distilroberta-base",
+        "models--microsoft--deberta-v3-xsmall",
+        "models--facebook--mms-tts-hin",
+        "models--sentence-transformers--all-MiniLM-L6-v2",
+        "models--prajjwal1--bert-tiny",
+        "models--thunderboltc--whisper-small-santali-sanlish"
+      ],
+      "reclaimable_bytes": 1381841850,
+      "reclaimable_gib": 1.29,
+      "git_hazard": {
+        "problem": ".gitignore covers models/*.nemo, *.safetensors, *.ckpt, *.pt, *.pth but NOT models/onnx/",
+        "would_be_committed_bytes": 1381512800,
+        "would_be_committed_mib": 1317.56,
+        "files": [
+          "models/onnx/hindi/model.int8.onnx",
+          "models/onnx/hindi/model_fp32.onnx",
+          "models/onnx/hindi/vocab.json",
+          "models/onnx/santali/model.int8.onnx",
+          "models/onnx/santali/model_fp32.onnx",
+          "models/onnx/santali/vocab.json"
+        ],
+        "is_git_repo": false,
+        "recommendation": "add a models/onnx/** rule before git init; ship graphs via Git LFS or a release artifact"
+      }
+    }
+  },
+  "recommendations": [
+    "Bundle the two INT8 graphs plus the two vocab.json in Flutter: 377.06 MiB total.",
+    "Keep FP32 graphs out of the default bundle; serve them via Play Asset Delivery if the fallback is needed.",
+    "Keep both .nemo files, IndicTrans2-1B, Indic Parler-TTS and the flan-t5 tokenizer files server-side only (8.71 GiB).",
+    "Prune 1.29 GiB of unused HF cache entries, including the empty thunderboltc folder.",
+    "Extend .gitignore to models/onnx/** before running git init."
+  ]
+}

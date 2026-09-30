@@ -1,0 +1,433 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "numbers_up_to_100",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Numbers up to 100",
+      "intent": "TEACHING_METHOD",
+      "keywords": [
+        "numbers",
+        "number",
+        "counting",
+        "count",
+        "100",
+        "100 तक",
+        "ginti",
+        "sankhya",
+        "संख्या",
+        "संख्याएँ",
+        "गिनती",
+        "गिनना"
+      ],
+      "questionPatterns": [
+        "how should I teach numbers up to 100",
+        "how do I teach numbers",
+        "how to teach numbers",
+        "how can I teach counting",
+        "how do I teach counting to 100",
+        "numbers kaise padhau",
+        "numbers kaise padhaye",
+        "mujhe numbers samjhana hai",
+        "100 तक की संख्याएँ कैसे सिखाएँ",
+        "गिनती कैसे सिखाएँ",
+        "संख्याएँ कैसे सिखाएँ"
+      ],
+      "answerHindi": "बच्चों को स्थानीय वस्तुओं (महुआ के बीज, कंकड़, पत्ते) की मदद से 1 से 100 तक की गिनती सिखाएँ। पहले वस्तुओं को समूह में गिनवाएँ, फिर संख्याओं को पढ़ने और लिखने का अभ्यास कराएँ। रोज़ 10-10 की गिनती का खेल खेलें। सामान्य कठिनाई: 50 के बाद बच्चे क्रम भूल जाते हैं — ऐसे में दस-दस के बंडल बनाकर गिनती दोहराएँ।",
+      "answerEnglish": "Teach counting from 1 to 100 using familiar local objects (mahua seeds, pebbles, leaves). First let children count objects in groups, then practice reading and writing the numbers. Play a count-by-tens game every day. Common difficulty: children lose track after 50 — revise by making bundles of ten and recounting."
+    },
+    {
+      "id": "counting_activity",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Numbers up to 100",
+      "intent": "ACTIVITY",
+      "keywords": [
+        "activity",
+        "numbers",
+        "number",
+        "counting",
+        "count",
+        "game",
+        "play",
+        "ginti",
+        "khel",
+        "गतिविधि",
+        "खेल",
+        "गिनती"
+      ],
+      "questionPatterns": [
+        "what activity can I use for counting",
+        "give me a counting activity",
+        "counting activity",
+        "give me an activity for numbers up to 100",
+        "numbers ke liye ek activity batao",
+        "numbers ke liye ek activity",
+        "counting ki activity",
+        "ginti ke liye activity",
+        "give me an activity for numbers",
+        "ek activity batao",
+        "100 तक गिनती के लिए गतिविधि बताइए",
+        "गिनती सिखाने के लिए कौन सी गतिविधि करूँ"
+      ],
+      "answerHindi": "कक्षा में 'बीज बटोरो' खेल खेलें: बच्चों को टोकरी में 10-10 महुआ के बीज इकट्ठा करने को कहें और हर टोकरी के साथ ज़ोर से गिनती बुलवाएँ (10, 20, 30...)। फिर टोकरियाँ मिलाकर कुल बीज गिनवाएँ। यह गतिविधि 15 मिनट की है और इसमें पूरी कक्षा भाग ले सकती है।",
+      "answerEnglish": "Play 'Seed Collect' in class: ask children to collect mahua seeds in baskets of 10 and call out the count aloud with each basket (10, 20, 30...). Then combine baskets and count the total together. This 15-minute activity involves the whole class."
+    },
+    {
+      "id": "place_value_tens_ones",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Place Value",
+      "intent": "EXPLANATION",
+      "keywords": [
+        "place value",
+        "tens",
+        "ones",
+        "ten",
+        "one",
+        "bundle",
+        "दहाई",
+        "इकाई",
+        "दहाई और इकाई",
+        "बंडल"
+      ],
+      "questionPatterns": [
+        "how can I explain tens and ones",
+        "how can I explain place value",
+        "explain place value",
+        "दहाई और इकाई कैसे समझाएँ",
+        "दहाई इकाई कैसे सिखाएँ"
+      ],
+      "answerHindi": "10 तीलियों का एक बंडल बाँधकर दिखाएँ और कहें — 'यह एक दहाई है'। फिर 3 बंडल और 4 खुली तीलियाँ रखकर समझाएँ कि 34 का अर्थ है 3 दहाई और 4 इकाई। बच्चे खुद बंडल बनाएँ और संख्या बोलें। सामान्य गलती: बच्चे 40 और 14 में भ्रमित होते हैं — बंडल गिनकर अंतर स्पष्ट करें।",
+      "answerEnglish": "Tie 10 sticks into one bundle and show it — 'this is one ten'. Then place 3 bundles and 4 loose sticks to show that 34 means 3 tens and 4 ones. Let children make bundles themselves and say the number aloud. Common mistake: children confuse 40 and 14 — clear this by counting the bundles."
+    },
+    {
+      "id": "addition_concrete",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Addition",
+      "intent": "TEACHING_METHOD",
+      "keywords": [
+        "addition",
+        "add",
+        "adding",
+        "plus",
+        "sum",
+        "jod",
+        "jodna",
+        "जोड़",
+        "जोड़ना",
+        "योग"
+      ],
+      "questionPatterns": [
+        "how should I teach addition",
+        "how do I teach addition",
+        "how to teach addition",
+        "addition kaise samjhau",
+        "jod kaise sikhau",
+        "जोड़ कैसे सिखाएँ",
+        "बच्चों को जोड़ कैसे सिखाएँ"
+      ],
+      "answerHindi": "जोड़ हमेशा मूर्त वस्तुओं से शुरू करें: 7 बीज रखकर 5 और मिलाएँ और साथ-साथ गिनवाएँ। फिर चित्र बनाकर (गोले, लकीरें) वही जोड़ दोहराएँ, सबसे अंत में अंक लिखें (7 + 5 = 12)। रोज़मर्रा के उदाहरण लें — 'तुम्हारे पास 4 आम हैं, दादी ने 3 और दिए, अब कितने हुए?'",
+      "answerEnglish": "Always start addition with concrete objects: place 7 seeds, add 5 more, and count together. Then repeat the same sum with drawings (circles, tally marks), and only at the end write the numerals (7 + 5 = 12). Use daily-life examples — 'You have 4 mangoes, grandmother gave 3 more, how many now?'"
+    },
+    {
+      "id": "shapes_intro",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Shapes",
+      "intent": "TEACHING_METHOD",
+      "keywords": [
+        "shapes",
+        "shape",
+        "circle",
+        "triangle",
+        "square",
+        "rectangle",
+        "आकृति",
+        "आकृतियाँ",
+        "गोला",
+        "त्रिभुज",
+        "चौकोर"
+      ],
+      "questionPatterns": [
+        "how can I teach shapes",
+        "how do I teach shapes",
+        "teach shapes",
+        "आकृतियाँ कैसे सिखाएँ",
+        "गोला त्रिभुज कैसे सिखाएँ"
+      ],
+      "answerHindi": "कक्षा और गाँव की चीज़ों से शुरुआत करें: थाली (गोला), छत (त्रिभुज), किताब (चौकोर)। बच्चों को छूकर कोने और किनारे गिनने दें, फिर ज़मीन या स्लेट पर आकृति बनवाएँ। खेल: 'आकृति खोजो' — बच्चे कक्षा में दौड़कर बताई गई आकृति की वस्तु छूकर दिखाएँ।",
+      "answerEnglish": "Start with objects from the classroom and village: a plate (circle), a roof (triangle), a book (rectangle). Let children touch and count corners and sides, then draw the shape on the ground or slate. Game: 'Find the shape' — children run and touch an object of the named shape."
+    },
+    {
+      "id": "vocabulary_building",
+      "className": "Class 2",
+      "subject": "Language",
+      "topic": "Vocabulary",
+      "intent": "TEACHING_METHOD",
+      "keywords": [
+        "vocabulary",
+        "words",
+        "word",
+        "meaning",
+        "shabd",
+        "shabdavali",
+        "शब्द",
+        "शब्दावली",
+        "शब्दों",
+        "अर्थ"
+      ],
+      "questionPatterns": [
+        "how can I build children's vocabulary",
+        "how to build vocabulary",
+        "build vocabulary",
+        "शब्दावली कैसे बढ़ाएँ",
+        "बच्चों के शब्द कैसे बढ़ाएँ"
+      ],
+      "answerHindi": "रोज़ 5 नए शब्द चित्र के साथ सिखाएँ — पहले मातृभाषा में अर्थ बताएँ, फिर हिंदी शब्द बोलकर दोहरवाएँ। शब्द दीवार बनाएँ: सीखे शब्दों के चित्र कक्षा की दीवार पर चिपकाएँ। खेल: 'शब्द और क्रिया' — शब्द बोलते ही बच्चे उसका अभिनय करें (जैसे 'कूदना' सुनकर कूदें)।",
+      "answerEnglish": "Teach 5 new words daily with pictures — first give the meaning in the mother tongue, then say the Hindi word and make children repeat it. Build a word wall: stick pictures of learned words on the classroom wall. Game: 'Word and action' — on hearing a word, children act it out (e.g. jump on hearing 'jump')."
+    },
+    {
+      "id": "reading_simple_text",
+      "className": "Class 2",
+      "subject": "Language",
+      "topic": "Reading",
+      "intent": "TEACHING_METHOD",
+      "keywords": [
+        "reading",
+        "read",
+        "story",
+        "padhna",
+        "padhne",
+        "पढ़ना",
+        "पढ़ाना",
+        "कहानी",
+        "वाचन"
+      ],
+      "questionPatterns": [
+        "how should I teach reading",
+        "how do I teach reading",
+        "how to teach reading",
+        "बच्चों को पढ़ना कैसे सिखाएँ",
+        "पढ़ना कैसे सिखाएँ"
+      ],
+      "answerHindi": "पहले ज़ोर से पढ़कर सुनाएँ — उँगली से शब्दों पर इशारा करते हुए धीरे-धीरे पढ़ें। फिर साथ-साथ (समूह वाचन) और अंत में बच्चों से अकेले पढ़वाएँ। रोज़ एक छोटी चित्र-कहानी पढ़ें और 2 सरल प्रश्न पूछें — 'कहानी में कौन था? उसने क्या किया?' सामान्य कठिनाई: बच्चे अटक-अटक कर पढ़ते हैं — डाँटें नहीं, शब्द को तोड़कर (वर्ण-वर्ण) पढ़ने में मदद करें।",
+      "answerEnglish": "First read aloud while pointing at each word with your finger, slowly. Then read together (choral reading), and finally let children read alone. Read one short picture story daily and ask 2 simple questions — 'Who was in the story? What did they do?' Common difficulty: children read haltingly — do not scold; help by breaking the word into letters."
+    },
+    {
+      "id": "writing_sentences",
+      "className": "Class 2",
+      "subject": "Language",
+      "topic": "Writing",
+      "intent": "EXPLANATION",
+      "keywords": [
+        "writing",
+        "write",
+        "sentence",
+        "sentences",
+        "likhna",
+        "likhai",
+        "लिखना",
+        "लिखाएँ",
+        "लेखन",
+        "वाक्य"
+      ],
+      "questionPatterns": [
+        "how can I help children write simple sentences",
+        "how to teach writing sentences",
+        "teach writing",
+        "बच्चों को वाक्य लिखना कैसे सिखाएँ",
+        "लिखना कैसे सिखाएँ"
+      ],
+      "answerHindi": "पहले बोलना, फिर लिखना: बच्चे अपना वाक्य बोलें ('मैं आम खाता हूँ'), आप श्यामपट्ट पर लिखें, फिर बच्चे स्लेट पर उतारें। शुरुआत चित्र देखकर एक वाक्य से करें। मात्राओं की गलती पर पूरा वाक्य न मिटवाएँ — केवल गलत अक्षर सुधारें और तारीफ़ ज़रूर करें।",
+      "answerEnglish": "First speaking, then writing: the child says a sentence ('I eat mangoes'), you write it on the blackboard, then children copy it onto slates. Begin with one sentence about a picture. For matra mistakes, do not erase the whole sentence — correct only the wrong letter and always praise the effort."
+    },
+    {
+      "id": "oral_speaking_practice",
+      "className": "Class 2",
+      "subject": "Language",
+      "topic": "Oral Language",
+      "intent": "ACTIVITY",
+      "keywords": [
+        "speaking",
+        "speak",
+        "talk",
+        "oral",
+        "practice",
+        "activity",
+        "बोलना",
+        "बातचीत",
+        "मौखिक",
+        "बोलने"
+      ],
+      "questionPatterns": [
+        "what activity can I use for speaking practice",
+        "speaking activity",
+        "speaking practice activity",
+        "बोलने के अभ्यास के लिए कौन सी गतिविधि करूँ",
+        "बच्चों को बोलना कैसे सिखाएँ"
+      ],
+      "answerHindi": "'गोल घेरे की बात' गतिविधि करें: बच्चे गोल घेरे में बैठें, एक गेंद एक-दूसरे को दें — जिसके पास गेंद हो, वह अपनी मातृभाषा या हिंदी में 2 वाक्य बोले (जैसे 'आज मैंने क्या खाया')। शुरुआत में शिक्षक खुद पहले बोलकर उदाहरण दें। शर्मीले बच्चों पर दबाव न डालें — पहले जोड़ी में, फिर समूह में बुलवाएँ।",
+      "answerEnglish": "Do the 'Talking Circle': children sit in a circle and pass a ball — whoever holds it speaks 2 sentences in their mother tongue or Hindi (e.g. 'What I ate today'). The teacher speaks first to model it. Do not pressure shy children — let them speak in pairs first, then in the group."
+    },
+    {
+      "id": "classroom_activity_generic",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Numbers up to 100",
+      "intent": "CLASSROOM_ACTIVITY",
+      "keywords": [
+        "activity",
+        "classroom",
+        "game",
+        "fun",
+        "गतिविधि",
+        "कक्षा",
+        "खेल",
+        "गतिविधियाँ"
+      ],
+      "questionPatterns": [
+        "give me a classroom activity",
+        "classroom activity",
+        "give me an activity",
+        "कक्षा के लिए गतिविधि बताइए",
+        "कोई गतिविधि बताइए"
+      ],
+      "answerHindi": "10 मिनट की 'खड़े-हो बैठो' गतिविधि: आप संख्या बोलें — सम संख्या पर बच्चे खड़े हों, विषम पर बैठें। फिर गति बढ़ाएँ। अंत में 2 बच्चे सामने आकर अपनी बारी में संख्या बोलें। यह खेल ध्यान, श्रवण और संख्या-पहचान तीनों का अभ्यास कराता है।",
+      "answerEnglish": "A 10-minute 'Stand Up, Sit Down' activity: call out a number — children stand on even numbers and sit on odd ones. Then speed up. At the end, 2 children come forward and call numbers in turn. This game practices attention, listening and number recognition together."
+    },
+    {
+      "id": "numbers_simplify",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Numbers up to 100",
+      "intent": "SIMPLIFY",
+      "keywords": [
+        "simplify",
+        "simple",
+        "easier",
+        "easy",
+        "slow",
+        "numbers",
+        "number",
+        "counting",
+        "ginti",
+        "samjhau",
+        "samjhana",
+        "आसान",
+        "सरल",
+        "सरलता"
+      ],
+      "questionPatterns": [
+        "how can I simplify this",
+        "simplify this",
+        "make it simple",
+        "make it easier",
+        "numbers ko simple kaise samjhau",
+        "numbers ko saral kaise samjhaye",
+        "numbers simple kaise samjhau",
+        "ye kaise samjhau",
+        "इसे आसान कैसे बनाएँ",
+        "सरल करके कैसे समझाएँ"
+      ],
+      "answerHindi": "पाठ को तीन छोटे चरणों में बाँटें: (1) केवल 1 से 20 तक की गिनती वस्तुओं के साथ, (2) फिर 20 से 50 तक, (3) अंत में 100 तक। हर चरण में पहले मातृभाषा में समझाएँ, फिर हिंदी शब्द जोड़ें। एक बार में एक ही नया विचार दें और हर 5 मिनट में बच्चों से दोहरवाएँ।",
+      "answerEnglish": "Split the lesson into three small steps: (1) only counting 1 to 20 with objects, (2) then 20 to 50, (3) finally up to 100. In each step explain first in the mother tongue, then add the Hindi words. Give only one new idea at a time and make children repeat every 5 minutes."
+    },
+    {
+      "id": "numbers_assessment",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Numbers up to 100",
+      "intent": "ASSESSMENT",
+      "keywords": [
+        "assess",
+        "assessment",
+        "test",
+        "check",
+        "evaluate",
+        "question",
+        "numbers",
+        "number",
+        "counting",
+        "ginti",
+        "karu",
+        "जाँच",
+        "मूल्यांकन",
+        "परख",
+        "परीक्षा",
+        "आकलन"
+      ],
+      "questionPatterns": [
+        "how should I assess it",
+        "how to assess",
+        "assess numbers",
+        "numbers ka assessment kaise karu",
+        "numbers ka assessment kaise kare",
+        "assessment kaise karu",
+        "इसकी जाँच कैसे करूँ",
+        "मूल्यांकन कैसे करूँ"
+      ],
+      "answerHindi": "5 मिनट का मौखिक आकलन करें: हर बच्चे से 3 काम करवाएँ — (1) 10 वस्तुएँ गिनकर दिखाओ, (2) संख्या बोलो और स्लेट पर लिखो (जैसे 47), (3) दो संख्याओं में बड़ी-छोटी बताओ। उत्तर सही-गलत की सूची बनाएँ, अंक न दें। जो बच्चे अटकें, उन्हें अगले दिन बंडल-गिनती दोहरवाएँ।",
+      "answerEnglish": "Do a 5-minute oral check: each child does 3 tasks — (1) count 10 objects aloud, (2) say a number and write it on the slate (e.g. 47), (3) tell which of two numbers is bigger. Keep a simple right/wrong list, no marks. Children who struggle should revise bundle-counting the next day."
+    },
+    {
+      "id": "numbers_example",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Numbers up to 100",
+      "intent": "EXAMPLE",
+      "keywords": [
+        "example",
+        "examples",
+        "numbers",
+        "number",
+        "counting",
+        "उदाहरण",
+        "मिसाल"
+      ],
+      "questionPatterns": [
+        "give me an example",
+        "give me examples",
+        "show me an example",
+        "numbers ke liye example",
+        "numbers ka example batao",
+        "कोई उदाहरण बताइए",
+        "उदाहरण दीजिए"
+      ],
+      "answerHindi": "यह उदाहरण श्यामपट्ट पर करके दिखाएँ: 47 का अर्थ है 4 बंडल (4 दहाई) और 7 खुली तीलियाँ (7 इकाई)। पहले बंडल गिनवाएँ — 'दस, बीस, तीस, चालीस' — फिर खुली तीलियाँ — 'इकतालीस... सैंतालीस'। फिर बच्चों से 52 और 36 के लिए यही दोहरवाएँ।",
+      "answerEnglish": "Demonstrate this example on the blackboard: 47 means 4 bundles (4 tens) and 7 loose sticks (7 ones). First count the bundles — 'ten, twenty, thirty, forty' — then the loose sticks — 'forty-one... forty-seven'. Then make children repeat the same for 52 and 36."
+    },
+    {
+      "id": "place_value_difficulty",
+      "className": "Class 2",
+      "subject": "Mathematics",
+      "topic": "Place Value",
+      "intent": "COMMON_DIFFICULTY",
+      "keywords": [
+        "difficult",
+        "difficulty",
+        "mistake",
+        "mistakes",
+        "confuse",
+        "confusing",
+        "struggle",
+        "कठिन",
+        "मुश्किल",
+        "गलती",
+        "भ्रम",
+        "समस्या"
+      ],
+      "questionPatterns": [
+        "what mistakes do children make with numbers",
+        "why do children confuse tens and ones",
+        "common difficulty with numbers",
+        "बच्चे संख्याओं में क्या गलती करते हैं",
+        "बच्चों को दहाई इकाई में क्या कठिनाई होती है"
+      ],
+      "answerHindi": "सबसे आम गलतियाँ: (1) 40 और 14 में भ्रम — समाधान: बंडल गिनकर दिखाएँ कि 40 में 4 बंडल हैं, 14 में सिर्फ 1; (2) 50 के बाद क्रम भूलना — समाधान: दस-दस की गिनती रोज़ दोहराएँ; (3) संख्या उल्टी लिखना (जैसे 34 की जगह 43) — समाधान: पहले बंडल, फिर खुली तीलियाँ — हमेशा इसी क्रम में लिखवाएँ।",
+      "answerEnglish": "Most common mistakes: (1) confusing 40 and 14 — remedy: count bundles to show 40 has 4 bundles while 14 has only 1; (2) losing track after 50 — remedy: revise count-by-tens daily; (3) writing digits reversed (43 for 34) — remedy: always write bundles first, then loose sticks, in that order."
+    }
+  ]
+}

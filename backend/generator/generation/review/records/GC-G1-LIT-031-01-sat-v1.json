@@ -1,0 +1,22 @@
+{
+  "schema_version": "review_v1",
+  "content_id": "GC-G1-LIT-031-01-sat-v1",
+  "blueprint_id": "BP-G1-LIT-031-01",
+  "curriculum_id": "G1-LIT-031",
+  "content_sha256": "d429716fdbcc8a71e18ee0d3569c81d79ff502dc6b45dcfe2267bdaa80700114",
+  "validator_report": {
+    "validator_version": "1.0.0",
+    "passed": true,
+    "warnings": 0
+  },
+  "review_status": "pending",
+  "gates": {
+    "hindi": "not_applicable",
+    "santali": "pending",
+    "curriculum": "pending",
+    "answer_key": "pending",
+    "provisional_range": "not_applicable"
+  },
+  "santali_script_confirmed": null,
+  "reviewer_notes": []
+}

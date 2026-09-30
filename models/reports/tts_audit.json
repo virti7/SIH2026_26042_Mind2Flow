@@ -1,0 +1,31 @@
+{
+  "model_id": "ai4bharat/indic-parler-tts-pretrained",
+  "disk_bytes": 3763425695,
+  "disk_mib": 3589.08,
+  "flan_t5_tokenizer_disk_mib": 3.07,
+  "param_count": 937803241,
+  "sample_rate": 44100,
+  "device": "cpu",
+  "load_time_s": 37.73,
+  "rss_before_load_mb": 208.2,
+  "rss_after_load_mb": 2613.4,
+  "rss_load_delta_mb": 2405.2,
+  "samples": [
+    {
+      "lang": "hin_Deva",
+      "input_text": "मेरा नाम वेद है।",
+      "audio_duration_s": 1.52,
+      "latency_s": 24.88,
+      "rtf": 16.359,
+      "rss_after_synth_mb": 3279.4
+    },
+    {
+      "lang": "sat_Olck",
+      "input_text": "ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱢᱞᱤ ᱠᱟᱱᱟ᱾",
+      "audio_duration_s": 1.87,
+      "latency_s": 28.61,
+      "rtf": 15.306,
+      "rss_after_synth_mb": 3453.3
+    }
+  ]
+}

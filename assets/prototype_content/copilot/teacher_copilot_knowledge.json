@@ -1,0 +1,383 @@
+{
+  "version": 1,
+  "note": "Deterministic OFFLINE Teacher Co-Pilot knowledge base. No LLM, no network. Edit freely: add items with id/intent/keywords/romanHindiKeywords/answers/route.",
+  "items": [
+    {
+      "id": "worksheet_generation",
+      "intent": "WORKSHEET_GENERATION",
+      "keywords": [
+        "worksheet",
+        "worksheets",
+        "work sheet",
+        "practice sheet",
+        "practice worksheet",
+        "bilingual worksheet",
+        "worksheet generator",
+        "वर्कशीट",
+        "अभ्यास पत्रक"
+      ],
+      "romanHindiKeywords": [
+        "worksheet banana",
+        "worksheet banani",
+        "worksheet banaye",
+        "worksheet banao",
+        "worksheet generate karni",
+        "worksheet generate karna",
+        "worksheet kaha milegi",
+        "worksheet kaha banegi",
+        "worksheet kidhar hai",
+        "worksheet kaha hai",
+        "worksheet kaise banau",
+        "mujhe worksheet chahiye",
+        "worksheet generator kaha hai",
+        "worksheet generator kholo",
+        "worksheet generator open karo",
+        "mujhe worksheet generate karni hain main kidhar jau",
+        "mujhe worksheet generate karni hai",
+        "how can i make bilingual worksheet with images",
+        "bilingual worksheet kaise banau",
+        "worksheet mein images kaise add karu"
+      ],
+      "answerHindi": "आप Bilingual Worksheet Generator में जाकर worksheet बना सकते हैं।",
+      "answerEnglish": "You can create a worksheet from the Bilingual Worksheet Generator.",
+      "route": "/resources/worksheet-generator",
+      "actionLabelHindi": "Worksheet Generator खोलें",
+      "actionLabelEnglish": "Open Worksheet Generator"
+    },
+    {
+      "id": "flashcard_generation",
+      "intent": "FLASHCARD_GENERATION",
+      "keywords": [
+        "flashcard",
+        "flashcards",
+        "flash card",
+        "flash cards",
+        "visual flashcard",
+        "picture card",
+        "फ्लैशकार्ड",
+        "चित्र कार्ड"
+      ],
+      "romanHindiKeywords": [
+        "flashcard banana",
+        "flashcard banani",
+        "flashcard banao",
+        "flashcard kaha banega",
+        "flashcard kaha milega",
+        "flashcards chahiye",
+        "mujhe flashcards chahiye",
+        "visual flashcard kaise banau",
+        "flashcard generator kaha hai",
+        "flashcard generator kholo",
+        "flashcard kaha hai"
+      ],
+      "answerHindi": "आप Flashcard Generator से visual flashcards बना सकते हैं।",
+      "answerEnglish": "You can create visual flashcards from the Flashcard Generator.",
+      "route": "/resources/flashcards",
+      "actionLabelHindi": "Flashcard Generator खोलें",
+      "actionLabelEnglish": "Open Flashcard Generator"
+    },
+    {
+      "id": "assessment",
+      "intent": "ASSESSMENT",
+      "keywords": [
+        "assessment",
+        "assess",
+        "test",
+        "quiz",
+        "exam",
+        "evaluation",
+        "मूल्यांकन",
+        "आकलन",
+        "परीक्षा",
+        "क्विज़"
+      ],
+      "romanHindiKeywords": [
+        "assessment kaha hai",
+        "assessment banana hai",
+        "assessment kaise karu",
+        "assessment kaise banau",
+        "quiz banana hai",
+        "quiz kaise banau",
+        "test banana hai",
+        "test kaise banau",
+        "assessment kholo",
+        "mujhe assessment chahiye"
+      ],
+      "answerHindi": "आप Assessment section में जाकर assessment बना या चला सकते हैं।",
+      "answerEnglish": "You can create or run an assessment from the Assessment section.",
+      "route": "/assessment/builder",
+      "actionLabelHindi": "Assessment खोलें",
+      "actionLabelEnglish": "Open Assessment"
+    },
+    {
+      "id": "live_translation",
+      "intent": "LIVE_TRANSLATION",
+      "keywords": [
+        "translate",
+        "translation",
+        "translator",
+        "live translation",
+        "hindi santali",
+        "santali",
+        "अनुवाद",
+        "भाषा बदल"
+      ],
+      "romanHindiKeywords": [
+        "translate karna hai",
+        "translate kaise karu",
+        "translate kaise karna hai",
+        "translation kaha hai",
+        "translation kaha se hoga",
+        "live translation kaha hai",
+        "bhasha translate kaha se hoga",
+        "hindi santali mein kaise jayegi",
+        "translator kaha hai",
+        "translator kholo"
+      ],
+      "answerHindi": "Live Classroom Translator में जाकर Hindi से Santali translation का प्रयोग करें।",
+      "answerEnglish": "Open Live Classroom Translator to use Hindi-to-Santali classroom translation.",
+      "route": "/translate",
+      "actionLabelHindi": "Live Translator खोलें",
+      "actionLabelEnglish": "Open Live Translator"
+    },
+    {
+      "id": "downloads",
+      "intent": "DOWNLOADS",
+      "keywords": [
+        "download",
+        "downloads",
+        "downloaded",
+        "saved",
+        "saved materials",
+        "डाउनलोड"
+      ],
+      "romanHindiKeywords": [
+        "download ki hui worksheet kaha hai",
+        "mere downloads kaha hain",
+        "downloaded flashcard kaha milega",
+        "resources kaha se kholun",
+        "downloads kaha hain",
+        "downloads kaha hai",
+        "download kaha milega"
+      ],
+      "answerHindi": "आप Downloads section में जाकर अपनी download की हुई सामग्री खोल सकते हैं।",
+      "answerEnglish": "You can open your downloaded materials from the Downloads section.",
+      "route": "/resources/downloads",
+      "actionLabelHindi": "Downloads खोलें",
+      "actionLabelEnglish": "Open Downloads"
+    },
+    {
+      "id": "teacher_guidance",
+      "intent": "TEACHER_GUIDANCE",
+      "keywords": [
+        "teach",
+        "teaching",
+        "padhane",
+        "explain",
+        "activity",
+        "addition",
+        "numbers",
+        "counting",
+        "reading",
+        "guidance",
+        "पढ़ान",
+        "सिखा",
+        "गतिविधि",
+        "मार्गदर्शन"
+      ],
+      "romanHindiKeywords": [
+        "padhane ka tarika batao",
+        "padhane ka tarika",
+        "numbers kaise padhau",
+        "numbers kaise padhaye",
+        "addition kaise samjhau",
+        "baccho ko reading kaise sikhau",
+        "baccho ko addition kaise sikhau",
+        "activity batao",
+        "ek activity batao",
+        "teaching guidance kaha milegi",
+        "mujhe ye kaise padhana hai",
+        "ye kaise padhau",
+        "ise kaise sikhaye",
+        "kaise samjhau",
+        "kaise sikhau"
+      ],
+      "answerHindi": "",
+      "answerEnglish": "",
+      "route": "/teach/guidance",
+      "actionLabelHindi": "Teaching Guidance खोलें",
+      "actionLabelEnglish": "Open Teaching Guidance"
+    },
+    {
+      "id": "progress",
+      "intent": "PROGRESS",
+      "keywords": [
+        "progress",
+        "student progress",
+        "lessons taught",
+        "assessment progress",
+        "resources used",
+        "report",
+        "marks",
+        "प्रगति",
+        "रिपोर्ट"
+      ],
+      "romanHindiKeywords": [
+        "progress kaha hai",
+        "progress kaise dekhu",
+        "baccho ki progress kaha hai",
+        "report kaha hai",
+        "progress kholo"
+      ],
+      "answerHindi": "आप Progress section में जाकर बच्चों की प्रगति देख सकते हैं।",
+      "answerEnglish": "You can see children's progress from the Progress section.",
+      "route": "/progress",
+      "actionLabelHindi": "Progress खोलें",
+      "actionLabelEnglish": "Open Progress"
+    },
+    {
+      "id": "teach_home",
+      "intent": "TEACH",
+      "keywords": [
+        "teach home",
+        "lesson",
+        "class",
+        "curriculum",
+        "पाठ",
+        "कक्षा"
+      ],
+      "romanHindiKeywords": [
+        "padhana kaha se shuru karu",
+        "lesson kaha hai",
+        "teach kaha hai",
+        "class kaha hai",
+        "padhai kaha se karu"
+      ],
+      "answerHindi": "आप Teach section में जाकर पाठ और कक्षा शुरू कर सकते हैं।",
+      "answerEnglish": "You can start lessons and classes from the Teach section.",
+      "route": "/teach",
+      "actionLabelHindi": "Teach खोलें",
+      "actionLabelEnglish": "Open Teach"
+    },
+    {
+      "id": "settings",
+      "intent": "SETTINGS",
+      "keywords": [
+        "setting",
+        "settings",
+        "profile",
+        "account",
+        "language setting",
+        "language preference",
+        "audio setting",
+        "सेटिंग"
+      ],
+      "romanHindiKeywords": [
+        "setting kaha hai",
+        "settings kaha hai",
+        "bhasha setting kaha hai",
+        "settings kholo"
+      ],
+      "answerHindi": "आप Settings में जाकर भाषा और ऑडियो बदल सकते हैं।",
+      "answerEnglish": "You can change language and audio from Settings.",
+      "route": "/settings",
+      "actionLabelHindi": "Settings खोलें",
+      "actionLabelEnglish": "Open Settings"
+    },
+    {
+      "id": "offline_content",
+      "intent": "OFFLINE_CONTENT",
+      "keywords": [
+        "offline",
+        "content pack",
+        "language pack",
+        "offline content",
+        "ऑफलाइन"
+      ],
+      "romanHindiKeywords": [
+        "offline content kaha hai",
+        "content pack kaha hai",
+        "language pack kaha hai",
+        "offline me kya hai"
+      ],
+      "answerHindi": "आप Offline Content section में जाकर content और language packs देख सकते हैं।",
+      "answerEnglish": "You can see content and language packs from the Offline Content section.",
+      "route": "/offline/content",
+      "actionLabelHindi": "Offline Content खोलें",
+      "actionLabelEnglish": "Open Offline Content"
+    },
+    {
+      "id": "activity_library",
+      "intent": "ACTIVITY_LIBRARY",
+      "keywords": [
+        "activity library",
+        "activities",
+        "library",
+        "गतिविधि पुस्तकालय"
+      ],
+      "romanHindiKeywords": [
+        "activity library kaha hai",
+        "activities kaha hain",
+        "khel wali activity kaha hai",
+        "activity kholo"
+      ],
+      "answerHindi": "आप Activity Library में जाकर कक्षा की गतिविधियाँ देख सकते हैं।",
+      "answerEnglish": "You can browse classroom activities from the Activity Library.",
+      "route": "/resources/activities",
+      "actionLabelHindi": "Activity Library खोलें",
+      "actionLabelEnglish": "Open Activity Library"
+    },
+    {
+      "id": "resource_detail",
+      "intent": "RESOURCE_DETAIL",
+      "keywords": [
+        "topic",
+        "resource detail",
+        "chapter",
+        "विषय",
+        "पाठ्य सामग्री"
+      ],
+      "romanHindiKeywords": [
+        "topic kaha hai",
+        "chapter kaha hai",
+        "resource kaha hai",
+        "vishay kaha hai"
+      ],
+      "answerHindi": "आप Topic section में जाकर पाठ्य सामग्री देख सकते हैं।",
+      "answerEnglish": "You can see learning materials from the Topic section.",
+      "route": "/resources/topic",
+      "actionLabelHindi": "Topic खोलें",
+      "actionLabelEnglish": "Open Topic"
+    },
+    {
+      "id": "subject_sequence",
+      "intent": "SUBJECT_PLANNING",
+      "keywords": [
+        "maths ke baad",
+        "math ke baad",
+        "next subject",
+        "konsa subject",
+        "kaunsa subject",
+        "which subject",
+        "agla subject",
+        "next kya padhau",
+        "ke baad kya padhau",
+        "subject planning",
+        "time table",
+        "timetable"
+      ],
+      "romanHindiKeywords": [
+        "mujhe maths ke baad konsa subject padhana chahiye",
+        "maths ke baad konsa subject padhana chahiye",
+        "math ke baad kya padhau",
+        "next subject kya padhau",
+        "maths ke baad kya padhau"
+      ],
+      "answerHindi": "अपनी कक्षा की समय-सारणी के अनुसार अगला विषय चुनें। यदि समय-सारणी उपलब्ध नहीं है, तो प्रधानाध्यापक से पूछें — ऐप में कोई कक्षा-विशिष्ट विषय-क्रम पहले से तय नहीं है।",
+      "answerEnglish": "Choose the next subject from your class timetable. If no timetable is available, ask your head teacher — the app has no predefined class-specific subject sequence.",
+      "route": "/teach",
+      "actionLabelHindi": "Teach खोलें",
+      "actionLabelEnglish": "Open Teach"
+    }
+  ]
+}

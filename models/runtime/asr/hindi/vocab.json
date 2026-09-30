@@ -1,0 +1,476 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-09-26T17:20:45+05:30",
+  "language": "hindi",
+  "language_code": "hi",
+  "script": "Devanagari",
+  "source_nemo_model": "models/indicconformer_stt_hi_hybrid_rnnt_large.nemo",
+  "source_model_class": "EncDecHybridRNNTCTCBPEModel",
+  "decoder_used_for_export": "ctc",
+  "audio_input": {
+    "sample_rate_hz": 16000,
+    "channels": 1,
+    "encoding": "float32 PCM in [-1, 1]"
+  },
+  "features": {
+    "sample_rate": 16000,
+    "n_fft": 512,
+    "win_length": 400,
+    "hop_length": 160,
+    "n_mels": 80,
+    "window": "hann",
+    "window_periodic": false,
+    "center": true,
+    "pad_mode": "reflect",
+    "fmin": 0.0,
+    "fmax": 8000.0,
+    "mel_norm": "slaney",
+    "mag_power": 2.0,
+    "use_log": true,
+    "log_zero_guard_type": "add",
+    "log_zero_guard_value": 5.960464477539063e-08,
+    "preemph": 0.97,
+    "dither": 0.0,
+    "normalize": "per_feature",
+    "normalize_eps": 1e-05,
+    "frame_splicing": 1,
+    "pad_to": 0,
+    "pad_value": 0.0
+  },
+  "feature_notes": {
+    "reference": "nemo.collections.asr.parts.preprocessing.features.FilterbankFeatures",
+    "order": "preemphasis -> STFT(center=True, reflect pad) -> power magnitude -> mel filterbank -> log(+2^-24) -> per-feature mean/std normalisation -> zero fill past the valid length",
+    "dither": "NeMo applies dither only in training mode, so inference is deterministic (dither=0)",
+    "frame_count": "n_frames = num_samples // hop_length + 1"
+  },
+  "encoder": {
+    "feat_in": 80,
+    "n_layers": 17,
+    "d_model": 512,
+    "subsampling": "striding",
+    "subsampling_factor": 4
+  },
+  "ctc": {
+    "n_global_classes": 5633,
+    "blank_index_global": 5632,
+    "blank_index_after_language_selection": 256,
+    "n_languages_in_checkpoint": 22,
+    "decode": "argmax over the selected columns, then NeMo's fold (drop blank, collapse repeats)",
+    "notes": "logits are log-softmax over ALL 22 languages at once; select your language's columns"
+  },
+  "all_languages": {
+    "as": {
+      "offset": 0,
+      "size": 256
+    },
+    "bn": {
+      "offset": 256,
+      "size": 256
+    },
+    "brx": {
+      "offset": 512,
+      "size": 256
+    },
+    "doi": {
+      "offset": 768,
+      "size": 256
+    },
+    "kok": {
+      "offset": 1024,
+      "size": 256
+    },
+    "gu": {
+      "offset": 1280,
+      "size": 256
+    },
+    "hi": {
+      "offset": 1536,
+      "size": 256
+    },
+    "kn": {
+      "offset": 1792,
+      "size": 256
+    },
+    "ks": {
+      "offset": 2048,
+      "size": 256
+    },
+    "mai": {
+      "offset": 2304,
+      "size": 256
+    },
+    "ml": {
+      "offset": 2560,
+      "size": 256
+    },
+    "mr": {
+      "offset": 2816,
+      "size": 256
+    },
+    "mni": {
+      "offset": 3072,
+      "size": 256
+    },
+    "ne": {
+      "offset": 3328,
+      "size": 256
+    },
+    "or": {
+      "offset": 3584,
+      "size": 256
+    },
+    "pa": {
+      "offset": 3840,
+      "size": 256
+    },
+    "sa": {
+      "offset": 4096,
+      "size": 256
+    },
+    "sat": {
+      "offset": 4352,
+      "size": 256
+    },
+    "sd": {
+      "offset": 4608,
+      "size": 256
+    },
+    "ta": {
+      "offset": 4864,
+      "size": 256
+    },
+    "te": {
+      "offset": 5120,
+      "size": 256
+    },
+    "ur": {
+      "offset": 5376,
+      "size": 256
+    }
+  },
+  "language_columns": {
+    "offset": 1536,
+    "size": 256,
+    "select": "columns 1536..1791 plus column 5632 (blank); blank is index 256 in the selected block"
+  },
+  "vocab": [
+    "<unk>",
+    "▁क",
+    "▁स",
+    "▁ह",
+    "▁म",
+    "▁प",
+    "ार",
+    "ने",
+    "ें",
+    "▁ब",
+    "▁के",
+    "्र",
+    "▁है",
+    "▁ज",
+    "या",
+    "▁द",
+    "▁र",
+    "▁में",
+    "▁व",
+    "▁ल",
+    "ों",
+    "▁अ",
+    "▁की",
+    "▁न",
+    "▁को",
+    "▁ग",
+    "ान",
+    "▁आ",
+    "र्",
+    "▁कि",
+    "ता",
+    "▁इ",
+    "▁से",
+    "▁भ",
+    "▁उ",
+    "▁का",
+    "▁कर",
+    "▁त",
+    "ना",
+    "्य",
+    "▁ने",
+    "▁पर",
+    "िक",
+    "ला",
+    "▁श",
+    "▁इस",
+    "▁च",
+    "▁औ",
+    "ही",
+    "▁प्र",
+    "▁और",
+    "स्",
+    "ाल",
+    "▁ए",
+    "क्",
+    "▁हो",
+    "हा",
+    "ड़",
+    "▁जा",
+    "▁हैं",
+    "▁य",
+    "▁थ",
+    "ित",
+    "▁भी",
+    "िया",
+    "ाम",
+    "वा",
+    "िल",
+    "िए",
+    "के",
+    "▁ख",
+    "िय",
+    "ते",
+    "▁बा",
+    "ंग",
+    "हीं",
+    "▁फ",
+    "▁वि",
+    "▁स्",
+    "ेश",
+    "त्र",
+    "▁उन",
+    "कर",
+    "ती",
+    "री",
+    "ले",
+    "िन",
+    "से",
+    "▁सा",
+    "▁नहीं",
+    "▁रा",
+    "रा",
+    "ारी",
+    "▁लिए",
+    "िस",
+    "▁एक",
+    "▁सं",
+    "गा",
+    "्या",
+    "▁ले",
+    "नी",
+    "ुर",
+    "सी",
+    "ोग",
+    "▁सम",
+    "▁ट",
+    "▁ही",
+    "ति",
+    "▁दे",
+    "▁रह",
+    "▁अप",
+    "▁हु",
+    "▁ड",
+    "का",
+    "▁किया",
+    "क्ष",
+    "ंद",
+    "वार",
+    "▁मु",
+    "ुल",
+    "▁कार",
+    "ाय",
+    "▁गया",
+    "▁नि",
+    "ली",
+    "त्",
+    "ियों",
+    "▁पह",
+    "ां",
+    "की",
+    "िला",
+    "्ह",
+    "्ट",
+    "▁था",
+    "▁घ",
+    "▁तो",
+    "▁करने",
+    "ास",
+    "ंच",
+    "कार",
+    "▁कहा",
+    "▁कु",
+    "▁सि",
+    "▁बाद",
+    "मा",
+    "▁साथ",
+    "▁यह",
+    "▁उन्ह",
+    "▁रहे",
+    "रो",
+    "▁अध",
+    "्म",
+    "▁लोग",
+    "▁पू",
+    "गी",
+    "ाह",
+    "भा",
+    "ंड",
+    "▁दिया",
+    "▁सु",
+    "▁उस",
+    "▁",
+    "ा",
+    "क",
+    "र",
+    "े",
+    "न",
+    "ी",
+    "्",
+    "स",
+    "ि",
+    "ं",
+    "ह",
+    "म",
+    "त",
+    "ल",
+    "ो",
+    "प",
+    "य",
+    "व",
+    "द",
+    "ज",
+    "ब",
+    "ग",
+    "ु",
+    "ै",
+    "श",
+    "ट",
+    "ए",
+    "च",
+    "भ",
+    "ड",
+    "अ",
+    "ू",
+    "इ",
+    "आ",
+    "थ",
+    "ख",
+    "ध",
+    "उ",
+    "फ",
+    "़",
+    "ई",
+    "ष",
+    "औ",
+    "ण",
+    "ौ",
+    "छ",
+    "घ",
+    "ॉ",
+    "ठ",
+    "ओ",
+    "ढ",
+    "ृ",
+    "झ",
+    "ऐ",
+    "ऑ",
+    "ँ",
+    "ञ",
+    "ऊ",
+    "ः",
+    "ऋ",
+    "ॅ",
+    "१",
+    "०",
+    "२",
+    "ऩ",
+    "५",
+    "९",
+    "३",
+    "८",
+    "४",
+    "७",
+    "६",
+    "ऱ",
+    "ङ",
+    "ऎ",
+    "॰",
+    "ळ",
+    "ऍ",
+    "ॐ",
+    "ॢ",
+    "ऽ",
+    "ॆ",
+    "॒",
+    "ॊ",
+    "ॠ",
+    "ॄ",
+    "ऒ",
+    "॑",
+    "॔",
+    "ॽ",
+    "ऌ",
+    "ऴ",
+    "ऺ",
+    "ऻ"
+  ],
+  "script_notes": "ids decode to Devanagari text (U+0900..U+097F).",
+  "onnx": {
+    "fp32": {
+      "file": "model_fp32.onnx",
+      "bytes": 493060285
+    },
+    "int8": {
+      "file": "model.int8.onnx",
+      "bytes": 197677727
+    },
+    "input": [
+      "audio_signal",
+      "length"
+    ],
+    "input_shapes": [
+      {
+        "name": "audio_signal",
+        "shape": [
+          "audio_signal_dynamic_axes_1",
+          "80",
+          "audio_signal_dynamic_axes_2"
+        ],
+        "type": "tensor(float)"
+      },
+      {
+        "name": "length",
+        "shape": [
+          "length_dynamic_axes_1"
+        ],
+        "type": "tensor(int64)"
+      }
+    ],
+    "output": [
+      "logprobs"
+    ],
+    "output_shapes": [
+      {
+        "name": "logprobs",
+        "shape": [
+          "logprobs_dynamic_axes_1",
+          "logprobs_dynamic_axes_2",
+          "5633"
+        ],
+        "type": "tensor(float)"
+      }
+    ],
+    "dynamic_axes": {
+      "audio_signal": {
+        "0": "audio_signal_dynamic_axes_1",
+        "2": "audio_signal_dynamic_axes_2"
+      },
+      "length": {
+        "0": "length_dynamic_axes_1"
+      },
+      "logprobs": {
+        "0": "logprobs_dynamic_axes_1",
+        "1": "logprobs_dynamic_axes_2"
+      }
+    },
+    "opset": 16,
+    "exported_with": "torch.onnx.export(dynamo=False)"
+  }
+}

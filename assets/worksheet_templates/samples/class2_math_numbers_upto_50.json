@@ -1,0 +1,51 @@
+{
+  "template": "bilingual_worksheet_v1",
+  "meta": {
+    "grade": 2,
+    "subject": "Mathematics",
+    "subject_hi": "गणित",
+    "number": 2,
+    "topic": "Numbers up to 50",
+    "title_source": "कार्य पत्रक - 2 (संख्या: 20 से 50 तक)",
+    "title_target": "",
+    "language_1": "hi",
+    "language_2": "sat"
+  },
+  "blocks": [
+    {
+      "kind": "mcq",
+      "prompt": { "hi": "संख्या '35' में दहाई (Tens) का अंक कौन सा है?", "en": "Which digit is in the tens place in 35?" },
+      "options": ["5", "3", "8", "2"],
+      "answer": "3"
+    },
+    {
+      "kind": "fill_blank",
+      "prompt": { "hi": "रिक्त स्थान भरें", "en": "Fill in the missing number." },
+      "sequence": ["45", null, "47"],
+      "answers": ["46"]
+    },
+    {
+      "kind": "order_match",
+      "prompt": { "hi": "छोटी से बड़ी संख्या का मिलान करें", "en": "Match from smallest to largest." },
+      "slots": [
+        { "hi": "सबसे छोटी", "en": "Smallest" },
+        { "hi": "बीच की", "en": "Middle" },
+        { "hi": "सबसे बड़ी", "en": "Largest" }
+      ],
+      "values": ["99", "12", "50"],
+      "answer": ["12", "50", "99"]
+    },
+    {
+      "kind": "match_pairs",
+      "prompt": { "hi": "संख्या को उसके सही विस्तार से मिलाएँ", "en": "Match the number with its correct expanded form." },
+      "left": ["42", "18", "60"],
+      "right": ["10 + 8", "60 + 0", "40 + 2"],
+      "answer": { "42": "40 + 2", "18": "10 + 8", "60": "60 + 0" }
+    },
+    {
+      "kind": "trace",
+      "prompt": { "hi": "नीचे दी गई संख्या में दहाई (Tens) के नीचे रेखा खींचें (Trace)", "en": "Trace the tens digit in the numbers below." },
+      "items": ["7", "4", "5", "9", "8", "2"]
+    }
+  ]
+}

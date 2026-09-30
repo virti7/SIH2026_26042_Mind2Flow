@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "note": "Controlled vocabulary. Only categories present in the source PDF are included; 'numbers' is intentionally absent until a source with numbers is added.",
+  "categories": {
+    "animals": {
+      "label": "Animals",
+      "id_prefix": null,
+      "subcategories": {
+        "domestic_animals": {"label": "Domestic Animals", "id_prefix": "domestic_animal", "folder": "animals/domestic", "deck": "03_domestic_animals"},
+        "wild_animals": {"label": "Wild Animals", "id_prefix": "wild_animal", "folder": "animals/wild", "deck": "04_wild_animals"}
+      }
+    },
+    "birds":         {"label": "Birds",         "id_prefix": "bird",         "folder": "birds",         "deck": "05_birds"},
+    "vegetables":    {"label": "Vegetables",    "id_prefix": "vegetable",    "folder": "vegetables",    "deck": "07_vegetables"},
+    "fruits":        {"label": "Fruits",        "id_prefix": "fruit",        "folder": "fruits",        "deck": "06_fruits"},
+    "flowers":       {"label": "Flowers",       "id_prefix": "flower",       "folder": "flowers",       "deck": "08_flowers"},
+    "water_animals": {"label": "Water Animals", "id_prefix": "water_animal", "folder": "water_animals", "deck": "09_water_animals"},
+    "insects":       {"label": "Insects",       "id_prefix": "insect",       "folder": "insects",       "deck": "10_insects"},
+    "residence":     {"label": "Residence",     "id_prefix": "residence",    "folder": "residence",     "deck": "13_residence"},
+    "transport":     {"label": "Transport",     "id_prefix": "transport",    "folder": "transport",     "deck": "11_transport"},
+    "relations":     {"label": "Relations",     "id_prefix": "relation",     "folder": "relations",     "deck": "12_relations"},
+    "body_parts":    {"label": "Body Parts",    "id_prefix": "body_part",    "folder": "body_parts",    "deck": "02_body_parts"},
+    "colours":       {"label": "Colours",       "id_prefix": "colour",       "folder": "colours",       "deck": "01_colours"}
+  },
+  "visual_types": ["photograph", "illustration", "line_drawing", "labelled_diagram", "colour_swatch"],
+  "keywords": {
+    "animals": ["animal"],
+    "domestic_animals": ["domestic animal", "farm animal", "pet"],
+    "wild_animals": ["wild animal", "jungle", "forest animal"],
+    "birds": ["bird", "feathers", "flying"],
+    "vegetables": ["vegetable", "food", "plant"],
+    "fruits": ["fruit", "food", "plant"],
+    "flowers": ["flower", "plant", "blossom"],
+    "water_animals": ["water animal", "aquatic"],
+    "insects": ["insect", "small creature", "bug"],
+    "residence": ["residence", "home", "habitat", "shelter"],
+    "transport": ["transport", "vehicle", "travel"],
+    "relations": ["relation", "family", "person"],
+    "body_parts": ["body part", "human anatomy", "human body"],
+    "colours": ["colour", "color"]
+  }
+}

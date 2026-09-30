@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "language": {
+    "source": "Hindi",
+    "target": "Santali",
+    "targetScript": "Ol Chiki"
+  },
+  "phrases": [
+    {
+      "id": "sun_rises_east",
+      "category": "Literacy",
+      "hindi": "सूरज पूरब से निकलता है।",
+      "english": "The sun rises in the east.",
+      "santaliOlChiki": "ᱪᱟᱱᱫᱚ ᱫᱚ ᱯᱩᱨᱩᱵᱽ ᱠᱷᱚᱱ ᱨᱟᱠᱟᱵᱽ ᱮᱫᱟᱭ",
+      "santaliRoman": "Cando do purub khon rakab edai",
+      "audio": "assets/prototype_content/translation/audio/santali/santali_sun_rises_east.wav",
+      "hindiAudio": "assets/prototype_content/translation/audio/hindi/hindi_sun_rises_east.wav",
+      "hindiVariants": ["सूरज पूरब से निकलता है", "सूरज पूर्व से निकलता है"],
+      "santaliVariants": ["cando do purub khon rakab edai"],
+      "tags": ["sun", "sentence", "literacy"]
+    },
+    {
+      "id": "listen_carefully",
+      "category": "Instructions",
+      "hindi": "सब बच्चे ध्यान से सुनो।",
+      "santaliOlChiki": "ᱡᱚᱛᱚ ᱜᱤᱫᱽᱨᱟᱹ ᱠᱚ, ᱢᱚᱱ ᱠᱟᱛᱮ ᱟᱸᱡᱚᱢ ᱢᱮ",
+      "santaliRoman": "Joto gidra ko, mon kathe anjom me.",
+      "audio": "assets/prototype_content/translation/audio/santali/santali_listen_carefully_children.wav",
+      "tags": ["listen", "attention", "instruction"]
+    },
+    {
+      "id": "greeting_namaste",
+      "category": "Greeting",
+      "hindi": "नमस्ते बच्चों! आप सब कैसे हैं?",
+      "santaliOlChiki": "ᱡᱚᱦᱟᱲ ᱜᱤᱫᱽᱨᱟᱹ ᱠᱚ! ᱟᱯᱮ ᱥᱟᱱᱟᱢ ᱪᱮᱫ ᱞᱮᱠᱟ ᱢᱮᱱᱟᱹ ᱠᱟᱱ? ",
+      "santaliRoman": "Johar gidra ko! Ape sanam ched leka mena kana?",
+      "audio": "assets/prototype_content/translation/audio/santali/santali_hello_children.wav",
+      "tags": ["greeting", "children", "namaste"]
+    },
+    {
+      "id": "praise_good_answer",
+      "category": "Encouragement",
+      "hindi": "शाबाश! आपने बहुत अच्छा उत्तर दिया।",
+      "santaliOlChiki": "ᱵᱮᱥ ᱠᱟᱹᱢᱤ! ᱟᱹᱰᱤ ᱵᱮᱥ ᱛᱮᱞᱟ ᱮᱢ ᱠᱮᱟ ᱾",
+      "santaliRoman": "Besh kami! Aḍi besh tela em kea",
+      "audio": "assets/prototype_content/translation/audio/santali/santali_well_done_good_answer.wav",
+      "tags": ["praise", "encouragement", "answer"]
+    },
+    {
+      "id": "question_not_understood",
+      "category": "Questions",
+      "hindi": "क्या किसी बच्चे को समझ नहीं आया?",
+      "santaliOlChiki": "ᱚᱠᱚ ᱜᱤᱫᱽᱨᱟᱹ ᱵᱩᱡᱷᱟᱹᱣ ᱵᱟᱝ ᱠᱮᱫᱟ?",
+      "santaliRoman": "Oko gidra bujhaṛ bang keda?",
+      "audio": "assets/prototype_content/translation/audio/santali/santali_who_did_not_understand.wav",
+      "tags": ["question", "understanding", "doubt"]
+    },
+    {
+      "id": "take_out_notebook",
+      "category": "Instructions",
+      "hindi": "अपनी किताब खोलो।।",
+      "santaliOlChiki": "ᱟᱢᱟᱜ ᱯᱩᱛᱷᱤ ᱡᱷᱤᱡ ᱢᱮ",
+      "santaliRoman": "Amag puthi jhij me.",
+      "audio": "assets/prototype_content/translation/audio/santali/santali_open_your_book.wav",
+      "tags": ["notebook", "instruction", "classroom"]
+    },
+    {
+      "id": "sit_quietly",
+      "category": "Classroom management",
+      "hindi": "शांति से बैठो, बच्चों।",
+      "santaliOlChiki": "ᱜᱤᱫᱽᱨᱟᱹ ᱠᱚ, ᱛᱷᱤᱨ ᱠᱟᱛᱮ ᱫᱩᱲᱩᱵ ᱢᱮ",
+      "santaliRoman": "Gidra ko, thir kathe duḍub me.",
+      "audio": "assets/prototype_content/translation/audio/santali/santali_sit_quietly_children.wav",
+      "tags": ["silence", "discipline", "classroom"]
+    },
+    {
+      "id": "look_here",
+      "category": "Instructions",
+      "hindi": "इधर देखो।",
+      "santaliOlChiki": "",
+      "santaliRoman": "",
+      "audio": "assets/prototype_content/translation/audio/santali/look_here.wav",
+      "tags": ["attention", "instruction"]
+    },
+    {
+      "id": "try_again",
+      "category": "Encouragement",
+      "hindi": "फिर से कोशिश करो।",
+      "santaliOlChiki": "", 
+      "santaliRoman": "",
+      "audio": "assets/prototype_content/translation/audio/santali/try_again.wav",
+      "tags": ["encouragement", "effort"]
+    },
+    {
+      "id": "say_again",
+      "category": "Instructions",
+      "hindi": "फिर से बोलो।",
+      "santaliOlChiki": "",
+      "santaliRoman": "",
+      "audio": "assets/prototype_content/translation/audio/santali/say_again.wav",
+      "tags": ["speak", "repeat", "instruction"]
+    },
+    {
+      "id": "read_loud",
+      "category": "Literacy",
+      "hindi": "यह पंक्ति ज़ोर से पढ़ो।",
+      "santaliOlChiki": "",
+      "santaliRoman": "",
+      "audio": "assets/prototype_content/translation/audio/santali/read_loud.wav",
+      "tags": ["read", "literacy", "instruction"]
+    },
+    {
+      "id": "who_knows_answer",
+      "category": "Questions",
+      "hindi": "उत्तर कौन जानता है?",
+      "santaliOlChiki": "",
+      "santaliRoman": "",
+      "audio": "assets/prototype_content/translation/audio/santali/who_knows_answer.wav",
+      "tags": ["answer", "question"]
+    },
+    {
+      "id": "feeling_unwell",
+      "category": "Emergency",
+      "hindi": "क्या किसी की तबीयत खराब है?",
+      "santaliOlChiki": "",
+      "santaliRoman": "",
+      "audio": "assets/prototype_content/translation/audio/santali/feeling_unwell.wav",
+      "tags": ["emergency", "health"]
+    }
+  ]
+}

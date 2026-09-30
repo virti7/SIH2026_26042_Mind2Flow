@@ -1,0 +1,62 @@
+{
+  "schema_version": "generated_content_v1",
+  "content_id": "GC-G1-NUM-032-01-bi-v1",
+  "blueprint_id": "BP-G1-NUM-032-01",
+  "curriculum_id": "G1-NUM-032",
+  "curriculum_version": "curriculum_master_v1",
+  "blueprint_version": "content_blueprint_v1",
+  "grade": 1,
+  "domain": "numeracy",
+  "content_type": "worksheet",
+  "language_mode": "bilingual",
+  "languages": ["hi", "sat"],
+  "scripts": {"hi": "Deva", "sat": "Olck"},
+  "generation_method": "native",
+  "title": {"hi": "मिलाओ और गिनो", "sat": "ᱴᱮᱥᱴ ᱚᱠ"},
+  "instructions": {
+    "learner": {"hi": "चित्र देखो। कुल कितने हैं? सही संख्या पर गोला लगाओ।", "sat": "ᱴᱮᱥᱴ ᱮᱠ ᱴᱟᱠ᱾"}
+  },
+  "items": [
+    {"item_id": "q1", "item_type": "multiple_choice", "prompt": {"hi": "4 आम और 7 आम। कुल कितने आम?", "sat": "4 ᱟᱢ 7 ᱟᱢ᱾"},
+     "math": {"kind": "add", "operands": [4, 7]},
+     "options": [{"option_id": "a", "value": 10, "text": {"hi": "10", "sat": "10"}}, {"option_id": "b", "value": 11, "text": {"hi": "11", "sat": "11"}}, {"option_id": "c", "value": 12, "text": {"hi": "12", "sat": "12"}}],
+     "asset_refs": ["img_q1"]},
+    {"item_id": "q2", "item_type": "multiple_choice", "prompt": {"hi": "3 चूड़ियाँ और 5 चूड़ियाँ। कुल कितनी?", "sat": "3 ᱪᱩᱲᱤ 5 ᱪᱩᱲᱤ᱾"},
+     "math": {"kind": "add", "operands": [3, 5]},
+     "options": [{"option_id": "a", "value": 8, "text": {"hi": "8", "sat": "8"}}, {"option_id": "b", "value": 7, "text": {"hi": "7", "sat": "7"}}, {"option_id": "c", "value": 9, "text": {"hi": "9", "sat": "9"}}],
+     "asset_refs": ["img_q2"]},
+    {"item_id": "q3", "item_type": "multiple_choice", "prompt": {"hi": "6 कंचे और 6 कंचे। कुल कितने?", "sat": "6 ᱜᱩᱞᱤ 6 ᱜᱩᱞᱤ᱾"},
+     "math": {"kind": "add", "operands": [6, 6]},
+     "options": [{"option_id": "a", "value": 11, "text": {"hi": "11", "sat": "11"}}, {"option_id": "b", "value": 13, "text": {"hi": "13", "sat": "13"}}, {"option_id": "c", "value": 12, "text": {"hi": "12", "sat": "12"}}],
+     "asset_refs": ["img_q3"]},
+    {"item_id": "q4", "item_type": "multiple_choice", "prompt": {"hi": "9 पत्ते और 9 पत्ते। कुल कितने?", "sat": "9 ᱥᱟᱠᱟᱢ 9 ᱥᱟᱠᱟᱢ᱾"},
+     "math": {"kind": "add", "operands": [9, 9]},
+     "options": [{"option_id": "a", "value": 18, "text": {"hi": "18", "sat": "18"}}, {"option_id": "b", "value": 17, "text": {"hi": "17", "sat": "17"}}, {"option_id": "c", "value": 16, "text": {"hi": "16", "sat": "16"}}],
+     "asset_refs": ["img_q4"]},
+    {"item_id": "q5", "item_type": "multiple_choice", "prompt": {"hi": "2 मुर्गियाँ और 5 मुर्गियाँ। कुल कितनी?", "sat": "2 ᱥᱤᱢ 5 ᱥᱤᱢ᱾"},
+     "math": {"kind": "add", "operands": [2, 5]},
+     "options": [{"option_id": "a", "value": 6, "text": {"hi": "6", "sat": "6"}}, {"option_id": "b", "value": 7, "text": {"hi": "7", "sat": "7"}}, {"option_id": "c", "value": 8, "text": {"hi": "8", "sat": "8"}}],
+     "asset_refs": ["img_q5"]},
+    {"item_id": "q6", "item_type": "multiple_choice", "prompt": {"hi": "8 रोटियाँ और 1 रोटी। कुल कितनी?", "sat": "8 ᱡᱚᱞ 1 ᱡᱚᱞ᱾"},
+     "math": {"kind": "add", "operands": [8, 1]},
+     "options": [{"option_id": "a", "value": 10, "text": {"hi": "10", "sat": "10"}}, {"option_id": "b", "value": 8, "text": {"hi": "8", "sat": "8"}}, {"option_id": "c", "value": 9, "text": {"hi": "9", "sat": "9"}}],
+     "asset_refs": ["img_q6"]}
+  ],
+  "answer_key": [
+    {"item_id": "q1", "answer": "b"}, {"item_id": "q2", "answer": "a"}, {"item_id": "q3", "answer": "c"},
+    {"item_id": "q4", "answer": "a"}, {"item_id": "q5", "answer": "b"}, {"item_id": "q6", "answer": "c"}
+  ],
+  "assets_required": [
+    {"asset_id": "img_q1", "type": "image", "description_en": "Two baskets: 4 mangoes in one, 7 mangoes in the other, clearly countable, no overlap.", "for_items": ["q1"]},
+    {"asset_id": "img_q2", "type": "image", "description_en": "Two groups of glass bangles: 3 and 5, clearly separated.", "for_items": ["q2"]},
+    {"asset_id": "img_q3", "type": "image", "description_en": "Two groups of 6 marbles each on a mat.", "for_items": ["q3"]},
+    {"asset_id": "img_q4", "type": "image", "description_en": "Two piles of sal leaves, 9 in each pile, countable.", "for_items": ["q4"]},
+    {"asset_id": "img_q5", "type": "image", "description_en": "A yard with 2 hens on the left and 5 hens on the right.", "for_items": ["q5"]},
+    {"asset_id": "img_q6", "type": "image", "description_en": "A plate with 8 chapatis and 1 more chapati being added.", "for_items": ["q6"]}
+  ],
+  "provisional": true,
+  "conflict_refs": ["X_G1_ADDSUB_RANGE"],
+  "review_gates": ["hindi_transcription", "santali_content", "provisional_range"],
+  "generation_notes": "TEST FIXTURE ONLY: Santali strings are placeholder Ol Chiki letters, not real Santali. Not for publishing.",
+  "origin_type": "AI_GENERATED"
+}

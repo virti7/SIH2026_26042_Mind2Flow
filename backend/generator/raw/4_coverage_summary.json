@@ -1,0 +1,142 @@
+{
+  "coverage_summary": {
+    "grade_1": {
+      "literacy_items": 89,
+      "numeracy_items": 59
+    },
+    "grade_2": {
+      "literacy_items": 64,
+      "numeracy_items": 40
+    },
+    "grade_3": {
+      "literacy_items": 12,
+      "numeracy_items": 8
+    }
+  },
+  "grade_unconfirmed_items": {
+    "literacy_items": 3,
+    "numeracy_items": 9
+  },
+  "counting_rule": "An item spanning several grades is counted once in each grade it spans.",
+  "by_source": {
+    "Learning Outcomes at the Foundational Stage": 174,
+    "Vidya Pravesh - Three-month Play-based School Preparation Module for Grade-I": 47,
+    "NIPUN Bharat Mission & FLN Lakshyas (training presentation, KVS ZIET Bhubaneswar)": 44,
+    "NIPUN Bharat - National Initiative for Proficiency in Reading with Understanding and Numeracy (presentation)": 6
+  },
+  "by_subdomain": {
+    "grade_1": {
+      "literacy/comprehension": 11,
+      "literacy/creative_expression": 3,
+      "literacy/fluency": 2,
+      "literacy/letter_knowledge": 5,
+      "literacy/listening": 6,
+      "literacy/phonological_awareness": 11,
+      "literacy/print_awareness": 7,
+      "literacy/reading": 10,
+      "literacy/speaking": 21,
+      "literacy/vocabulary": 3,
+      "literacy/writing": 10,
+      "numeracy/counting": 7,
+      "numeracy/fractions": 1,
+      "numeracy/geometry": 6,
+      "numeracy/mathematical_reasoning": 7,
+      "numeracy/measurement": 9,
+      "numeracy/money": 2,
+      "numeracy/number_operations": 10,
+      "numeracy/number_sense": 8,
+      "numeracy/patterns": 2,
+      "numeracy/spatial_reasoning": 1,
+      "numeracy/time": 6
+    },
+    "grade_2": {
+      "literacy/comprehension": 9,
+      "literacy/creative_expression": 1,
+      "literacy/fluency": 2,
+      "literacy/letter_knowledge": 2,
+      "literacy/listening": 6,
+      "literacy/phonological_awareness": 6,
+      "literacy/print_awareness": 2,
+      "literacy/reading": 6,
+      "literacy/speaking": 15,
+      "literacy/vocabulary": 4,
+      "literacy/writing": 11,
+      "numeracy/counting": 2,
+      "numeracy/geometry": 5,
+      "numeracy/mathematical_reasoning": 6,
+      "numeracy/measurement": 6,
+      "numeracy/money": 1,
+      "numeracy/number_operations": 9,
+      "numeracy/number_sense": 1,
+      "numeracy/patterns": 1,
+      "numeracy/place_value": 4,
+      "numeracy/spatial_reasoning": 3,
+      "numeracy/time": 2
+    },
+    "grade_3": {
+      "literacy/comprehension": 3,
+      "literacy/fluency": 1,
+      "literacy/print_awareness": 1,
+      "literacy/speaking": 3,
+      "literacy/writing": 4,
+      "numeracy/fractions": 1,
+      "numeracy/geometry": 1,
+      "numeracy/measurement": 1,
+      "numeracy/number_operations": 2,
+      "numeracy/patterns": 1,
+      "numeracy/place_value": 1,
+      "numeracy/time": 1
+    }
+  },
+  "confidence_distribution": {
+    "high": 174,
+    "medium": 96,
+    "low": 1
+  },
+  "items_with_source_conflict": 85,
+  "strongly_covered_areas": [
+    "Grade 1-2 numeracy: counting, numerals, comparison, addition/subtraction, shapes, measurement, time, money (LO document with NCF-FS corroboration)",
+    "Grade 1-2 L1 literacy: oral language, phonological awareness, akshara knowledge, reading, comprehension, writing (LO document Hindi section, NCF-FS)",
+    "Grade 1-2 English L2 oral language and early phonics (LO document)",
+    "Grade 1 entry school-readiness outcomes and activities (Vidya Pravesh)"
+  ],
+  "limited_evidence_areas": [
+    "All of Grade 3 (Lakshya slides only)",
+    "Fractions (Grade 3 Lakshya; 'half' vocabulary at Grade 1 entry)",
+    "Clock and calendar reading (Grade 3 Lakshya only)",
+    "Data handling (no explicit outcomes)",
+    "Paragraph writing (Grade 3 Lakshya only)",
+    "Mathematical vocabulary (NCF-only, no grade)"
+  ],
+  "requires_human_verification": [
+    "Grade 2 reading speed (X_G2_WPM)",
+    "Grade 1-2 number ranges and operations (Lakshya vs LO document)",
+    "All Hindi transcriptions and translations",
+    "L1 phonological awareness grade placement (X_C101_TRAJECTORY)",
+    "L2 track selection (X_L2_TRACKS)",
+    "All Grade 3 records (medium/low-quality sources)"
+  ],
+  "flashcard_suited_areas": [
+    "letter/akshara-sound knowledge",
+    "sight words",
+    "vocabulary and object names",
+    "rhyming pairs",
+    "numerals and number names",
+    "2D/3D shape names",
+    "currency notes",
+    "days/months",
+    "punctuation marks",
+    "multiplication tables (Grade 3 Lakshya)"
+  ],
+  "worksheet_or_interactive_suited_areas": [
+    "addition/subtraction and word problems",
+    "place value",
+    "patterns",
+    "measurement and estimation",
+    "sorting/classification",
+    "story comprehension and sequencing",
+    "sentence and functional writing",
+    "dictation and reading fluency (audio-interactive)",
+    "oral conversation and instruction-following (interactive/audio only; not worksheet)"
+  ]
+}

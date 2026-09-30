@@ -1,0 +1,86 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# Backend secrets & local databases (also covered by backend/.gitignore).
+# Never commit real credentials: backend/.env must stay untracked.
+backend/.env
+backend/.env.local
+backend/.env.*.local
+*.db
+*.sqlite3
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+*.env
+
+# Build
+build/
+.dart_tool/
+
+# Logs
+*.log
+logs/
+
+# Large AI model files
+models/**/*.nemo
+models/**/*.onnx
+models/**/*.safetensors
+models/**/*.bin
+models/**/*.pt
+models/**/*.pth
+
+# Local model/cache directories
+models/cache/
+models/downloads/
+# Widget Preview related
+.widget_preview/
+dev-defines.example.json

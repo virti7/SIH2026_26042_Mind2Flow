@@ -1,0 +1,34 @@
+{
+  "schema_version": "review_v1",
+  "content_id": "GC-G1-NUM-041-01-bi-v1",
+  "blueprint_id": "BP-G1-NUM-041-01",
+  "curriculum_id": "G1-NUM-041",
+  "content_sha256": "f52d6fbcaca485048677dc33d1c806b677b2fbea7d2601a4444efb96f45729e4",
+  "validator_report": {
+    "validator_version": "1.0.0",
+    "passed": true,
+    "warnings": 1,
+    "report_path": "D:\\1SIH_JHAR_WORKING\\backend\\generator\\generation\\generated\\pilot_v1\\GC-G1-NUM-041-01-bi-v1.json"
+  },
+  "review_status": "approved",
+  "gates": {
+    "hindi": "pass",
+    "santali": "pass",
+    "curriculum": "pass",
+    "answer_key": "pass",
+    "provisional_range": "pass"
+  },
+  "santali_script_confirmed": "Olck",
+  "reviewer_notes": [
+    {
+      "gate": "general",
+      "reviewer": "teacher-e2e-123",
+      "date": "2026-09-21",
+      "note": "Teacher verified Ol Chiki script for classroom display."
+    }
+  ],
+  "approved_by": [
+    "teacher-e2e-123"
+  ],
+  "approved_at": "2026-09-21"
+}

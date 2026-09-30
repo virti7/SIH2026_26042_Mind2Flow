@@ -1,0 +1,70 @@
+{
+  "source_inventory": [
+    {
+      "document": "Learning Outcomes at the Foundational Stage",
+      "file": "pdfs/Learning_Outcome_for_the_Foundational_Stage.pdf",
+      "publisher": "NCERT (logo and name on back cover)",
+      "document_type": "official_learning_outcomes_document",
+      "year": "NOT_CONFIRMED (PDF metadata created 2025-08-26; cites NCERT 2024 materials)",
+      "source_quality": "high",
+      "pages_analyzed": "All 73 PDF pages; CG-8 (PDF 24-34), Hindi language section (PDF 35-43, read from page images), English L2 (PDF 49-52). Urdu section (PDF 44-48) inventoried only.",
+      "relevance": "Primary source for grade-wise (Grade 1, Grade 2) literacy and numeracy outcomes, mapped to NCF-FS curricular goals and competencies.",
+      "limitations": "No Grade 3. Hindi text uses a non-Unicode font (read visually from page images). Urdu section not extracted. C-10.9 Grade 1/2 cells duplicate C-10.8. CG-8 numbering differs from NCF-FS and is internally inconsistent."
+    },
+    {
+      "document": "National Curriculum Framework for Foundational Stage (NCF-FS) 2022",
+      "file": "pdfs/NCF_for_Foundational_Stage_20_October_2022.pdf",
+      "publisher": "National Steering Committee for National Curriculum Frameworks; submitted to the Ministry of Education (Foreword)",
+      "document_type": "national_curriculum_framework",
+      "year": "2022 (file name dated 20 October 2022; PDF metadata 2022-10-19)",
+      "source_quality": "high",
+      "pages_analyzed": "Contents (9-10); Ch.2 definitions (49-69, targeted); Section 4.5 literacy and numeracy strategies (112-122); Annexure 1 CG-8 to CG-11 (246-266); Annexure 3 NIPUN-NCF competency mapping (325-334).",
+      "relevance": "Defines curricular goals, competencies and illustrative learning-outcome trajectories; corroborates LO-document outcomes; supplies pedagogy/example activities.",
+      "limitations": "Annexure 1 columns A-E cover ages 3-8 as a continuum and are NOT labelled by grade, so NCF-only outcomes cannot be grade-assigned. Chapters 3, 5-10 and Annexure 2 were not fully extracted."
+    },
+    {
+      "document": "Vidya Pravesh - Three-month Play-based School Preparation Module for Grade-I",
+      "file": "pdfs/vidyapravesh.pdf",
+      "publisher": "NCERT",
+      "document_type": "school_preparation_module",
+      "year": "2022 (First Edition, February 2022)",
+      "source_quality": "high",
+      "pages_analyzed": "Front matter (1-12); Part II Goal 2 and Goal 3 activities (56-85, targeted); Annexure I outcomes (166-170).",
+      "relevance": "Grade 1 entry (first 12 weeks) school-readiness outcomes and named play-based activities for literacy and numeracy.",
+      "limitations": "Outcomes are labelled 'Preschool 3 - Balvatika' though transacted in Grade-I. IL3.16-3.19 and IL3.24 missing from listing. Two-column layout; worksheets (Part III) and Annexures II-VIII not extracted."
+    },
+    {
+      "document": "NIPUN Bharat - National Initiative for Proficiency in Reading with Understanding and Numeracy (presentation)",
+      "file": "pdfs/doc20217531.pdf",
+      "publisher": "NOT_CONFIRMED (content on the MoE NIPUN Bharat Mission; metadata author 'Harsh Singh', created 2021-07-05)",
+      "document_type": "mission_presentation",
+      "year": "2021 (PDF metadata)",
+      "source_quality": "medium",
+      "pages_analyzed": "All 17 slides; Lakshya staircase slide 11 read from image.",
+      "relevance": "Grade 1-3 Lakshyas (reading speed, number ranges, operations); FLN component definitions.",
+      "limitations": "Summary slide only; publisher not stated; Grade 2 reading speed conflicts with ZIET slides."
+    },
+    {
+      "document": "NIPUN Bharat Mission & FLN Lakshyas (training presentation)",
+      "file": "pdfs/2024092814.pdf",
+      "publisher": "KVS ZIET Bhubaneswar (training associate); Lakshya slides carry MoE and NIPUN Bharat branding",
+      "document_type": "training_presentation_secondary",
+      "year": "2023 (PDF metadata 2023-06-08)",
+      "source_quality": "low",
+      "pages_analyzed": "All 34 slides; image-only Lakshya slides 23-30 read visually.",
+      "relevance": "Only supplied source with detailed Grade 3 literacy and numeracy Lakshyas and strand-wise (oral/reading/writing) Grade 1-2 Lakshyas.",
+      "limitations": "Secondary source; text in images; wording may differ from the NIPUN Bharat Guidelines, which were not supplied."
+    },
+    {
+      "document": "NIPUN Bharat Mission - Stakeholders: Roles and Responsibilities",
+      "file": "pdfs/NIPUN_BharatStakeholders_RolesResponsibilities.pdf",
+      "publisher": "Department of School Education and Literacy, Ministry of Education",
+      "document_type": "administrative_guideline",
+      "year": "NOT_CONFIRMED",
+      "source_quality": "high",
+      "pages_analyzed": "All 53 PDF pages (text); searched for curricular content.",
+      "relevance": "Administrative roles only; states that NCERT determines learning outcomes and develops Vidya Pravesh.",
+      "limitations": "Contains no learning outcomes; no curriculum records drawn from it."
+    }
+  ]
+}

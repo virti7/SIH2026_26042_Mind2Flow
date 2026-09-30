@@ -1,0 +1,11 @@
+{
+  "activeDemoId": "sun_rises_east",
+  "demos": [
+    {
+      "id": "sun_rises_east",
+      "hindi": "सूरज पूरब से निकलता है।",
+      "santali": "ᱪᱟᱱᱫᱚ ᱫᱚ ᱯᱩᱨᱩᱵᱽ ᱠᱷᱚᱱ ᱨᱟᱠᱟᱵᱽ ᱮᱫᱟᱭ",
+      "audio": "assets/prototype_content/translation/audio/santali/santali_sun_rises_east.wav"
+    }
+  ]
+}

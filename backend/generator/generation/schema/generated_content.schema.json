@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "generated_content.schema.json",
+  "title": "Generated content unit (v1)",
+  "description": "Exact JSON a generation call must return for ONE blueprint record. Structural rules live here; blueprint-specific rules (counts, ranges, languages per mode, gates) are enforced by generation/validation/*.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "content_id", "blueprint_id", "curriculum_id", "curriculum_version", "blueprint_version",
+    "grade", "domain", "content_type", "language_mode", "languages", "scripts", "generation_method",
+    "title", "instructions", "items", "answer_key", "assets_required",
+    "provisional", "conflict_refs", "review_gates", "origin_type"
+  ],
+  "properties": {
+    "schema_version": { "const": "generated_content_v1" },
+    "content_id": {
+      "type": "string",
+      "description": "GC-<grade>-<LIT|NUM>-<nnn>-<blueprint seq>-<bi|hi|sat>-v<n>. 'bi' for bilingual units, the language code for parallel_monolingual units.",
+      "pattern": "^GC-G[12]-(LIT|NUM)-[0-9]{3}-[0-9]{2}-(bi|hi|sat)-v[0-9]+$"
+    },
+    "blueprint_id": { "type": "string", "pattern": "^BP-G[12]-(LIT|NUM)-[0-9]{3}-[0-9]{2}$" },
+    "curriculum_id": { "type": "string", "pattern": "^G[12]-(LIT|NUM)-[0-9]{3}$" },
+    "curriculum_version": { "const": "curriculum_master_v1" },
+    "blueprint_version": { "const": "content_blueprint_v1" },
+    "grade": { "enum": [1, 2] },
+    "domain": { "enum": ["literacy", "numeracy"] },
+    "content_type": { "enum": ["flashcard", "worksheet", "interactive_activity", "audio_activity"] },
+    "language_mode": { "enum": ["bilingual", "parallel_monolingual"] },
+    "languages": {
+      "type": "array",
+      "items": { "enum": ["hi", "sat"] },
+      "minItems": 1, "maxItems": 2, "uniqueItems": true
+    },
+    "scripts": {
+      "type": "object",
+      "description": "ISO 15924 script code used for each language present. Hindi must be Deva. Santali script is to be confirmed by a reviewer.",
+      "additionalProperties": false,
+      "properties": {
+        "hi": { "const": "Deva" },
+        "sat": { "enum": ["Olck", "Deva", "Beng", "Orya", "Latn"] }
+      }
+    },
+    "generation_method": {
+      "enum": ["native", "translated"],
+      "description": "parallel_monolingual units must be 'native' (written directly in the language, never translated)."
+    },
+    "title": { "$ref": "#/$defs/localized" },
+    "instructions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["learner"],
+      "properties": {
+        "learner": { "$ref": "#/$defs/localized" },
+        "teacher": { "$ref": "#/$defs/localized" }
+      }
+    },
+    "stimulus": {
+      "type": "object",
+      "description": "Shared material used by several items (e.g., a short story or a picture set).",
+      "additionalProperties": false,
+      "properties": {
+        "passage": { "$ref": "#/$defs/localized" },
+        "asset_refs": { "$ref": "#/$defs/asset_refs" }
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/item" }
+    },
+    "answer_key": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item_id", "answer"],
+        "properties": {
+          "item_id": { "$ref": "#/$defs/id" },
+          "answer": {
+            "description": "Option id, number, ordered list, or per-language text for open answers.",
+            "oneOf": [
+              { "type": "string", "minLength": 1 },
+              { "type": "number" },
+              { "type": "array", "minItems": 1 },
+              { "$ref": "#/$defs/localized" }
+            ]
+          },
+          "accept_alternatives": { "type": "array" },
+          "explanation": { "$ref": "#/$defs/localized" }
+        }
+      }
+    },
+    "assets_required": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["asset_id", "type", "description_en", "for_items"],
+        "properties": {
+          "asset_id": { "type": "string", "pattern": "^(img|aud)_[a-z0-9_]+$" },
+          "type": { "enum": ["image", "audio"] },
+          "description_en": { "type": "string", "minLength": 3, "description": "Brief for the asset team (English). Must not contain learner-facing text." },
+          "language": { "enum": ["hi", "sat"], "description": "Required for audio assets." },
+          "spoken_text": { "$ref": "#/$defs/localized", "description": "Exact words to record for an audio asset." },
+          "for_items": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+        },
+        "if": { "properties": { "type": { "const": "audio" } } },
+        "then": { "required": ["language", "spoken_text"] }
+      }
+    },
+    "provisional": { "type": "boolean" },
+    "conflict_refs": { "type": "array", "items": { "type": "string", "pattern": "^X_[A-Z0-9_]+$" }, "uniqueItems": true },
+    "review_gates": {
+      "type": "array",
+      "items": { "enum": ["hindi_transcription", "santali_content", "provisional_range"] },
+      "uniqueItems": true
+    },
+    "generation_notes": { "type": "string" },
+    "origin_type": { "const": "AI_GENERATED" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "language_mode": { "const": "parallel_monolingual" } } },
+      "then": { "properties": { "languages": { "maxItems": 1 }, "generation_method": { "const": "native" } } }
+    },
+    {
+      "if": { "properties": { "language_mode": { "const": "bilingual" } } },
+      "then": { "properties": { "languages": { "minItems": 2 } } }
+    }
+  ],
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_]{1,32}$" },
+    "asset_refs": { "type": "array", "items": { "type": "string", "pattern": "^(img|aud)_[a-z0-9_]+$" }, "uniqueItems": true },
+    "localized": {
+      "type": "object",
+      "description": "Text per language. Which keys are required depends on language_mode (checked by language_validator.py).",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "hi": { "type": "string", "minLength": 1 },
+        "sat": { "type": "string", "minLength": 1 }
+      }
+    },
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["option_id"],
+      "properties": {
+        "option_id": { "$ref": "#/$defs/id" },
+        "text": { "$ref": "#/$defs/localized" },
+        "value": { "description": "Machine value for numeracy options (number, symbol or position)." },
+        "asset_refs": { "$ref": "#/$defs/asset_refs" }
+      },
+      "anyOf": [ { "required": ["text"] }, { "required": ["asset_refs"] }, { "required": ["value"] } ]
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["item_id", "item_type"],
+      "properties": {
+        "item_id": { "$ref": "#/$defs/id" },
+        "item_type": {
+          "enum": ["card", "multiple_choice", "match", "fill_blank", "sequence", "sort", "write",
+                   "count_and_select", "listen_and_choose", "listen_and_write", "open_response"]
+        },
+        "prompt": { "$ref": "#/$defs/localized" },
+        "front": { "$ref": "#/$defs/localized" },
+        "back": { "$ref": "#/$defs/localized" },
+        "options": { "type": "array", "items": { "$ref": "#/$defs/option" } },
+        "math": { "$ref": "#/$defs/math" },
+        "asset_refs": { "$ref": "#/$defs/asset_refs" }
+      },
+      "if": { "properties": { "item_type": { "const": "card" } } },
+      "then": { "required": ["front", "back"] },
+      "else": { "required": ["prompt"] }
+    },
+    "math": {
+      "type": "object",
+      "description": "Machine-readable quantities for numeracy items. numeracy_validator.py recomputes answers from this block.",
+      "required": ["kind"],
+      "oneOf": [
+        { "properties": { "kind": { "const": "count" }, "count": { "type": "integer", "minimum": 0 } }, "required": ["count"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "compare" }, "left": { "type": "integer", "minimum": 0 }, "right": { "type": "integer", "minimum": 0 }, "ask": { "enum": ["more", "fewer"] } }, "required": ["left", "right", "ask"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "numeral" }, "value": { "type": "integer", "minimum": 0 } }, "required": ["value"], "additionalProperties": false },
+        { "properties": { "kind": { "enum": ["add", "subtract"] }, "operands": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 2, "maxItems": 2 }, "word_problem": { "type": "boolean" } }, "required": ["operands"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "symbol" }, "symbol": { "enum": ["+", "-"] }, "operands": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 2, "maxItems": 2 } }, "required": ["symbol"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "choose_operation" }, "operands": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 2, "maxItems": 2 }, "operation": { "enum": ["+", "-"] } }, "required": ["operands", "operation"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "place_value" }, "tens": { "type": "integer", "minimum": 0, "maximum": 9 }, "ones": { "type": "integer", "minimum": 0, "maximum": 9 } }, "required": ["tens", "ones"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "skip_count" }, "start": { "type": "integer", "minimum": 0 }, "step": { "type": "integer", "minimum": 1 }, "hops": { "type": "integer", "minimum": 1 } }, "required": ["start", "step", "hops"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "repeated_addition" }, "groups": { "type": "integer", "minimum": 1 }, "group_size": { "type": "integer", "minimum": 1 } }, "required": ["groups", "group_size"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "money" }, "target": { "type": "integer", "minimum": 1 }, "available": { "type": "array", "items": { "enum": [1, 2, 5, 10, 20, 50, 100] }, "minItems": 1 } }, "required": ["target", "available"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "pattern" }, "unit": { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 3 }, "shown": { "type": "array", "items": { "type": "string" }, "minItems": 2 } }, "required": ["unit", "shown"], "additionalProperties": false },
+        { "properties": { "kind": { "const": "non_numeric" }, "topic": { "enum": ["spatial", "shape", "sort"] } }, "required": ["topic"], "additionalProperties": false }
+      ]
+    }
+  }
+}

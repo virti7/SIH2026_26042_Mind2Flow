@@ -1,0 +1,96 @@
+[
+  {
+    "id": "greeting",
+    "hindi": "नमस्ते बच्चों!",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/greeting.mp3",
+    "topic": "Greeting",
+    "context": "Classroom greeting",
+    "variants": ["नमस्ते बच्चो", "सबको नमस्ते"]
+  },
+  {
+    "id": "open_math_book",
+    "hindi": "अपनी गणित की किताब खोलो।",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/open_math_book.mp3",
+    "topic": "Mathematics",
+    "context": "Classroom instruction",
+    "variants": [
+      "अपनी गणित की किताब खोलो",
+      "सब अपनी गणित की किताब खोलो",
+      "सभी अपनी गणित की किताब खोलो"
+    ]
+  },
+  {
+    "id": "take_out_notebook",
+    "hindi": "अपनी कॉपी निकालो।",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/take_out_notebook.mp3",
+    "topic": "Books",
+    "context": "Classroom instruction",
+    "variants": ["अपनी कॉपी निकालो", "सब अपनी कॉपी निकालो"]
+  },
+  {
+    "id": "count_to_five",
+    "hindi": "पाँच तक गिनो।",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/count_to_five.mp3",
+    "topic": "Counting",
+    "context": "Mathematics activity",
+    "variants": ["पाँच तक गिनो", "सब पाँच तक गिनो"]
+  },
+  {
+    "id": "tell_the_answer",
+    "hindi": "उत्तर बताओ।",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/tell_the_answer.mp3",
+    "topic": "Question",
+    "context": "Classroom question",
+    "variants": ["उत्तर बताओ", "अपना उत्तर बताओ"]
+  },
+  {
+    "id": "very_good",
+    "hindi": "बहुत अच्छा!",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/very_good.mp3",
+    "topic": "Praise",
+    "context": "Encouragement",
+    "variants": ["बहुत अच्छा", "बहुत अच्छे"]
+  },
+  {
+    "id": "listen_carefully",
+    "hindi": "ध्यान से सुनो।",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/listen_carefully.mp3",
+    "topic": "Classroom management",
+    "context": "Attention instruction",
+    "variants": ["ध्यान से सुनो", "सब ध्यान से सुनो"]
+  },
+  {
+    "id": "do_this_activity",
+    "hindi": "यह गतिविधि करो।",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/do_this_activity.mp3",
+    "topic": "Activity instruction",
+    "context": "Learning activity",
+    "variants": ["यह गतिविधि करो", "सब यह गतिविधि करो"]
+  },
+  {
+    "id": "close_your_book",
+    "hindi": "अपनी किताब बंद करो।",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/close_your_book.mp3",
+    "topic": "Books",
+    "context": "Classroom instruction",
+    "variants": ["अपनी किताब बंद करो", "सब अपनी किताब बंद करो"]
+  },
+  {
+    "id": "sit_quietly",
+    "hindi": "शांति से बैठो।",
+    "santali": "",
+    "audio": "assets/prototype_content/translation/audio/santali/sit_quietly.mp3",
+    "topic": "Classroom management",
+    "context": "Discipline instruction",
+    "variants": ["शांति से बैठो", "सब शांति से बैठो"]
+  }
+]

@@ -1,0 +1,598 @@
+{
+  "version": "review_v1",
+  "created_at": "2026-09-19",
+  "applies_to": {
+    "file": "extraction/curriculum/canonical/curriculum_master_v1.json",
+    "sha256": "02ecfbdb0301027a0a4b24e31fac4c0c92e1a9ff8067054e364bfee266486543"
+  },
+  "derived_from": {
+    "file": "extraction/curriculum/conflicts_to_review.json",
+    "sha256": "50d9af072e836f07bcf06990a9cf65faad332ed20f97d158e0416d17b60eb431"
+  },
+  "prototype_policy": {
+    "status": "provisional",
+    "source_conflicts_unresolved": true
+  },
+  "summary": {
+    "total_conflicts": 13,
+    "prototype_relevant": 7,
+    "deferred": 6
+  },
+  "conflicts": [
+    {
+      "conflict_id": "X_G2_WPM",
+      "topic": "Grade 2 oral reading fluency target",
+      "priority": "high",
+      "grades": [
+        2
+      ],
+      "source_a": "NIPUN Bharat presentation (doc20217531.pdf) slide 11: Grade 2 'Read with meaning; 45-60 words per minute'.",
+      "source_b": "ZIET Bhubaneswar Lakshya slides (2024092814.pdf) slide 27: Class II 'Reads unknown text of 8-10 sentences ... (approximately 30 to 45 words per minute correctly)'.",
+      "likely_reason": "NOT_CONFIRMED (the NIPUN Bharat Guidelines, which would settle this, were not supplied).",
+      "precedence_applied": "NCERT_LO over NIPUN slides",
+      "resolution_in_canonical": "Canonical item keeps the LO wording (accurate, fluent reading of short paragraphs with intonation and pauses). No words-per-minute target adopted; both NIPUN figures kept as overruled evidence.",
+      "impact_on_prototype": "high",
+      "canonical_items_affected": [
+        "G2-LIT-008"
+      ],
+      "overruled_statements": [
+        {
+          "canonical_id": "G2-LIT-008",
+          "statement": "Reads unknown text of 8-10 sentences with simple words with appropriate speed (approximately 30 to 45 words per minute correctly) and clarity.",
+          "source_code": "NIPUN_ZIET_SLIDES",
+          "page": 27
+        }
+      ],
+      "needs_human_review": true,
+      "reviewer_question": "Which Grade 2 oral reading fluency target applies (NIPUN Bharat Guidelines): 30-45 or 45-60 words per minute?",
+      "blocks_prototype": true,
+      "prototype_action": "Do not generate WPM-based assessment.",
+      "provisional_choice": {
+        "working_choice": "No words-per-minute target",
+        "basis": "Sources conflict; NIPUN Bharat Guidelines not supplied",
+        "generation_rule": "Do not generate WPM-based or timed-reading assessment."
+      },
+      "resolution_status": "provisional"
+    },
+    {
+      "conflict_id": "X_G1_NUMBER_RANGE",
+      "topic": "Grade 1 number reading/writing range",
+      "priority": "high",
+      "grades": [
+        1
+      ],
+      "source_a": "NIPUN Bharat presentation (doc20217531.pdf) slide 11 and ZIET Bhubaneswar Lakshya slides (2024092814.pdf) slide 26: Grade 1 'Read and write numbers up to 99'.",
+      "source_b": "Learning Outcomes at the Foundational Stage (NCERT) p.26 (printed): Grade 1 'Recognises and writes numerals up to 20 and in words up to 10'; reading/writing numerals to 99 appears in the Grade 2 column (p.24, p.26).",
+      "likely_reason": "NOT_CONFIRMED. The documents differ in type (mission targets vs grade-wise learning outcomes).",
+      "precedence_applied": "NCERT_LO over NIPUN slides",
+      "resolution_in_canonical": "Grade 1 numerals up to 20 (words up to 10); reading/writing to 99 stays at Grade 2.",
+      "impact_on_prototype": "high",
+      "canonical_items_affected": [
+        "G1-NUM-041"
+      ],
+      "overruled_statements": [
+        {
+          "canonical_id": "G1-NUM-041",
+          "statement": "Read and write numbers up to 99",
+          "source_code": "NIPUN_MOE_SLIDES",
+          "page": 11
+        }
+      ],
+      "needs_human_review": true,
+      "reviewer_question": "Should Grade 1 content cover reading/writing numbers to 99 (NIPUN) or to 20 (NCERT LO)?",
+      "blocks_prototype": true,
+      "prototype_action": "Choose one working range and label it provisional.",
+      "provisional_choice": {
+        "working_choice": "Grade 1 numerals 0-20 (number words up to 10)",
+        "basis": "NCERT_LO (precedence rank 1)",
+        "generation_rule": "Grade 1 numeral reading/writing content uses 0-20 only."
+      },
+      "resolution_status": "provisional"
+    },
+    {
+      "conflict_id": "X_G1_COUNT_RANGE",
+      "topic": "Grade 1 counting range",
+      "priority": "high",
+      "grades": [
+        1
+      ],
+      "source_a": "ZIET Bhubaneswar Lakshya slides (2024092814.pdf) slide 26: Class I 'Counts objects up to 20'.",
+      "source_b": "Learning Outcomes at the Foundational Stage (NCERT) p.24 (printed): Grade 1 'Counts objects up to 99 and observe the pattern as groups of 10, up to 99'.",
+      "likely_reason": "NOT_CONFIRMED.",
+      "precedence_applied": "NCERT_LO over NIPUN slides",
+      "resolution_in_canonical": "Grade 1 counts objects up to 99 in groups of ten; NIPUN 'count up to 20' kept as a subsumed target.",
+      "impact_on_prototype": "medium",
+      "canonical_items_affected": [
+        "G1-NUM-002"
+      ],
+      "overruled_statements": [
+        {
+          "canonical_id": "G1-NUM-002",
+          "statement": "Counts objects up to 20",
+          "source_code": "NIPUN_ZIET_SLIDES",
+          "page": 26
+        }
+      ],
+      "needs_human_review": true,
+      "reviewer_question": "Confirm Grade 1 counting range: 20 (NIPUN slide) or 99 in groups of ten (NCERT LO).",
+      "blocks_prototype": true,
+      "prototype_action": "Choose one working range and label it provisional.",
+      "provisional_choice": {
+        "working_choice": "Grade 1 object counting up to 20 for generated items; groups-of-ten counting to 99 allowed only as oral/concrete 'bundle' activities",
+        "basis": "Conservative intersection of NCERT_LO (99) and NIPUN slide (20)",
+        "generation_rule": "Printed/visual counting sets in Grade 1 content contain at most 20 objects."
+      },
+      "resolution_status": "provisional"
+    },
+    {
+      "conflict_id": "X_G1_ADDSUB_RANGE",
+      "topic": "Grade 1 addition/subtraction range",
+      "priority": "high",
+      "grades": [
+        1
+      ],
+      "source_a": "ZIET Bhubaneswar Lakshya slides (2024092814.pdf) slide 26: 'addition and subtraction of numbers up to 9'; NIPUN Bharat presentation (doc20217531.pdf) slide 11: 'Perform simple addition and subtraction' (no range).",
+      "source_b": "Learning Outcomes at the Foundational Stage (NCERT) p.27 (printed): Grade 1 addition sums up to 18; subtraction problems up to 9.",
+      "likely_reason": "NOT_CONFIRMED.",
+      "precedence_applied": "NCERT_LO over NIPUN slides",
+      "resolution_in_canonical": "Grade 1 addition up to 18 and subtraction within 9 using concrete objects.",
+      "impact_on_prototype": "medium",
+      "canonical_items_affected": [
+        "G1-NUM-032",
+        "G1-NUM-033"
+      ],
+      "overruled_statements": [
+        {
+          "canonical_id": "G1-NUM-032",
+          "statement": "Perform simple addition and subtraction",
+          "source_code": "NIPUN_MOE_SLIDES",
+          "page": 11
+        }
+      ],
+      "needs_human_review": true,
+      "reviewer_question": "Confirm Grade 1 addition range: within 9 (NIPUN slide) or up to 18 (NCERT LO).",
+      "blocks_prototype": true,
+      "prototype_action": "Choose one working range and label it provisional.",
+      "provisional_choice": {
+        "working_choice": "Grade 1 addition with sums up to 18; subtraction within 9; concrete/pictorial contexts",
+        "basis": "NCERT_LO (precedence rank 1)",
+        "generation_rule": "No Grade 1 sums above 18; no subtraction from numbers above 9."
+      },
+      "resolution_status": "provisional"
+    },
+    {
+      "conflict_id": "X_G2_NUMBER_RANGE",
+      "topic": "Grade 2 number reading/writing range",
+      "priority": "high",
+      "grades": [
+        2
+      ],
+      "source_a": "NIPUN Bharat presentation (doc20217531.pdf) slide 11 and ZIET Bhubaneswar Lakshya slides (2024092814.pdf) slide 28: Grade 2 'Read and write numbers up to 999'.",
+      "source_b": "Learning Outcomes at the Foundational Stage (NCERT) p.24 and p.26 (printed): Grade 2 reads and writes numerals up to 99 using place value.",
+      "likely_reason": "NOT_CONFIRMED.",
+      "precedence_applied": "NCERT_LO over NIPUN slides",
+      "resolution_in_canonical": "Grade 2 reads/writes numbers up to 99 with place value; 3-digit numbers excluded from the prototype.",
+      "impact_on_prototype": "high",
+      "canonical_items_affected": [
+        "G2-NUM-027"
+      ],
+      "overruled_statements": [
+        {
+          "canonical_id": "G2-NUM-027",
+          "statement": "Read and write numbers up to 999",
+          "source_code": "NIPUN_MOE_SLIDES",
+          "page": 11
+        }
+      ],
+      "needs_human_review": true,
+      "reviewer_question": "Should Grade 2 include 3-digit numbers (to 999) as NIPUN states?",
+      "blocks_prototype": true,
+      "prototype_action": "Choose one working range and label it provisional.",
+      "provisional_choice": {
+        "working_choice": "Grade 2 numbers 0-99 (tens and ones)",
+        "basis": "NCERT_LO (precedence rank 1)",
+        "generation_rule": "No 3-digit numbers in Grade 2 content."
+      },
+      "resolution_status": "provisional"
+    },
+    {
+      "conflict_id": "X_G2_TABLES",
+      "topic": "Grade 2 multiplication tables",
+      "priority": "medium",
+      "grades": [
+        2
+      ],
+      "source_a": "ZIET Bhubaneswar Lakshya slides (2024092814.pdf) slide 28: constructs multiplication facts (tables) of 2, 3 and 4.",
+      "source_b": "Learning Outcomes at the Foundational Stage (NCERT) p.28 (printed): Grade 2 develops the meaning of multiplication as repeated addition and skip counting up to 99; no tables named.",
+      "likely_reason": "NOT_CONFIRMED (wording difference in scope rather than direct contradiction).",
+      "precedence_applied": "NCERT_LO over NIPUN slides",
+      "resolution_in_canonical": "Grade 2 multiplication as repeated addition and skip counting; tables of 2-4 not adopted as a canonical outcome.",
+      "impact_on_prototype": "medium",
+      "canonical_items_affected": [
+        "G2-NUM-024"
+      ],
+      "overruled_statements": [
+        {
+          "canonical_id": "G2-NUM-024",
+          "statement": "Performs multiplication as repeated addition and division as equal distribution/sharing and constructs multiplication facts (tables) of 2, 3 and 4x",
+          "source_code": "NIPUN_ZIET_SLIDES",
+          "page": 28
+        }
+      ],
+      "needs_human_review": true,
+      "reviewer_question": "Should multiplication tables of 2, 3, 4 be a Grade 2 outcome?",
+      "blocks_prototype": true,
+      "prototype_action": "No tables drill; repeated addition only (provisional).",
+      "provisional_choice": {
+        "working_choice": "Multiplication as repeated addition / skip counting only",
+        "basis": "NCERT_LO (precedence rank 1)",
+        "generation_rule": "No multiplication-table drills in Grade 2 content."
+      },
+      "resolution_status": "provisional"
+    },
+    {
+      "conflict_id": "X_L2_TRACKS",
+      "topic": "Language 2 reading/writing outcomes (CG-11)",
+      "priority": "medium",
+      "grades": [
+        1,
+        2
+      ],
+      "source_a": "Learning Outcomes at the Foundational Stage (NCERT) English L2 section p.50 (printed): C-11.2 is 'N/A' for all levels; C-11.1 lists English-specific outcomes.",
+      "source_b": "Learning Outcomes at the Foundational Stage (NCERT) Hindi section pp.40-41 (printed): CG-11 C-11.1 and C-11.2 carry Grade 1 and Grade 2 outcomes (matching NCF-FS C-11.1/C-11.2 columns D/E).",
+      "likely_reason": "NOT_CONFIRMED. The two sections may target different second languages; the documents do not say.",
+      "precedence_applied": "Within NCERT_LO: language-specific English section preferred for the English track",
+      "resolution_in_canonical": "English L2 section is the canonical English track. Overlapping Hindi-section CG-11 outcomes merged into it; the rest are kept as a generic L2 track needing review.",
+      "impact_on_prototype": "high",
+      "canonical_items_affected": [
+        "G1-LIT-052",
+        "G1-LIT-053",
+        "G1-LIT-077",
+        "G1-LIT-078",
+        "G1-LIT-079",
+        "G2-LIT-047",
+        "G2-LIT-048",
+        "G2-LIT-049",
+        "G2-LIT-050",
+        "G2-LIT-051",
+        "G2-LIT-052",
+        "G2-LIT-053"
+      ],
+      "overruled_statements": [],
+      "needs_human_review": true,
+      "reviewer_question": "For non-English second languages, should the Hindi-section CG-11 outcomes be used?",
+      "blocks_prototype": true,
+      "prototype_action": "Avoid making L2 the prototype focus.",
+      "provisional_choice": {
+        "working_choice": "L2 is not a prototype focus",
+        "basis": "Track ambiguity unresolved",
+        "generation_rule": "Blueprints use L1 and language-neutral items only; no L2 English/L2 generic seeds."
+      },
+      "resolution_status": "provisional"
+    },
+    {
+      "conflict_id": "X_C101_TRAJECTORY",
+      "topic": "L1 phonological awareness (C-10.1) placement",
+      "priority": "medium",
+      "grades": [
+        1,
+        2
+      ],
+      "source_a": "NCF-FS 2022 Annexure 1 p.261 (verified visually): C-10.1 outcomes occupy columns A-C only; columns D and E are empty.",
+      "source_b": "Learning Outcomes at the Foundational Stage (NCERT) p.36 (printed): identifying rhyming/alliterative words, splitting aksharas into vowel/consonant sounds and blending are placed in the Grade 1 column; producing rhymes in Grade 2.",
+      "likely_reason": "NOT_CONFIRMED. The LO document's Grade 1/2 C-10.1 cells match NCF-FS C-11.1 (L2) columns D/E (p.265).",
+      "precedence_applied": "NCERT_LO (only grade-labelled source)",
+      "resolution_in_canonical": "L1 phonological-awareness items kept at Grade 1/2 as in the LO document.",
+      "impact_on_prototype": "high",
+      "canonical_items_affected": [
+        "G1-LIT-014",
+        "G1-LIT-015",
+        "G1-LIT-016",
+        "G2-LIT-013"
+      ],
+      "overruled_statements": [],
+      "needs_human_review": true,
+      "reviewer_question": "Confirm L1 rhyme/alliteration and sound segmentation belong in Grades 1-2 (NCF-FS places them earlier).",
+      "blocks_prototype": false,
+      "prototype_action": "No prototype action needed; leave unresolved for later review.",
+      "provisional_choice": null,
+      "resolution_status": "deferred"
+    },
+    {
+      "conflict_id": "X_C109_ANOMALY",
+      "topic": "C-10.9 (interest in children's books) Grade 1/2 cells",
+      "priority": "medium",
+      "grades": [
+        1,
+        2
+      ],
+      "source_a": "Learning Outcomes at the Foundational Stage (NCERT) p.40 (printed): Grade 1 and Grade 2 cells of C-10.9 repeat the C-10.8 writing outcomes word for word.",
+      "source_b": "NCF-FS 2022 Annexure 1 p.265: C-10.9 columns D/E give reading-interest outcomes.",
+      "likely_reason": "Apparent editorial duplication in the LO document (inferred from identical text; not stated by the source).",
+      "precedence_applied": "NCERT_LO unusable for this competency; NCF_FS not grade-labelled",
+      "resolution_in_canonical": "No Grade 1/2 item for C-10.9 in the prototype.",
+      "impact_on_prototype": "medium",
+      "canonical_items_affected": [],
+      "overruled_statements": [],
+      "needs_human_review": true,
+      "reviewer_question": "Obtain corrected C-10.9 Grade 1/2 outcomes from the latest NCERT edition.",
+      "blocks_prototype": false,
+      "prototype_action": "No prototype action needed; leave unresolved for later review.",
+      "provisional_choice": null,
+      "resolution_status": "deferred"
+    },
+    {
+      "conflict_id": "X_MULT_DIV_TRAJECTORY",
+      "topic": "Multiplication/division outcomes under C-8.7",
+      "priority": "low",
+      "grades": [
+        1,
+        2
+      ],
+      "source_a": "Learning Outcomes at the Foundational Stage (NCERT) pp.28-29 (printed): Grade 1 forms/pictures equal groups (up to 20); Grade 2 multiplication as repeated addition and skip counting to 99, division as equal distribution/sharing.",
+      "source_b": "NCF-FS 2022 Annexure 1 p.252: column D 'Solves small-number multiplication problems by grouping', 'Recognizes the symbol for multiplication/division'; column E 'Uses repeated adding ... up to 99', 'Uses repeated subtraction ... division'.",
+      "likely_reason": "NOT_CONFIRMED. NCF-FS columns are not grade-labelled, so the difference is in wording and emphasis, not an explicit grade clash.",
+      "precedence_applied": "NCERT_LO over NCF_FS (for grade placement)",
+      "resolution_in_canonical": "LO Grade 1/2 statements used; NCF-FS column D/E statements are not grade-labelled and are excluded from the prototype.",
+      "impact_on_prototype": "low",
+      "canonical_items_affected": [
+        "G1-NUM-034",
+        "G1-NUM-035",
+        "G2-NUM-023",
+        "G2-NUM-024"
+      ],
+      "overruled_statements": [],
+      "needs_human_review": true,
+      "reviewer_question": "Should NCF-FS symbol recognition (x, ÷) and repeated subtraction be added to Grade 2?",
+      "blocks_prototype": false,
+      "prototype_action": "No prototype action needed; leave unresolved for later review.",
+      "provisional_choice": null,
+      "resolution_status": "deferred"
+    },
+    {
+      "conflict_id": "X_C812_NUMBERING",
+      "topic": "Competency numbering and wording in CG-8",
+      "priority": "low",
+      "grades": [
+        1,
+        2
+      ],
+      "source_a": "NCF-FS 2022 (pp.61-62, 256): C-8.12 = vocabulary for mathematical concepts; C-8.13 = formulates and solves simple mathematical problems. NCF C-8.8 and C-8.9 wording also differs (adds 'makes, classifies ... relative relation of objects in space'; 'Selects appropriate tools and units').",
+      "source_b": "Learning Outcomes at the Foundational Stage (NCERT) p.32 (printed): C-8.12 = formulates and solves simple mathematical problems; no vocabulary competency. Yet the LO document's own EVS syllabus table (p.52 printed) cites 'C-8.13: Formulates and solves...'.",
+      "likely_reason": "NOT_CONFIRMED. The LO document is internally inconsistent on this numbering.",
+      "precedence_applied": "NCF_FS for competency wording; NCERT_LO for grade placement",
+      "resolution_in_canonical": "Items keep the LO competency code and text; the NCF-FS code is recorded. Use competency text, not code, as the join key.",
+      "impact_on_prototype": "medium",
+      "canonical_items_affected": [
+        "G1-NUM-013",
+        "G1-NUM-014",
+        "G2-NUM-007",
+        "G2-NUM-008",
+        "G2-NUM-009"
+      ],
+      "overruled_statements": [],
+      "needs_human_review": true,
+      "reviewer_question": "Which competency code set (LO or NCF-FS) should the app use as identifiers?",
+      "blocks_prototype": false,
+      "prototype_action": "No prototype action needed; leave unresolved for later review.",
+      "provisional_choice": null,
+      "resolution_status": "deferred"
+    },
+    {
+      "conflict_id": "X_C94_COUNT",
+      "topic": "Number of oral instructions followed (C-9.4)",
+      "priority": "low",
+      "grades": [
+        1
+      ],
+      "source_a": "Learning Outcomes at the Foundational Stage (NCERT) p.35 (printed): Grade 1 follows 8-10 instructions at a time.",
+      "source_b": "NCF-FS 2022 Annexure 1 p.259: column D 'Follows instructions comprising of several steps (8 to 9 instructions at a time)'.",
+      "likely_reason": "NOT_CONFIRMED.",
+      "precedence_applied": "NCERT_LO over NCF_FS",
+      "resolution_in_canonical": "Grade 1 keeps '8-10 instructions at a time'.",
+      "impact_on_prototype": "low",
+      "canonical_items_affected": [
+        "G1-LIT-013"
+      ],
+      "overruled_statements": [],
+      "needs_human_review": true,
+      "reviewer_question": "Grade 1 oral instructions: 8-9 or 8-10 at a time?",
+      "blocks_prototype": false,
+      "prototype_action": "No prototype action needed; leave unresolved for later review.",
+      "provisional_choice": null,
+      "resolution_status": "deferred"
+    },
+    {
+      "conflict_id": "X_VP_LEVEL",
+      "topic": "Level of Vidya Pravesh outcomes",
+      "priority": "low",
+      "grades": [
+        1
+      ],
+      "source_a": "Vidya Pravesh (NCERT, 2022) Preface p.v and title: module for children entering Grade-I, transacted in the first three months (12 weeks) of Grade-I.",
+      "source_b": "Vidya Pravesh (NCERT, 2022) Annexure I p.154: outcomes headed '(Preschool 3 - Balvatika)' and sourced from the NIPUN Bharat Guidelines.",
+      "likely_reason": "Supported by source: the module is an interim school-readiness measure for Grade-I entrants 'aligned to the learning outcomes of Pre-school 3 (Balvatika)' (Preface).",
+      "precedence_applied": "Scope rule",
+      "resolution_in_canonical": "Vidya Pravesh items are kept as stage 'grade_1_entry' (school preparation), separate from end-of-Grade-1 outcomes.",
+      "impact_on_prototype": "low",
+      "canonical_items_affected": [
+        "G1-LIT-033",
+        "G1-LIT-034",
+        "G1-LIT-035",
+        "G1-LIT-036",
+        "G1-LIT-037",
+        "G1-LIT-038",
+        "G1-LIT-039",
+        "G1-LIT-040",
+        "G1-LIT-041",
+        "G1-LIT-042",
+        "G1-LIT-043",
+        "G1-LIT-044",
+        "G1-LIT-045",
+        "G1-LIT-062",
+        "G1-LIT-063",
+        "G1-LIT-064",
+        "G1-LIT-065",
+        "G1-LIT-066",
+        "G1-LIT-067",
+        "G1-LIT-068",
+        "G1-LIT-069",
+        "G1-LIT-070",
+        "G1-LIT-071",
+        "G1-LIT-072",
+        "G1-LIT-073",
+        "G1-LIT-074",
+        "G1-LIT-075",
+        "G1-LIT-076",
+        "G1-NUM-004",
+        "G1-NUM-005",
+        "G1-NUM-006",
+        "G1-NUM-007",
+        "G1-NUM-012",
+        "G1-NUM-016",
+        "G1-NUM-017",
+        "G1-NUM-018",
+        "G1-NUM-025",
+        "G1-NUM-026",
+        "G1-NUM-027",
+        "G1-NUM-029",
+        "G1-NUM-037",
+        "G1-NUM-038",
+        "G1-NUM-043",
+        "G1-NUM-044",
+        "G1-NUM-045",
+        "G1-NUM-047",
+        "G1-NUM-054"
+      ],
+      "overruled_statements": [],
+      "needs_human_review": true,
+      "reviewer_question": "Should Vidya Pravesh entry outcomes be included in Grade 1 content or treated as a readiness module?",
+      "blocks_prototype": false,
+      "prototype_action": "No prototype action needed; leave unresolved for later review.",
+      "provisional_choice": null,
+      "resolution_status": "deferred"
+    }
+  ],
+  "non_conflict_prototype_rules": [
+    {
+      "issue": "Hindi transcription",
+      "prototype_action": "Human-check before publishing Hindi content.",
+      "items": [
+        "G1-LIT-001",
+        "G1-LIT-002",
+        "G1-LIT-003",
+        "G1-LIT-004",
+        "G1-LIT-005",
+        "G1-LIT-006",
+        "G1-LIT-007",
+        "G1-LIT-008",
+        "G1-LIT-009",
+        "G1-LIT-010",
+        "G1-LIT-011",
+        "G1-LIT-012",
+        "G1-LIT-013",
+        "G1-LIT-014",
+        "G1-LIT-015",
+        "G1-LIT-016",
+        "G1-LIT-017",
+        "G1-LIT-018",
+        "G1-LIT-019",
+        "G1-LIT-020",
+        "G1-LIT-021",
+        "G1-LIT-022",
+        "G1-LIT-023",
+        "G1-LIT-024",
+        "G1-LIT-025",
+        "G1-LIT-026",
+        "G1-LIT-027",
+        "G1-LIT-028",
+        "G1-LIT-029",
+        "G1-LIT-030",
+        "G1-LIT-031",
+        "G1-LIT-032",
+        "G1-LIT-077",
+        "G1-LIT-078",
+        "G1-LIT-079",
+        "G2-LIT-001",
+        "G2-LIT-002",
+        "G2-LIT-003",
+        "G2-LIT-004",
+        "G2-LIT-005",
+        "G2-LIT-006",
+        "G2-LIT-007",
+        "G2-LIT-008",
+        "G2-LIT-009",
+        "G2-LIT-010",
+        "G2-LIT-011",
+        "G2-LIT-012",
+        "G2-LIT-013",
+        "G2-LIT-014",
+        "G2-LIT-015",
+        "G2-LIT-016",
+        "G2-LIT-017",
+        "G2-LIT-018",
+        "G2-LIT-019",
+        "G2-LIT-020",
+        "G2-LIT-021",
+        "G2-LIT-022",
+        "G2-LIT-023",
+        "G2-LIT-024",
+        "G2-LIT-025",
+        "G2-LIT-026",
+        "G2-LIT-027",
+        "G2-LIT-028",
+        "G2-LIT-029",
+        "G2-LIT-030",
+        "G2-LIT-031",
+        "G2-LIT-048",
+        "G2-LIT-049",
+        "G2-LIT-050",
+        "G2-LIT-051",
+        "G2-LIT-052",
+        "G2-LIT-053"
+      ]
+    },
+    {
+      "issue": "Fractions",
+      "prototype_action": "Don't generate Grade 1-2 fraction lessons beyond supported material ('half' vocabulary)."
+    },
+    {
+      "issue": "Clock/calendar",
+      "prototype_action": "Don't generate Grade 1-2 clock-reading content."
+    },
+    {
+      "issue": "Paragraph writing",
+      "prototype_action": "Keep out of Grade 1-2 generation."
+    }
+  ],
+  "merge_scope_differences": [
+    {
+      "canonical_id": "G1-LIT-010",
+      "official_learning_outcome": "परिचित शब्दों वाले कुछ वाक्यों को परिशुद्ध रूप से पढ़ते हैं।",
+      "merged_statement": "Reads small sentences consisting of at least 4-5 simple words in an age appropriate unknown text.",
+      "source_code": "NIPUN_ZIET_SLIDES",
+      "difference": "Lakshya specifies sentences of at least 4-5 simple words in an unknown text (stricter than LO 'familiar words')."
+    },
+    {
+      "canonical_id": "G1-NUM-010",
+      "official_learning_outcome": "Observes and describes the physical features of various solids/ shapes in their own language (for example, a ball rolls, a box slides)",
+      "merged_statement": "Observes and describes physical properties of 3D shapes (solid shapes) around him/her like round/flat surfaces, number of corners and edges etc.",
+      "source_code": "NIPUN_ZIET_SLIDES",
+      "difference": "Lakshya adds round/flat surfaces, number of corners and edges."
+    },
+    {
+      "canonical_id": "G1-NUM-048",
+      "official_learning_outcome": "Develops and uses vocabulary of spatial relationship (for example, top, bottom, on, under, inside, outside, above, below, near, far, before, after)",
+      "merged_statement": "Uses spatial vocabulary like far/near, in/out, above/below, left/right, front/behind, top/bottom etc.",
+      "source_code": "NIPUN_ZIET_SLIDES",
+      "difference": "Lakshya lists spatial vocabulary as a Grade 2 target and adds left/right, front/behind; canonical item spans Grades 1-2."
+    },
+    {
+      "canonical_id": "G2-NUM-004",
+      "official_learning_outcome": "Identifies 2D shapes by their names (for example, square, rectangle, triangle and circle) and describes their observable characteristics (for example, the pages of a book are rectangular and have 4 sides, 4 corners)",
+      "merged_statement": "Identifies and describes 2-D shapes like rectangle, triangle, circle, oval etc.",
+      "source_code": "NIPUN_ZIET_SLIDES",
+      "difference": "Lakshya adds 'oval'."
+    }
+  ]
+}

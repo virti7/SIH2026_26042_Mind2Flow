@@ -1,0 +1,32 @@
+{
+  "schema_version": "generated_content_v1",
+  "content_id": "GC-G1-NUM-032-01-bi-v1",
+  "blueprint_id": "BP-G1-NUM-032-01",
+  "curriculum_id": "G1-NUM-032",
+  "curriculum_version": "curriculum_master_v1",
+  "blueprint_version": "content_blueprint_v1",
+  "grade": 1,
+  "domain": "numeracy",
+  "content_type": "worksheet",
+  "language_mode": "bilingual",
+  "languages": ["hi", "sat"],
+  "scripts": {"hi": "Deva", "sat": "Olck"},
+  "generation_method": "native",
+  "title": {"hi": "मिलाओ और गिनो", "sat": "ᱴᱮᱥᱴ ᱚᱠ"},
+  "instructions": {
+    "learner": {"hi": "चित्र देखो। कुल कितने हैं? सही संख्या पर गोला लगाओ।", "sat": "ᱴᱮᱥᱴ ᱮᱠ ᱴᱟᱠ᱾"}
+  },
+  "items": [
+    {"item_id": "q1", "item_type": "multiple_choice", "prompt": {"hi": "4 आम और 7 आम। कुल कितने आम?", "sat": "4 ᱟᱢ 7 ᱟᱢ᱾"},
+     "math": {"kind": "add", "operands": [4, 7]},
+     "options": [{"option_id": "a", "value": 10, "text": {"hi": "10", "sat": "10"}}, {"option_id": "b", "value": 11, "text": {"hi": "11", "sat": "11"}}, {"option_id": "c", "value": 12, "text": {"hi": "12", "sat": "12"}}],
+     "asset_refs": ["img_q1"]}
+  ],
+  "assets_required": [
+    {"asset_id": "img_q1", "type": "image", "description_en": "Two baskets of mangoes.", "for_items": ["q1"]}
+  ],
+  "provisional": true,
+  "conflict_refs": ["X_G1_ADDSUB_RANGE"],
+  "review_gates": ["hindi_transcription", "santali_content", "provisional_range"],
+  "origin_type": "AI_GENERATED"
+}

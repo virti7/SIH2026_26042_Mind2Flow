@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "note": "Navigation intent registry. Every route MUST already exist in lib/app/router/route_names.dart (AppRoutes). Do not invent routes.",
+  "intents": [
+    {
+      "intent": "WORKSHEET_GENERATION",
+      "route": "/resources/worksheet-generator",
+      "routeName": "worksheetGenerator",
+      "labelHindi": "Bilingual Worksheet Generator",
+      "labelEnglish": "Bilingual Worksheet Generator"
+    },
+    {
+      "intent": "FLASHCARD_GENERATION",
+      "route": "/resources/flashcards",
+      "routeName": "flashcardGenerator",
+      "labelHindi": "Flashcard Generator",
+      "labelEnglish": "Flashcard Generator"
+    },
+    {
+      "intent": "ASSESSMENT",
+      "route": "/assessment/builder",
+      "routeName": "assessmentBuilder",
+      "labelHindi": "Assessment",
+      "labelEnglish": "Assessment"
+    },
+    {
+      "intent": "TEACHER_GUIDANCE",
+      "route": "/teach/guidance",
+      "routeName": "teacherGuidance",
+      "labelHindi": "Teaching Guidance",
+      "labelEnglish": "Teaching Guidance"
+    },
+    {
+      "intent": "LIVE_TRANSLATION",
+      "route": "/translate",
+      "routeName": "translate",
+      "labelHindi": "Live Classroom Translator",
+      "labelEnglish": "Live Classroom Translator"
+    },
+    {
+      "intent": "DOWNLOADS",
+      "route": "/resources/downloads",
+      "routeName": "downloads",
+      "labelHindi": "Downloads",
+      "labelEnglish": "Downloads"
+    },
+    {
+      "intent": "PROGRESS",
+      "route": "/progress",
+      "routeName": "progress",
+      "labelHindi": "Progress",
+      "labelEnglish": "Progress"
+    },
+    {
+      "intent": "TEACH",
+      "route": "/teach",
+      "routeName": "teach",
+      "labelHindi": "Teach",
+      "labelEnglish": "Teach"
+    },
+    {
+      "intent": "SETTINGS",
+      "route": "/settings",
+      "routeName": "settings",
+      "labelHindi": "Settings",
+      "labelEnglish": "Settings"
+    },
+    {
+      "intent": "OFFLINE_CONTENT",
+      "route": "/offline/content",
+      "routeName": "contentPacks",
+      "labelHindi": "Offline Content",
+      "labelEnglish": "Offline Content"
+    },
+    {
+      "intent": "ACTIVITY_LIBRARY",
+      "route": "/resources/activities",
+      "routeName": "activityLibrary",
+      "labelHindi": "Activity Library",
+      "labelEnglish": "Activity Library"
+    },
+    {
+      "intent": "RESOURCE_DETAIL",
+      "route": "/resources/topic",
+      "routeName": "topicDetail",
+      "labelHindi": "Topic",
+      "labelEnglish": "Topic"
+    }
+  ]
+}

@@ -1,0 +1,499 @@
+{
+  "schema_version": "review_v1",
+  "content_id": "GC-G1-NUM-032-01-bi-v1",
+  "blueprint_id": "BP-G1-NUM-032-01",
+  "curriculum_id": "G1-NUM-032",
+  "content_sha256": "176e10053e48e374b1f34f3bbceddae882ff0a1e8125902624b3534a88d45ff8",
+  "validator_report": {
+    "validator_version": "1.0.0",
+    "passed": true,
+    "warnings": 1,
+    "report_path": "D:\\1SIH_JHARH\\bilingual generator\\generation\\generated\\pilot_v1\\GC-G1-NUM-032-01-bi-v1.json"
+  },
+  "review_status": "approved",
+  "gates": {
+    "hindi": "pass",
+    "santali": "pass",
+    "curriculum": "pass",
+    "answer_key": "pass",
+    "provisional_range": "pass"
+  },
+  "santali_script_confirmed": "Olck",
+  "reviewer_notes": [
+    {
+      "gate": "general",
+      "reviewer": "rev_soren_01",
+      "date": "2026-09-20",
+      "note": "Pilot unit verified and approved for publishing"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "auditor_reviewer_01",
+      "date": "2026-09-20",
+      "note": "Audited and confirmed by verification script."
+    },
+    {
+      "gate": "general",
+      "reviewer": "auditor_reviewer_01",
+      "date": "2026-09-20",
+      "note": "Audited and confirmed by verification script."
+    },
+    {
+      "gate": "general",
+      "reviewer": "auditor_reviewer_01",
+      "date": "2026-09-20",
+      "note": "Audited and confirmed by verification script."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-20",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "Reviewed mathematical accuracy and Ol Chiki rendering"
+    },
+    {
+      "gate": "general",
+      "reviewer": "reviewer-user-uuid-50",
+      "date": "2026-09-21",
+      "note": "All review gates passed by authorized reviewer."
+    }
+  ],
+  "approved_by": [
+    "rev_soren_01",
+    "rev_marandi_02",
+    "reviewer-user-uuid-50",
+    "auditor_reviewer_01"
+  ],
+  "approved_at": "2026-09-21"
+}

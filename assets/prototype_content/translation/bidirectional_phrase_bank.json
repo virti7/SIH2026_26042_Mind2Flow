@@ -1,0 +1,67 @@
+[
+  {
+    "id": "phrase_001",
+    "santaliOlChiki": "ᱤᱧ ᱱᱚᱣᱟ ᱵᱟᱝ ᱵᱩᱡᱷᱟᱹᱣ ᱮᱫᱟᱸ",
+    "santaliRoman": "Iñ nowa bang bujhaṛ edañ.",
+    "santaliAudio": "assets/prototype_content/translation/audio/santali/santali_i_dont_understand_this.wav",
+    "hindi": "मुझे यह नहीं समझ रहा है",
+    "hindiRoman": "Mujhe yah nahin samajh raha hai",
+    "hindiAudio": "assets/prototype_content/translation/audio/hindi/hindi_i_dont_understand_this.wav",
+    "category": "classroom",
+    "tags": [],
+    "confidenceScore": 62,
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "phrase_002",
+    "santaliOlChiki": "ᱤᱧ ᱟᱢ ᱞᱟᱹᱜᱤᱛ ᱯᱟᱲᱦᱟᱣ ᱮᱫᱟᱸ",
+    "santaliRoman": "Iñ am lāgit paṛhaw edañ.",
+    "santaliAudio": "assets/prototype_content/translation/audio/santali/santali_i_explain_to_you.wav",
+    "hindi": "मैं तुम्हें समझाती हूँ",
+    "hindiRoman": "Main tumhe samjhati hu",
+    "hindiAudio": "",
+    "category": "classroom",
+    "tags": [],
+    "confidenceScore": 91,
+    "reviewStatus": "approved"
+  },
+  {
+    "id": "phrase_003",
+    "santaliOlChiki": "ᱤᱧ ᱟᱢ ᱵᱟᱝ ᱵᱩᱡᱷᱟᱹᱣ ᱮᱫᱟᱸ",
+    "santaliRoman": "Iñ am bang bujhaṛ edañ.",
+    "santaliAudio": "assets/prototype_content/translation/audio/santali/santali_i_dont_understand_this.wav",
+    "hindi": "मैं यह नहीं समझ रहा हूँ",
+    "hindiRoman": "Main yah nahin samajh raha hoon",
+    "hindiAudio": "assets/prototype_content/translation/audio/hindi/hindi_i_dont_understand_this.wav",
+    "category": "classroom",
+    "tags": [],
+    "confidenceScore": 38,
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "phrase_004",
+    "santaliOlChiki": "ᱤᱧ ᱟᱢ ᱞᱟᱹᱜᱤᱛ ᱯᱟᱲᱦᱟᱣ ᱮᱫᱟᱸ",
+    "santaliRoman": "Iñ am lāgit paṛhaw edañ.",
+    "santaliAudio": "assets/prototype_content/translation/audio/santali/santali_i_explain_to_you.wav",
+    "hindi": "मैं तुम्हें समझाती हूँ",
+    "hindiRoman": "Main tumhe samjhati hu",
+    "hindiAudio": "",
+    "category": "classroom",
+    "tags": [],
+    "confidenceScore": 78,
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "phrase_005",
+    "santaliOlChiki": "ᱤᱧ ᱱᱚᱣᱟ ᱵᱟᱝ ᱵᱩᱡᱷᱟᱹᱣ ᱮᱫᱟᱸ",
+    "santaliRoman": "Iñ nowa bang bujhaṛ edañ.",
+    "santaliAudio": "assets/prototype_content/translation/audio/santali/santali_i_dont_understand_this.wav",
+    "hindi": "मुझे यह नहीं समझ रहा है",
+    "hindiRoman": "Mujhe yah nahin samajh raha hai",
+    "hindiAudio": "assets/prototype_content/translation/audio/hindi/hindi_i_dont_understand_this.wav",
+    "category": "classroom",
+    "tags": [],
+    "confidenceScore": 45,
+    "reviewStatus": "pending"
+  }
+]

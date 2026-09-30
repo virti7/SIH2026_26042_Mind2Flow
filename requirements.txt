@@ -1,0 +1,8 @@
+# First-pass Windows requirements.
+# If NeMo installation fails, keep this file unchanged and report the exact error.
+torch>=2.2
+torchaudio>=2.2
+nemo_toolkit[asr]
+soundfile>=0.12
+scipy>=1.11
+numpy>=1.26

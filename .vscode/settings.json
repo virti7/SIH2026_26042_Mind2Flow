@@ -1,0 +1,10 @@
+{
+  "python.analysis.extraPaths": [
+    "./backend",
+    "./backend/generator",
+    "./backend/generator/generation",
+    "./backend/generator/generation/validation",
+    "./backend/generator/generation/review",
+    "./backend/generator/generation/publishing"
+  ]
+}

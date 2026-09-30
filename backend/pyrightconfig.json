@@ -1,0 +1,11 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "extraPaths": [
+    "generator",
+    "generator/generation",
+    "generator/generation/validation",
+    "generator/generation/review",
+    "generator/generation/publishing"
+  ]
+}

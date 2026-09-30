@@ -1,0 +1,177 @@
+name: maatribhasha
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.0
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_bloc: ^8.1.6
+  go_router: ^14.2.0
+  get_it: ^7.7.0
+  equatable: ^2.0.5
+  shared_preferences: ^2.2.3
+  google_fonts: ^6.2.1
+  intl: ^0.19.0
+  drift: ^2.24.0
+  sqlite3_flutter_libs: ^0.5.28
+  path_provider: ^2.1.5
+  path: ^1.9.0
+  connectivity_plus: ^6.1.1
+  uuid: ^4.5.1
+  supabase_flutter: ^2.17.2
+  http: ^1.2.0
+  # Local prototype Santali audio playback (offline classroom demo).
+  # No network use: plays bundled asset files only. There was no existing
+  # audio/TTS package in the project, so audioplayers is introduced solely
+  # for local-asset playback (stop-previous, no overlap, preload demo set).
+  audioplayers: ^6.0.0
+  # Downloads actions: system print dialog + OS share sheet for the saved
+  # worksheet file. Core download/offline-open works without them; actions
+  # degrade to an honest message when the platform cannot print/share.
+  share_plus: ^10.1.2
+  printing: ^5.13.0
+  # Picture-library flashcard PDFs (images + labels). Already resolved as a
+  # dependency of `printing`; declared because it is imported directly.
+  pdf: ^3.11.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  drift_dev: ^2.24.0
+  build_runner: ^2.4.14
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/illustrations/
+    - assets/icons/
+    # Deterministic offline prototype content (presentation mode).
+    # Bundled into the APK; readable with airplane mode ON, no
+    # FastAPI / Supabase / Sarvam required. See
+    # assets/prototype_content/README.md for where to place files.
+    - assets/prototype_content/
+    # Reusable worksheet layouts (JSON) + sample worksheet documents.
+    - assets/worksheet_templates/
+    - assets/worksheet_templates/samples/
+    - assets/prototype_content/worksheets/pdf/
+    - assets/prototype_content/worksheets/manifests/
+    - assets/prototype_content/flashcards/images/
+    - assets/prototype_content/flashcards/sets/
+    - assets/prototype_content/flashcards/manifests/
+    - assets/prototype_content/assessments/images/
+    - assets/prototype_content/assessments/manifests/
+    - assets/prototype_content/shared/images/
+    - assets/prototype_content/shared/icons/
+    - assets/prototype_content/shared/fonts/
+    # Offline Santali classroom-audio prototype (presentation mode).
+    # Bundled into the APK; Hindi speech -> local lookup -> local audio,
+    # no Sarvam / FastAPI / network. See
+    # assets/prototype_content/translation/audio/santali/README.md.
+    - assets/prototype_content/translation/phrases/
+    - assets/prototype_content/translation/audio/santali/
+    - assets/prototype_content/translation/audio/hindi/
+    # Master offline Santali Quick Phrase Bank (SIH presentation APK):
+    # ONE central JSON file + ONE local audio folder, bundled for
+    # airplane-mode use. See phrase_bank/README.md for how to add phrases.
+    - assets/prototype_content/translation/phrase_bank/
+    # Active demo scenario for the Live Translator prototype (no matching;
+    # the configured demo supplies the Santali output/audio directly).
+    - assets/prototype_content/translation/santali_demo_translation.json
+    # Deterministic bidirectional Translator phrase bank (single source of
+    # truth for single-tap Hindi→Santali / double-tap Santali→Hindi).
+    - assets/prototype_content/translation/bidirectional_phrase_bank.json
+    # Deterministic offline Teacher Guidance Q&A knowledge base
+    # (pre-authored Hindi + English answers, zero network).
+    - assets/prototype_content/teacher_guidance/
+    # Deterministic offline Teacher Co-Pilot knowledge base
+    # (navigation intents + Roman-Hindi keywords + quick questions).
+    - assets/prototype_content/copilot/
+    # Static SmartBoard classroom demo (SIH prototype): fixed math example
+    # 5 + 5 = 10 / five five ten, loaded via SmartBoardDemoRepository.
+    # Offline, bundled into the APK, no network.
+    - assets/prototype_content/smartboard/
+    # Santali Mother-Tongue Visual Vocabulary Curriculum Assets (Problem Statement 26042)
+    - assets/prototype_content/flashcards/metadata/
+    - assets/prototype_content/flashcards/config/
+    - assets/prototype_content/flashcards/images/animals/domestic/
+    - assets/prototype_content/flashcards/images/animals/wild/
+    - assets/prototype_content/flashcards/images/birds/
+    - assets/prototype_content/flashcards/images/body_parts/
+    - assets/prototype_content/flashcards/images/colours/
+    - assets/prototype_content/flashcards/images/flowers/
+    - assets/prototype_content/flashcards/images/fruits/
+    - assets/prototype_content/flashcards/images/insects/
+    - assets/prototype_content/flashcards/images/relations/
+    - assets/prototype_content/flashcards/images/residence/
+    - assets/prototype_content/flashcards/images/transport/
+    - assets/prototype_content/flashcards/images/vegetables/
+    - assets/prototype_content/flashcards/images/water_animals/
+    - assets/prototype_content/flashcards/labels/animals/domestic/
+    - assets/prototype_content/flashcards/labels/animals/wild/
+    - assets/prototype_content/flashcards/labels/birds/
+    - assets/prototype_content/flashcards/labels/body_parts/
+    - assets/prototype_content/flashcards/labels/colours/
+    - assets/prototype_content/flashcards/labels/flowers/
+    - assets/prototype_content/flashcards/labels/fruits/
+    - assets/prototype_content/flashcards/labels/insects/
+    - assets/prototype_content/flashcards/labels/relations/
+    - assets/prototype_content/flashcards/labels/residence/
+    - assets/prototype_content/flashcards/labels/transport/
+    - assets/prototype_content/flashcards/labels/vegetables/
+    - assets/prototype_content/flashcards/labels/water_animals/
+
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package

@@ -1,0 +1,292 @@
+# Source-page configuration for the Santali visual vocabulary dataset.
+#
+# Every item lists, in reading order (row by row, left to right):
+#   en      English gloss exactly as printed in the book (typos kept - this is source truth)
+#   hi      Hindi gloss as printed (read from the rendered page; the PDF text layer
+#           stores Hindi in legacy KrutiDev encoding, so it is not machine-readable)
+#   concept normalized concept used for IDs / retrieval (lower_snake_case)
+#   note    optional: explains any difference between the printed label and the concept
+#   visual_type  optional per-item override of the page default
+#
+# Santali labels are NOT listed here: they are pulled from the PDF text layer and
+# cropped from the rendered page, then left unverified for human review.
+
+source:
+  pdf: "source/Aao Santali Likhna Sikhe.pdf"
+  title: "Aao Santali Likhna Sikhe (ᱜᱤᱫᱽᱨᱟᱹ ᱜᱟᱛᱮᱜ ᱯᱩᱛᱷᱤ)"
+  render_dpi: 300
+
+# Images that are drawn on the page but are not flashcard items
+# (hidden duplicates underneath another photo, drop shadows).
+drop_xrefs:
+  11: [151]   # larger jasmine raster hidden underneath the visible one
+  18: [334]   # drop-shadow image behind the WHITE swatch
+
+min_image_size_pt: 20
+
+pages:
+
+  6:
+    category: animals
+    subcategory: domestic_animals
+    heading_en: "DOMESTIC ANIMAL"
+    heading_hi: "पालतू जानवर"
+    visual_type: photograph
+    items:
+      - {en: COW, hi: गाय, concept: cow}
+      - {en: OX, hi: बैल, concept: ox}
+      - {en: CALF, hi: बछड़ा, concept: calf}
+      - {en: BUFFALO, hi: भैंस, concept: buffalo}
+      - {en: BUFFALO, hi: भैंस, concept: buffalo, note: "second buffalo (bull); text layer spells it BUFFAL0"}
+      - {en: CALF, hi: बछड़ा, concept: buffalo_calf, note: "printed as CALF; photo shows a buffalo calf"}
+      - {en: GOAT, hi: बकरी, concept: goat}
+      - {en: PIG, hi: सुअर, concept: pig}
+      - {en: SHEEP, hi: भेड़, concept: sheep}
+      - {en: ELEPHANT, hi: हाथी, concept: elephant}
+      - {en: HORSE, hi: घोड़ा, concept: horse}
+      - {en: CAMLE, hi: ऊंट, concept: camel, note: "printed spelling CAMLE"}
+      - {en: DONKEY, hi: गधा, concept: donkey}
+      - {en: DOG, hi: कुत्ता, concept: dog}
+      - {en: CAT, hi: बिल्ली, concept: cat}
+
+  7:
+    category: animals
+    subcategory: wild_animals
+    heading_en: "WILD ANIMAL"
+    heading_hi: "जंगली जानवर"
+    visual_type: photograph
+    items:
+      - {en: LION, hi: शेर, concept: lion}
+      - {en: TIGER, hi: बाघ, concept: tiger}
+      - {en: LEOPART, hi: तेंदुआ, concept: leopard, note: "printed spelling LEOPART"}
+      - {en: FOX, hi: लोमड़ी, concept: fox}
+      - {en: WOLF, hi: भेड़िया, concept: wolf}
+      - {en: HYENA, hi: लकड़बग्घा, concept: hyena}
+      - {en: BEAR, hi: भालू, concept: bear}
+      - {en: MONKEY, hi: बंदर, concept: monkey}
+      - {en: BABOON, hi: लंगुर, concept: langur, note: "printed BABOON; Hindi लंगुर and photo show a langur"}
+      - {en: DEER, hi: हिरण, concept: deer}
+      - {en: NILGAI, hi: नील गाय, concept: nilgai}
+      - {en: REINDEER, hi: बारहसिंगा, concept: barasingha, note: "printed REINDEER; Hindi बारहसिंगा = swamp deer"}
+      - {en: RABIT, hi: खरगोश, concept: rabbit, note: "printed spelling RABIT"}
+      - {en: PORCUPINE, hi: साही, concept: porcupine}
+      - {en: MONGOOSE, hi: नेवला, concept: mongoose}
+
+  8:
+    category: birds
+    heading_en: "BIRD"
+    heading_hi: "चिड़िया"
+    visual_type: photograph
+    items:
+      - {en: HEN, hi: मुर्गी, concept: hen}
+      - {en: DUCK, hi: बत्तख, concept: duck}
+      - {en: BABOON, hi: लंगुर, concept: pigeon, note: "SOURCE ERROR: printed BABOON/लंगुर but the photo is a pigeon (Santali text layer: ᱯᱟᱨᱣᱟ)"}
+      - {en: PEACOCK, hi: मोर, concept: peacock}
+      - {en: PARROT, hi: तोता, concept: parrot}
+      - {en: CUCKOO, hi: कोयल, concept: cuckoo}
+      - {en: SCATTER, hi: तितर, concept: partridge, note: "printed SCATTER; Hindi तितर = partridge"}
+      - {en: QUAIL, hi: बटेर, concept: quail}
+      - {en: SPARROW, hi: गौरेया, concept: sparrow}
+      - {en: HERON, hi: बगुला, concept: heron}
+      - {en: VULTURE, hi: गिद्ध, concept: vulture}
+      - {en: BEAGLE, hi: चील, concept: kite, note: "printed BEAGLE; Hindi चील = kite (bird of prey)"}
+      - {en: DOVE, hi: पड़की, concept: dove}
+      - {en: CROW, hi: कौआ, concept: crow}
+      - {en: SWAN, hi: हंस, concept: swan}
+
+  9:
+    category: vegetables
+    heading_en: "VEGETABLE"
+    heading_hi: "सब्जी"
+    visual_type: photograph
+    items:
+      - {en: POTATO, hi: आलु, concept: potato}
+      - {en: TOMATO, hi: टमाटर, concept: tomato}
+      - {en: BRINJAL, hi: बैंगन, concept: brinjal}
+      - {en: LADYFINGER, hi: भिंडी, concept: ladyfinger}
+      - {en: CHILI, hi: मिर्च, concept: chili}
+      - {en: BITTER GOURD, hi: करेला, concept: bitter_gourd}
+      - {en: CABBAGE, hi: बंदगोभी, concept: cabbage}
+      - {en: CAULIFLOWER, hi: फुलगोभी, concept: cauliflower}
+      - {en: PUMPKIN, hi: बैंगन, concept: pumpkin, note: "SOURCE ERROR: Hindi printed as बैंगन (brinjal); English and photo = pumpkin"}
+      - {en: ONION, hi: प्याज, concept: onion}
+      - {en: GARLIC, hi: लहसुन, concept: garlic}
+      - {en: LONG BEAN, hi: बोदी, concept: long_bean}
+      - {en: RIDGE GOURD, hi: प्याज, concept: ridge_gourd, note: "SOURCE ERROR: Hindi printed as प्याज (onion); English and photo = ridge gourd"}
+      - {en: BOTTEL GOURD, hi: लौकी, concept: bottle_gourd, note: "printed spelling BOTTEL"}
+      - {en: RADISH, hi: मुली, concept: radish}
+
+  10:
+    category: fruits
+    heading_en: "FRUIT"
+    heading_hi: "फल"
+    visual_type: photograph
+    items:
+      - {en: MANGO, hi: आम, concept: mango}
+      - {en: APPLE, hi: सेव, concept: apple}
+      - {en: BANANA, hi: केला, concept: banana}
+      - {en: MANGO, hi: केंद, concept: kendu, note: "SOURCE ERROR: printed MANGO; Hindi केंद = kendu (Diospyros / persimmon-like fruit), matches photo"}
+      - {en: CUSTARD APPLE, hi: सरीफा, concept: custard_apple}
+      - {en: GUAVA, hi: अमरूद, concept: guava}
+      - {en: BERRY, hi: जामुन, concept: jamun, note: "printed BERRY; Hindi जामुन = jamun / java plum"}
+      - {en: POMGRANATE, hi: अनार, concept: pomegranate, note: "printed spelling POMGRANATE"}
+      - {en: JACKFRUIT, hi: कटहल, concept: jackfruit}
+      - {en: ORANGE, hi: संतरा, concept: orange}
+      - {en: PEAR, hi: नशपाती, concept: pear}
+      - {en: PALM, hi: ताड़, concept: palm_fruit, note: "ताड़ = palmyra palm fruit"}
+      - {en: TAMARIND, hi: इमली, concept: tamarind}
+      - {en: HYPOCARP, hi: भेलवा, concept: bhelwa, note: "printed HYPOCARP; Hindi भेलवा = marking nut (Semecarpus anacardium)"}
+      - {en: PULM, hi: बेर, concept: ber, note: "printed PULM; Hindi बेर = Indian jujube"}
+
+  11:
+    category: flowers
+    heading_en: "FLOWER"
+    heading_hi: "फुल"
+    visual_type: photograph
+    items:
+      - {en: ROSE, hi: गुलाब, concept: rose}
+      - {en: HIBISCUS, hi: जोबा, concept: hibiscus}
+      - {en: MARIGOLD, hi: गेंदा, concept: marigold}
+      - {en: PALAS, hi: पलास, concept: palash, note: "flame of the forest (Butea monosperma)"}
+      - {en: LOTUS, hi: कमल, concept: lotus, visual_type: illustration}
+      - {en: SUNFLOWER, hi: सुर्यमुखी, concept: sunflower}
+      - {en: SAL, hi: सखुआ, concept: sal_flower, note: "flowers of the sal tree (Shorea robusta)"}
+      - {en: JASMINE, hi: चमेली, concept: jasmine}
+      - {en: FRANGIPANI, hi: गुलैन्ची, concept: frangipani}
+      - {en: MAGNOLIA, hi: चम्पा, concept: magnolia}
+      - {en: DELONIX, hi: गुलमोहर, concept: gulmohar, note: "Delonix regia / gulmohar", visual_type: illustration}
+      - {en: RED OLEANDER, hi: गुलैन्ची, concept: red_oleander, note: "Hindi repeats गुलैन्ची (probable source error; oleander = कनेर)"}
+
+  12:
+    category: water_animals
+    heading_en: "WATER ANIMAL"
+    heading_hi: "पानी में रहने वाले जंतु"
+    visual_type: photograph
+    items:
+      - {en: FISH, hi: मछली, concept: fish}
+      - {en: FROG, hi: मेढक, concept: frog}
+      - {en: CORCODILE, hi: मगरमच्छ, concept: crocodile, note: "printed spelling CORCODILE"}
+      - {en: SNAKE, hi: सांप, concept: snake}
+      - {en: TORTOISE, hi: कछुआ, concept: tortoise}
+      - {en: CRAB, hi: केकड़ा, concept: crab}
+      - {en: SNAIL, hi: घोंघा, concept: snail}
+      - {en: MUSSEL, hi: शंबुक, concept: mussel}
+      - {en: PRAWN, hi: झींगा, concept: prawn}
+      - {en: HIPPOPOTAMUS, hi: दरिया घोड़ा, concept: hippopotamus}
+      - {en: EEL FISH, hi: सर्प मछली, concept: eel}
+      - {en: BLUE WHEELS, hi: व्हेल, concept: blue_whale, note: "printed BLUE WHEELS; Hindi व्हेल = whale", visual_type: illustration}
+
+  13:
+    category: insects
+    heading_en: "INSECTS"
+    heading_hi: "कीड़ा"
+    visual_type: photograph
+    items:
+      - {en: SILKWORM, hi: रेशम कीट, concept: silkworm}
+      - {en: CENTIPEDE, hi: कनखजूरा, concept: centipede}
+      - {en: EARTHWORM, hi: केंचुआ, concept: earthworm}
+      - {en: MILLIPEDES, hi: गोजर, concept: millipede}
+      - {en: BUG BEETLE, hi: भृंग, concept: beetle}
+      - {en: DRAGONFLY, hi: व्याध पतंग, concept: dragonfly}
+      - {en: MILLIPEDES, hi: तितली, concept: butterfly, note: "SOURCE ERROR: printed MILLIPEDES; Hindi तितली and photo = butterfly"}
+      - {en: GRASSHOPPER, hi: टिड्डा, concept: grasshopper}
+      - {en: MOSQUITO, hi: मच्छर, concept: mosquito}
+      - {en: MILLIPEDES, hi: मकड़ी, concept: spider, note: "SOURCE ERROR: printed MILLIPEDES; Hindi मकड़ी and photo = spider"}
+      - {en: ANT, hi: चींटी, concept: ant}
+      - {en: TERMITE, hi: दीमक, concept: termite}
+
+  14:
+    category: residence
+    heading_en: "RESIDENCE"
+    heading_hi: "आवास"
+    visual_type: photograph
+    items:
+      - {en: HOME, hi: घर, concept: home, note: "traditional village house"}
+      - {en: HOME, hi: मकान, concept: house, note: "printed HOME; Hindi मकान = (brick) house"}
+      - {en: COTTAGE, hi: झोपड़ी, concept: hut}
+      - {en: COW SHED, hi: गोहाल, concept: cow_shed}
+      - {en: GOAT SHED, hi: बाड़ा, concept: goat_shed}
+      - {en: PIG SHED, hi: बाड़ा, concept: pig_shed}
+      - {en: Hole, hi: छेद, concept: burrow, note: "animal hole / burrow as a home"}
+      - {en: Forest, hi: जंगल, concept: forest, note: "forest as home of wild animals"}
+      - {en: TREE, hi: पेड़, concept: tree, note: "tree as home of birds"}
+      - {en: FISH, hi: मछली, concept: fish_in_water, note: "residence page: water as home of fish"}
+      - {en: YAK, hi: जंगली बैल, concept: yak_in_snow, note: "residence page: snowy mountains as home of yak"}
+      - {en: CAMEL, hi: ऊंट, concept: camel_in_desert, note: "residence page: desert as home of camel"}
+
+  15:
+    category: transport
+    heading_en: "TRANSPORT"
+    heading_hi: "यातायात"
+    visual_type: photograph
+    items:
+      - {en: BULLOCK CART, hi: बैलगाड़ी, concept: bullock_cart}
+      - {en: HORSE CART, hi: घोड़ागाड़ी, concept: horse_cart, visual_type: line_drawing}
+      - {en: BOAT, hi: नाव, concept: boat, visual_type: illustration}
+      - {en: CYCLE, hi: साइकिल, concept: bicycle}
+      - {en: MOTORCYCLE, hi: मोटरसाइकिल, concept: motorcycle}
+      - {en: BUS, hi: बस, concept: bus}
+      - {en: RAIL, hi: रेलगाड़ी, concept: train}
+      - {en: AEROPLANE, hi: हवाई जहाज, concept: aeroplane}
+      - {en: SHIP, hi: पानी जहाज, concept: ship}
+      - {en: TRACTURE, hi: ट्रैक्टर, concept: tractor, note: "printed spelling TRACTURE"}
+      - {en: TRUCK, hi: ट्रक, concept: truck}
+      - {en: AUTO, hi: टेम्पु, concept: auto_rickshaw}
+
+  16:
+    category: relations
+    heading_en: "RELATION"
+    heading_hi: "रिश्ता"
+    visual_type: illustration
+    items:
+      - {en: MOTHER, hi: माँ, concept: mother}
+      - {en: FATHER, hi: पिता, concept: father, visual_type: line_drawing}
+      - {en: GRAND FATHER, hi: दादा, concept: paternal_grandfather, note: "दादा = father's father"}
+      - {en: GRAND MOTHER, hi: दादी, concept: paternal_grandmother, note: "दादी = father's mother"}
+      - {en: BROTHER, hi: भाई, concept: brother, visual_type: photograph}
+      - {en: SISTER, hi: बहन, concept: sister, visual_type: photograph}
+      - {en: GRAND FATHER, hi: नाना, concept: maternal_grandfather, note: "नाना = mother's father"}
+      - {en: GRAND MOTHER, hi: नानी, concept: maternal_grandmother, note: "नानी = mother's mother"}
+
+  17:
+    category: body_parts
+    heading_en: "PARTS OF BODY"
+    heading_hi: "अंगों के नाम"
+    visual_type: photograph
+    # Not a regular grid: each item is matched to the image whose centre is
+    # nearest to `anchor` (PDF points). The cells carry only a Santali label,
+    # so `en` here is the matching term from the page's central diagram.
+    layout: anchors
+    items:
+      - {en: head, concept: head, anchor: [138, 131], body_region: head}
+      - {en: nose, concept: nose, anchor: [463, 135], body_region: face}
+      - {en: ear, concept: ear, anchor: [138, 229], body_region: head}
+      - {en: eye, concept: eye, anchor: [463, 236], body_region: face}
+      - {en: tooth, concept: teeth, anchor: [141, 319], body_region: face}
+      - {en: mouth, concept: mouth, anchor: [463, 313], body_region: face}
+      - {en: neck, concept: neck, anchor: [137, 401], body_region: neck}
+      - {en: shoulder, concept: shoulder, anchor: [463, 396], body_region: upper_body, visual_type: illustration}
+      - {en: chest, concept: chest, anchor: [138, 485], body_region: upper_body}
+      - {en: elbow, concept: elbow, anchor: [463, 482], body_region: arm, note: "cell shows a bent arm; diagram term chosen by position (Santali ᱢᱚᱠᱟ) - verify"}
+      - {en: arm, concept: arm, anchor: [137, 577], body_region: arm, note: "cell shows a flexed upper arm; diagram term chosen by position (Santali ᱥᱚᱯᱚ) - verify"}
+      - {en: finger, concept: finger, anchor: [283, 576], body_region: hand}
+      - {en: hand, concept: hand, anchor: [463, 576], body_region: hand}
+      - {en: toe, concept: toe, anchor: [138, 676], body_region: foot}
+      - {en: leg, concept: leg, anchor: [283, 687], body_region: leg}
+      - {en: knee, concept: knee, anchor: [463, 688], body_region: leg}
+      - {en: "PARTS OF BODY", hi: अंगों के नाम, concept: human_body_diagram, anchor: [293, 310], body_region: whole_body, visual_type: labelled_diagram,
+         note: "central labelled diagram: head, hair, ear, eye, mouth, nose, neck, tooth, chest, shoulder, breast, arm, elbow, finger, hand, hip, leg, knee, ankle, foot, toe",
+         no_santali: true}
+
+  18:
+    category: colours
+    heading_en: "COLOURS"
+    heading_hi: "रंग"
+    visual_type: colour_swatch
+    items:
+      - {en: RED, hi: लाल, concept: red}
+      - {en: BULE, hi: नीला, concept: blue, note: "printed spelling BULE"}
+      - {en: YELLOW, hi: पीला, concept: yellow}
+      - {en: BLACK, hi: काला, concept: black}
+      - {en: GREEN, hi: हरा, concept: green}
+      - {en: WHITE, hi: सफेद, concept: white}

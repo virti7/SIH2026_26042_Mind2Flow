@@ -1,0 +1,21 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Temporary and scratch files
+.tmp_*
+*.tmp
+*~
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

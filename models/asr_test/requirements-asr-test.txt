@@ -1,0 +1,9 @@
+# Isolated IndicConformer ASR test env — do NOT install into backend/venv.
+# Python 3.10 or 3.11, Linux/WSL2 Ubuntu recommended (NeMo has no official native-Windows pip support).
+# Install order matters: torch first (CPU or CUDA build), then AI4Bharat NeMo fork.
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.1
+soundfile>=0.12
+scipy>=1.11
+psutil>=5.9

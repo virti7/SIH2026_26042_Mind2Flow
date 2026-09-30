@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maatribhasha-backend"
+version = "1.0.0"
+description = "FastAPI Backend for Maatribhasha (SIH Problem Statement 26042)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.28.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "sqlalchemy>=2.0.28",
+    "aiosqlite>=0.20.0",
+    "asyncpg>=0.29.0",
+    "alembic>=1.13.0",
+    "python-jose[cryptography]>=3.3.0",
+    "httpx>=0.27.0",
+    "python-multipart>=0.0.9",
+    "jsonschema>=4.20.0",
+    "google-genai>=2.0.0",
+    "sarvamai>=0.1.34",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    ".",
+    "generator",
+    "generator/generation",
+    "generator/generation/validation",
+    "generator/generation/review",
+    "generator/generation/publishing",
+]
+asyncio_mode = "auto"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+extraPaths = [
+    "generator",
+    "generator/generation",
+    "generator/generation/validation",
+    "generator/generation/review",
+    "generator/generation/publishing",
+]
+
+
+

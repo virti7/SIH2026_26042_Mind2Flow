@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": "math_5_plus_5",
+      "sourceLanguage": "English",
+      "equation": "5 + 5 = 10",
+      "sourceWords": [
+        "five",
+        "five",
+        "ten"
+      ],
+      "santali": {
+        "olChiki": [
+          " ᱕ ᱢᱚᱬᱮ",
+          " ᱕ ᱢᱚᱬᱮ",
+          " ᱑᱐ ᱜᱮᱞ"
+        ],
+        "roman": [
+          "môṇe",
+          "môṇe",
+          "gel"
+        ],
+        "audio": "assets/prototype_content/translation/audio/santali/smartboard_math_5_plus_5.wav"
+      }
+    }
+  ]
+}

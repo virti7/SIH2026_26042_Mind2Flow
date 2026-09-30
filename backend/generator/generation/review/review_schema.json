@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "review_schema.json",
+  "title": "Review record for one generated content unit (v1)",
+  "description": "One review record per content_id. A unit may be published only when review_status is 'approved', which requires every gate to be 'pass' or 'not_applicable'. Gates mirror curriculum_master_v1 prototype_policy.review_gates, plus curriculum and answer-key checks.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "content_id", "blueprint_id", "curriculum_id", "content_sha256", "validator_report", "review_status", "gates", "reviewer_notes"],
+  "properties": {
+    "schema_version": { "const": "review_v1" },
+    "content_id": { "type": "string", "pattern": "^GC-G[12]-(LIT|NUM)-[0-9]{3}-[0-9]{2}-(bi|hi|sat)-v[0-9]+$" },
+    "blueprint_id": { "type": "string", "pattern": "^BP-G[12]-(LIT|NUM)-[0-9]{3}-[0-9]{2}$" },
+    "curriculum_id": { "type": "string", "pattern": "^G[12]-(LIT|NUM)-[0-9]{3}$" },
+    "content_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "Hash of the exact content file reviewed; any edit invalidates the review." },
+    "validator_report": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["validator_version", "passed"],
+      "properties": {
+        "validator_version": { "type": "string" },
+        "passed": { "type": "boolean" },
+        "warnings": { "type": "integer", "minimum": 0 },
+        "report_path": { "type": "string" }
+      }
+    },
+    "review_status": { "enum": ["pending", "in_review", "changes_requested", "approved", "rejected"] },
+    "gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hindi", "santali", "curriculum", "answer_key", "provisional_range"],
+      "properties": {
+        "hindi": { "$ref": "#/$defs/gate", "description": "Hindi-literate reviewer: language, spelling, naturalness, age-appropriateness. 'not_applicable' only for sat-only units." },
+        "santali": { "$ref": "#/$defs/gate", "description": "Santali-literate reviewer: language, script choice, naturalness, cultural appropriateness. 'not_applicable' only for hi-only units." },
+        "curriculum": { "$ref": "#/$defs/gate", "description": "Content matches the blueprint's learning objective, grade and exclusions." },
+        "answer_key": { "$ref": "#/$defs/gate", "description": "Every answer independently checked by a human (numeracy answers are also machine-checked)." },
+        "provisional_range": { "$ref": "#/$defs/gate", "description": "For provisional units: reviewer confirms the provisional range label is carried and no claim of official policy is made. 'not_applicable' for non-provisional units." }
+      }
+    },
+    "santali_script_confirmed": { "enum": ["Olck", "Deva", "Beng", "Orya", "Latn", null], "description": "Script the Santali reviewer confirmed; null until confirmed." },
+    "reviewer_notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["gate", "reviewer", "date", "note"],
+        "properties": {
+          "gate": { "enum": ["hindi", "santali", "curriculum", "answer_key", "provisional_range", "general"] },
+          "reviewer": { "type": "string", "minLength": 1 },
+          "date": { "type": "string", "format": "date" },
+          "note": { "type": "string", "minLength": 1 },
+          "item_ids": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "approved_by": { "type": "array", "items": { "type": "string" } },
+    "approved_at": { "type": "string", "format": "date" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "review_status": { "const": "approved" } } },
+      "then": {
+        "required": ["approved_by", "approved_at"],
+        "properties": {
+          "validator_report": { "properties": { "passed": { "const": true } } },
+          "gates": {
+            "properties": {
+              "hindi": { "enum": ["pass", "not_applicable"] },
+              "santali": { "enum": ["pass", "not_applicable"] },
+              "curriculum": { "const": "pass" },
+              "answer_key": { "const": "pass" },
+              "provisional_range": { "enum": ["pass", "not_applicable"] }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "review_status": { "const": "approved" } },
+        "required": ["gates"]
+      },
+      "then": {
+        "if": { "properties": { "gates": { "properties": { "santali": { "const": "pass" } } } } },
+        "then": { "required": ["santali_script_confirmed"], "properties": { "santali_script_confirmed": { "not": { "const": null } } } }
+      }
+    }
+  ],
+  "$defs": {
+    "gate": { "enum": ["pending", "pass", "fail", "not_applicable"] }
+  },
+  "examples": [
+    {
+      "schema_version": "review_v1",
+      "content_id": "GC-G1-NUM-032-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-032-01",
+      "curriculum_id": "G1-NUM-032",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "validator_report": { "validator_version": "1.0.0", "passed": true, "warnings": 1 },
+      "review_status": "pending",
+      "gates": { "hindi": "pending", "santali": "pending", "curriculum": "pending", "answer_key": "pending", "provisional_range": "pending" },
+      "santali_script_confirmed": null,
+      "reviewer_notes": []
+    }
+  ]
+}

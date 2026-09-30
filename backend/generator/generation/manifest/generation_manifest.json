@@ -1,0 +1,1653 @@
+{
+  "manifest_version": "generation_manifest_v1",
+  "batch": "pilot_v1",
+  "inputs": {
+    "curriculum_master": {
+      "path": "canonical/curriculum_master_v1.json",
+      "version": "curriculum_master_v1",
+      "sha256": "02ecfbdb0301027a0a4b24e31fac4c0c92e1a9ff8067054e364bfee266486543"
+    },
+    "content_blueprint": {
+      "path": "blueprint/content_blueprint_v1.json",
+      "version": "content_blueprint_v1",
+      "sha256": "9582dafecb48fe0a37e3d8267cdcbf96986c0017296720128539132aa40f3a7c"
+    },
+    "schema": {
+      "path": "generation/schema/generated_content.schema.json",
+      "version": "generated_content_v1",
+      "sha256": "f0041f4aca194c68caf6e9f8b6f7d0f1be4c48c72bc924a4979b5eab4a55ed06"
+    },
+    "prompts": {
+      "base_prompt": {
+        "path": "generation/prompts/base_prompt.md",
+        "version": "1.0.0",
+        "sha256": "190bbcc94c06101aedd179b48797cf66abfa4c51fdc894ddefee2a9621153115"
+      },
+      "literacy_bilingual": {
+        "path": "generation/prompts/literacy_bilingual.md",
+        "version": "1.0.0",
+        "sha256": "5cc5ce42df11a7abcf03ce619f999f1087ea130c5b757f6ade287157f02ebd92"
+      },
+      "literacy_parallel": {
+        "path": "generation/prompts/literacy_parallel.md",
+        "version": "1.0.0",
+        "sha256": "9562af1d5ffaaf4b1c9e7b2e5862da9a237848a27aa0112411766455f46ab894"
+      },
+      "numeracy_bilingual": {
+        "path": "generation/prompts/numeracy_bilingual.md",
+        "version": "1.0.0",
+        "sha256": "1ef70393795db814f2c6b4d308d7b190d1eda1b4b6e62c64b4d688f3ed90af0d"
+      },
+      "santali_generation": {
+        "path": "generation/prompts/santali_generation.md",
+        "version": "1.0.0",
+        "sha256": "cfabed34c7be3b00813ff3bbc52c9705e4cd1284d4254c23a23fac92e699fa7e"
+      }
+    },
+    "validators": {
+      "version": "1.0.0",
+      "files": {
+        "common.py": "b5a33a0c97d041da10eb7b45496273fef60e9facad5526767a773399596cfb63",
+        "content_validator.py": "2d149e6904ad7b16bdfca25a6ccea1123eb64bc38f25386349abf52978e5d272",
+        "language_validator.py": "fe41b1a6cb858e4edcce721c6ddc60cd4c591c044f40cae6204d8c62c95ec584",
+        "numeracy_validator.py": "eb6c0cd8ca09b04b42ff3a5ddc8a94f12f9e531c91e09135a40569ba2699c9b4"
+      }
+    }
+  },
+  "status_values": {
+    "generation_status": [
+      "planned",
+      "generated",
+      "failed",
+      "validated",
+      "rejected",
+      "stale"
+    ],
+    "review_status": [
+      "pending",
+      "in_review",
+      "changes_requested",
+      "approved",
+      "rejected"
+    ]
+  },
+  "rules": [
+    "One entry per content unit. Bilingual blueprints -> one '-bi-' unit; parallel_monolingual blueprints -> one '-hi-' and one '-sat-' unit.",
+    "Fill model, model_parameters, generation_timestamp and content_sha256 when a unit is generated; validator fields when validated.",
+    "Regenerating a unit creates -v2 and sets superseded_by on the old entry; never overwrite a generated file.",
+    "If a provisional decision (conflict_refs) changes, mark affected entries 'stale' and regenerate."
+  ],
+  "summary": {
+    "blueprints": 35,
+    "planned_units": 46,
+    "bilingual_units": 24,
+    "parallel_units": 22,
+    "validated_units": 1,
+    "failed_units": 0,
+    "approved_units": 0,
+    "rejected_units": 0,
+    "stale_units": 0
+  },
+  "entries": [
+    {
+      "content_id": "GC-G1-LIT-011-01-hi-v1",
+      "blueprint_id": "BP-G1-LIT-011-01",
+      "curriculum_id": "G1-LIT-011",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "flashcard",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-011-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-011-01-sat-v1",
+      "blueprint_id": "BP-G1-LIT-011-01",
+      "curriculum_id": "G1-LIT-011",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "flashcard",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-011-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-015-01-hi-v1",
+      "blueprint_id": "BP-G1-LIT-015-01",
+      "curriculum_id": "G1-LIT-015",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "audio_activity",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-015-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [
+        "X_C101_TRAJECTORY"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-015-01-sat-v1",
+      "blueprint_id": "BP-G1-LIT-015-01",
+      "curriculum_id": "G1-LIT-015",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "audio_activity",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-015-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [
+        "X_C101_TRAJECTORY"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-016-01-hi-v1",
+      "blueprint_id": "BP-G1-LIT-016-01",
+      "curriculum_id": "G1-LIT-016",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-016-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [
+        "X_C101_TRAJECTORY"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-016-01-sat-v1",
+      "blueprint_id": "BP-G1-LIT-016-01",
+      "curriculum_id": "G1-LIT-016",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-016-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [
+        "X_C101_TRAJECTORY"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-020-01-hi-v1",
+      "blueprint_id": "BP-G1-LIT-020-01",
+      "curriculum_id": "G1-LIT-020",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-020-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-020-01-sat-v1",
+      "blueprint_id": "BP-G1-LIT-020-01",
+      "curriculum_id": "G1-LIT-020",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "worksheet",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-020-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-021-01-hi-v1",
+      "blueprint_id": "BP-G1-LIT-021-01",
+      "curriculum_id": "G1-LIT-021",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "flashcard",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-021-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-021-01-sat-v1",
+      "blueprint_id": "BP-G1-LIT-021-01",
+      "curriculum_id": "G1-LIT-021",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "flashcard",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-021-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-010-01-hi-v1",
+      "blueprint_id": "BP-G1-LIT-010-01",
+      "curriculum_id": "G1-LIT-010",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-010-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-010-01-sat-v1",
+      "blueprint_id": "BP-G1-LIT-010-01",
+      "curriculum_id": "G1-LIT-010",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-010-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-001-01-bi-v1",
+      "blueprint_id": "BP-G1-LIT-001-01",
+      "curriculum_id": "G1-LIT-001",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-001-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-006-01-bi-v1",
+      "blueprint_id": "BP-G1-LIT-006-01",
+      "curriculum_id": "G1-LIT-006",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-006-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-028-01-bi-v1",
+      "blueprint_id": "BP-G1-LIT-028-01",
+      "curriculum_id": "G1-LIT-028",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "flashcard",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-028-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-031-01-hi-v1",
+      "blueprint_id": "BP-G1-LIT-031-01",
+      "curriculum_id": "G1-LIT-031",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "audio_activity",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-031-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-LIT-031-01-sat-v1",
+      "blueprint_id": "BP-G1-LIT-031-01",
+      "curriculum_id": "G1-LIT-031",
+      "grade": 1,
+      "domain": "literacy",
+      "content_type": "audio_activity",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-LIT-031-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-002-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-002-01",
+      "curriculum_id": "G1-NUM-002",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-002-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": true,
+      "conflict_refs": [
+        "X_G1_COUNT_RANGE"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-041-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-041-01",
+      "curriculum_id": "G1-NUM-041",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "flashcard",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-041-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": true,
+      "conflict_refs": [
+        "X_G1_NUMBER_RANGE"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-040-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-040-01",
+      "curriculum_id": "G1-NUM-040",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-040-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-032-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-032-01",
+      "curriculum_id": "G1-NUM-032",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-032-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": true,
+      "conflict_refs": [
+        "X_G1_ADDSUB_RANGE"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-033-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-033-01",
+      "curriculum_id": "G1-NUM-033",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-033-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": true,
+      "conflict_refs": [
+        "X_G1_ADDSUB_RANGE"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-031-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-031-01",
+      "curriculum_id": "G1-NUM-031",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "flashcard",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-031-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-046-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-046-01",
+      "curriculum_id": "G1-NUM-046",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-046-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-048-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-048-01",
+      "curriculum_id": "G1-NUM-048",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-048-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-011-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-011-01",
+      "curriculum_id": "G1-NUM-011",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-011-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G1-NUM-028-01-bi-v1",
+      "blueprint_id": "BP-G1-NUM-028-01",
+      "curriculum_id": "G1-NUM-028",
+      "grade": 1,
+      "domain": "numeracy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G1-NUM-028-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-009-01-hi-v1",
+      "blueprint_id": "BP-G2-LIT-009-01",
+      "curriculum_id": "G2-LIT-009",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "flashcard",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-009-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-009-01-sat-v1",
+      "blueprint_id": "BP-G2-LIT-009-01",
+      "curriculum_id": "G2-LIT-009",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "flashcard",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-009-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-014-01-hi-v1",
+      "blueprint_id": "BP-G2-LIT-014-01",
+      "curriculum_id": "G2-LIT-014",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-014-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-014-01-sat-v1",
+      "blueprint_id": "BP-G2-LIT-014-01",
+      "curriculum_id": "G2-LIT-014",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "worksheet",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-014-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-001-01-bi-v1",
+      "blueprint_id": "BP-G2-LIT-001-01",
+      "curriculum_id": "G2-LIT-001",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-001-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-024-01-bi-v1",
+      "blueprint_id": "BP-G2-LIT-024-01",
+      "curriculum_id": "G2-LIT-024",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-024-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-026-01-hi-v1",
+      "blueprint_id": "BP-G2-LIT-026-01",
+      "curriculum_id": "G2-LIT-026",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-026-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-026-01-sat-v1",
+      "blueprint_id": "BP-G2-LIT-026-01",
+      "curriculum_id": "G2-LIT-026",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "worksheet",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-026-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-029-01-bi-v1",
+      "blueprint_id": "BP-G2-LIT-029-01",
+      "curriculum_id": "G2-LIT-029",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-029-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-013-01-hi-v1",
+      "blueprint_id": "BP-G2-LIT-013-01",
+      "curriculum_id": "G2-LIT-013",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "audio_activity",
+      "languages": [
+        "hi"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-013-01-hi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [
+        "X_C101_TRAJECTORY"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-LIT-013-01-sat-v1",
+      "blueprint_id": "BP-G2-LIT-013-01",
+      "curriculum_id": "G2-LIT-013",
+      "grade": 2,
+      "domain": "literacy",
+      "content_type": "audio_activity",
+      "languages": [
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "literacy_parallel",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+literacy_parallel@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-LIT-013-01-sat-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [
+        "X_C101_TRAJECTORY"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-NUM-027-01-bi-v1",
+      "blueprint_id": "BP-G2-NUM-027-01",
+      "curriculum_id": "G2-NUM-027",
+      "grade": 2,
+      "domain": "numeracy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-NUM-027-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": true,
+      "conflict_refs": [
+        "X_G2_NUMBER_RANGE"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-NUM-018-01-bi-v1",
+      "blueprint_id": "BP-G2-NUM-018-01",
+      "curriculum_id": "G2-NUM-018",
+      "grade": 2,
+      "domain": "numeracy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-NUM-018-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": true,
+      "conflict_refs": [
+        "X_G2_NUMBER_RANGE"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-NUM-021-01-bi-v1",
+      "blueprint_id": "BP-G2-NUM-021-01",
+      "curriculum_id": "G2-NUM-021",
+      "grade": 2,
+      "domain": "numeracy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-NUM-021-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": true,
+      "conflict_refs": [
+        "X_G2_NUMBER_RANGE"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-NUM-011-01-bi-v1",
+      "blueprint_id": "BP-G2-NUM-011-01",
+      "curriculum_id": "G2-NUM-011",
+      "grade": 2,
+      "domain": "numeracy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-NUM-011-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-NUM-002-01-bi-v1",
+      "blueprint_id": "BP-G2-NUM-002-01",
+      "curriculum_id": "G2-NUM-002",
+      "grade": 2,
+      "domain": "numeracy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-NUM-002-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-NUM-004-01-bi-v1",
+      "blueprint_id": "BP-G2-NUM-004-01",
+      "curriculum_id": "G2-NUM-004",
+      "grade": 2,
+      "domain": "numeracy",
+      "content_type": "flashcard",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-NUM-004-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-NUM-024-01-bi-v1",
+      "blueprint_id": "BP-G2-NUM-024-01",
+      "curriculum_id": "G2-NUM-024",
+      "grade": 2,
+      "domain": "numeracy",
+      "content_type": "worksheet",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-NUM-024-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": true,
+      "conflict_refs": [
+        "X_G2_TABLES",
+        "X_MULT_DIV_TRAJECTORY"
+      ],
+      "superseded_by": null,
+      "notes": []
+    },
+    {
+      "content_id": "GC-G2-NUM-017-01-bi-v1",
+      "blueprint_id": "BP-G2-NUM-017-01",
+      "curriculum_id": "G2-NUM-017",
+      "grade": 2,
+      "domain": "numeracy",
+      "content_type": "interactive_activity",
+      "languages": [
+        "hi",
+        "sat"
+      ],
+      "curriculum_version": "curriculum_master_v1",
+      "blueprint_version": "content_blueprint_v1",
+      "prompt_stack": [
+        "base_prompt",
+        "numeracy_bilingual",
+        "santali_generation"
+      ],
+      "prompt_version": "base_prompt@1.0.0+numeracy_bilingual@1.0.0+santali_generation@1.0.0",
+      "model": null,
+      "model_parameters": null,
+      "generation_timestamp": null,
+      "generation_status": "planned",
+      "output_path": "generation/generated/pilot_v1/GC-G2-NUM-017-01-bi-v1.json",
+      "content_sha256": null,
+      "validator_version": null,
+      "validation_passed": null,
+      "validation_report_path": null,
+      "review_status": "pending",
+      "provisional": false,
+      "conflict_refs": [],
+      "superseded_by": null,
+      "notes": []
+    }
+  ]
+}

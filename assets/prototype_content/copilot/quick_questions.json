@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "note": "Quick questions shown in the Co-Pilot chat panel. Tapped questions go through the SAME rule engine. 'contextAware' items are only shown when a lesson context exists.",
+  "defaultQuestions": [
+    {
+      "id": "q_worksheet",
+      "labelHindi": "Worksheet कैसे बनाएं?",
+      "labelEnglish": "How to make a worksheet?",
+      "query": "mujhe worksheet generate karni hai main kidhar jau"
+    },
+    {
+      "id": "q_flashcard",
+      "labelHindi": "Flashcard कहाँ है?",
+      "labelEnglish": "Where are flashcards?",
+      "query": "mujhe flashcard banana hai"
+    },
+    {
+      "id": "q_assessment",
+      "labelHindi": "Assessment कहाँ है?",
+      "labelEnglish": "Where is assessment?",
+      "query": "assessment kaha hai"
+    },
+    {
+      "id": "q_translation",
+      "labelHindi": "Translation कहाँ है?",
+      "labelEnglish": "Where is translation?",
+      "query": "translation kaha hai"
+    },
+    {
+      "id": "q_guidance",
+      "labelHindi": "Teaching Guidance",
+      "labelEnglish": "Teaching guidance",
+      "query": "mujhe padhane ka tarika batao"
+    },
+    {
+      "id": "q_downloads",
+      "labelHindi": "Downloads कहाँ हैं?",
+      "labelEnglish": "Where are downloads?",
+      "query": "mere downloads kaha hain"
+    }
+  ],
+  "contextAwareQuestions": [
+    {
+      "id": "q_teach_this",
+      "labelHindi": "इसे कैसे सिखाएँ?",
+      "labelEnglish": "How to teach this?",
+      "query": "mujhe ye kaise padhana hai"
+    },
+    {
+      "id": "q_activity",
+      "labelHindi": "एक activity बताएं",
+      "labelEnglish": "Suggest an activity",
+      "query": "ek activity batao"
+    },
+    {
+      "id": "q_worksheet_ctx",
+      "labelHindi": "Worksheet बनाएं",
+      "labelEnglish": "Make a worksheet",
+      "query": "worksheet kaise banau"
+    },
+    {
+      "id": "q_flashcard_ctx",
+      "labelHindi": "Flashcard बनाएं",
+      "labelEnglish": "Make a flashcard",
+      "query": "flashcard kaise banau"
+    },
+    {
+      "id": "q_assess_ctx",
+      "labelHindi": "Assessment करें",
+      "labelEnglish": "Do an assessment",
+      "query": "assessment kaise karu"
+    }
+  ]
+}

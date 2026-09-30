@@ -1,0 +1,167 @@
+﻿id,category,subcategory,english,source_english,hindi,santali_candidate,santali_raw_text_layer,santali_label_image,page,source_crop,verified,corrected_santali,notes
+domestic_animal_cow_001,animals,domestic_animals,cow,COW,गाय,ᱜᱟᱹᱭ,ᱜᱟ+ᱭ,labels/animals/domestic/domestic_animal_cow_001_santali.png,6,raw/animals/domestic/domestic_animal_cow_001_source.png,FALSE,,
+domestic_animal_ox_001,animals,domestic_animals,ox,OX,बैल,ᱰᱟᱸᱹ ᱨᱟ,ᱰᱟa+ ᱨᱟ,labels/animals/domestic/domestic_animal_ox_001_santali.png,6,raw/animals/domestic/domestic_animal_ox_001_source.png,FALSE,,
+domestic_animal_calf_001,animals,domestic_animals,calf,CALF,बछड़ा,ᱢᱤᱦᱩᱸ,ᱢᱤᱦᱩa,labels/animals/domestic/domestic_animal_calf_001_santali.png,6,raw/animals/domestic/domestic_animal_calf_001_source.png,FALSE,,
+domestic_animal_buffalo_001,animals,domestic_animals,buffalo,BUFFALO,भैंस,ᱵᱤᱛᱠᱤᱞ,ᱵᱤᱛᱠᱤᱞ,labels/animals/domestic/domestic_animal_buffalo_001_santali.png,6,raw/animals/domestic/domestic_animal_buffalo_001_source.png,FALSE,,
+domestic_animal_buffalo_002,animals,domestic_animals,buffalo,BUFFALO,भैंस,ᱠᱟᱰᱟ,ᱠᱟᱰᱟ,labels/animals/domestic/domestic_animal_buffalo_002_santali.png,6,raw/animals/domestic/domestic_animal_buffalo_002_source.png,FALSE,,second buffalo (bull); text layer spells it BUFFAL0
+domestic_animal_buffalo_calf_001,animals,domestic_animals,buffalo calf,CALF,बछड़ा,ᱠᱟᱰᱟᱹ ᱦᱚᱯᱚᱱ,ᱠᱟᱰᱟ+ ᱦᱚᱯᱚᱱ,labels/animals/domestic/domestic_animal_buffalo_calf_001_santali.png,6,raw/animals/domestic/domestic_animal_buffalo_calf_001_source.png,FALSE,,printed as CALF; photo shows a buffalo calf
+domestic_animal_goat_001,animals,domestic_animals,goat,GOAT,बकरी,ᱢᱮᱨᱚᱢ,ᱢᱮᱨᱚᱢ,labels/animals/domestic/domestic_animal_goat_001_santali.png,6,raw/animals/domestic/domestic_animal_goat_001_source.png,FALSE,,
+domestic_animal_pig_001,animals,domestic_animals,pig,PIG,सुअर,ᱥᱩᱠᱨᱤ,ᱥᱩᱠᱨᱤ,labels/animals/domestic/domestic_animal_pig_001_santali.png,6,raw/animals/domestic/domestic_animal_pig_001_source.png,FALSE,,
+domestic_animal_sheep_001,animals,domestic_animals,sheep,SHEEP,भेड़,ᱵᱷᱤᱰᱤ,ᱵᱷᱤᱰᱤ,labels/animals/domestic/domestic_animal_sheep_001_santali.png,6,raw/animals/domestic/domestic_animal_sheep_001_source.png,FALSE,,
+domestic_animal_elephant_001,animals,domestic_animals,elephant,ELEPHANT,हाथी,ᱦᱟᱹᱛᱤ,ᱦᱟᱹᱛᱤ,labels/animals/domestic/domestic_animal_elephant_001_santali.png,6,raw/animals/domestic/domestic_animal_elephant_001_source.png,FALSE,,
+domestic_animal_horse_001,animals,domestic_animals,horse,HORSE,घोड़ा,,,labels/animals/domestic/domestic_animal_horse_001_santali.png,6,raw/animals/domestic/domestic_animal_horse_001_source.png,FALSE,,
+domestic_animal_camel_001,animals,domestic_animals,camel,CAMLE,ऊंट,ᱩ,ᱩ,labels/animals/domestic/domestic_animal_camel_001_santali.png,6,raw/animals/domestic/domestic_animal_camel_001_source.png,FALSE,,printed spelling CAMLE
+domestic_animal_donkey_001,animals,domestic_animals,donkey,DONKEY,गधा,ᱜᱟ ᱷ,ᱜᱟ ᱷ,labels/animals/domestic/domestic_animal_donkey_001_santali.png,6,raw/animals/domestic/domestic_animal_donkey_001_source.png,FALSE,,
+domestic_animal_dog_001,animals,domestic_animals,dog,DOG,कुत्ता,ᱥᱮᱛᱟ,ᱥᱮᱛᱟ,labels/animals/domestic/domestic_animal_dog_001_santali.png,6,raw/animals/domestic/domestic_animal_dog_001_source.png,FALSE,,
+domestic_animal_cat_001,animals,domestic_animals,cat,CAT,बिल्ली,ᱯᱩᱥᱤ,ᱯᱩᱥᱤ,labels/animals/domestic/domestic_animal_cat_001_santali.png,6,raw/animals/domestic/domestic_animal_cat_001_source.png,FALSE,,
+wild_animal_lion_001,animals,wild_animals,lion,LION,शेर,ᱠᱩᱞ,ᱠᱩᱞ,labels/animals/wild/wild_animal_lion_001_santali.png,7,raw/animals/wild/wild_animal_lion_001_source.png,FALSE,,
+wild_animal_tiger_001,animals,wild_animals,tiger,TIGER,बाघ,ᱛᱟᱨᱩ,ᱛᱟᱨᱩ,labels/animals/wild/wild_animal_tiger_001_santali.png,7,raw/animals/wild/wild_animal_tiger_001_source.png,FALSE,,
+wild_animal_leopard_001,animals,wild_animals,leopard,LEOPART,तेंदुआ,ᱟᱪᱤᱛᱟ,ᱟᱪᱤᱛᱟ,labels/animals/wild/wild_animal_leopard_001_santali.png,7,raw/animals/wild/wild_animal_leopard_001_source.png,FALSE,,printed spelling LEOPART
+wild_animal_fox_001,animals,wild_animals,fox,FOX,लोमड़ी,ᱛᱩᱭᱩ,ᱛᱩᱭᱩ,labels/animals/wild/wild_animal_fox_001_santali.png,7,raw/animals/wild/wild_animal_fox_001_source.png,FALSE,,
+wild_animal_wolf_001,animals,wild_animals,wolf,WOLF,भेड़िया,ᱦᱩᱸ ᱰᱟᱹᱨ,ᱦᱩa ᱰᱟ+ᱨ,labels/animals/wild/wild_animal_wolf_001_santali.png,7,raw/animals/wild/wild_animal_wolf_001_source.png,FALSE,,
+wild_animal_hyena_001,animals,wild_animals,hyena,HYENA,लकड़बग्घा,ᱦᱟᱰᱜᱽᱹᱟᱨ,ᱦᱟᱰᱜᱽ+ᱟᱨ,labels/animals/wild/wild_animal_hyena_001_santali.png,7,raw/animals/wild/wild_animal_hyena_001_source.png,FALSE,,
+wild_animal_bear_001,animals,wild_animals,bear,BEAR,भालू,ᱰᱟᱟ,ᱰᱟᱟ,labels/animals/wild/wild_animal_bear_001_santali.png,7,raw/animals/wild/wild_animal_bear_001_source.png,FALSE,,
+wild_animal_monkey_001,animals,wild_animals,monkey,MONKEY,बंदर,ᱜᱟᱬᱤ,ᱜᱟᱬᱤ,labels/animals/wild/wild_animal_monkey_001_santali.png,7,raw/animals/wild/wild_animal_monkey_001_source.png,FALSE,,
+wild_animal_langur_001,animals,wild_animals,langur,BABOON,लंगुर,ᱦᱟᱲᱩ,ᱦᱟᱲᱩ,labels/animals/wild/wild_animal_langur_001_santali.png,7,raw/animals/wild/wild_animal_langur_001_source.png,FALSE,,printed BABOON; Hindi लंगुर and photo show a langur
+wild_animal_deer_001,animals,wild_animals,deer,DEER,हिरण,ᱡᱤᱞ,ᱡᱤᱞ,labels/animals/wild/wild_animal_deer_001_santali.png,7,raw/animals/wild/wild_animal_deer_001_source.png,FALSE,,
+wild_animal_nilgai_001,animals,wild_animals,nilgai,NILGAI,नील गाय,ᱠᱟ ᱯᱤᱞ ᱜᱟᱭ,ᱠᱟ ᱯᱤᱞ ᱜᱟᱭ,labels/animals/wild/wild_animal_nilgai_001_santali.png,7,raw/animals/wild/wild_animal_nilgai_001_source.png,FALSE,,
+wild_animal_barasingha_001,animals,wild_animals,barasingha,REINDEER,बारहसिंगा,ᱡᱤᱞ ᱡᱷᱟᱠᱟᱲ,ᱡᱤᱞ ᱡᱷᱟᱠᱟᱲ,labels/animals/wild/wild_animal_barasingha_001_santali.png,7,raw/animals/wild/wild_animal_barasingha_001_source.png,FALSE,,printed REINDEER; Hindi बारहसिंगा = swamp deer
+wild_animal_rabbit_001,animals,wild_animals,rabbit,RABIT,खरगोश,ᱠᱩᱞᱟᱭ,ᱠᱩᱞᱟᱭ,labels/animals/wild/wild_animal_rabbit_001_santali.png,7,raw/animals/wild/wild_animal_rabbit_001_source.png,FALSE,,printed spelling RABIT
+wild_animal_porcupine_001,animals,wild_animals,porcupine,PORCUPINE,साही,ᱡᱷᱤᱸᱠ,ᱡᱷᱤaᱠ,labels/animals/wild/wild_animal_porcupine_001_santali.png,7,raw/animals/wild/wild_animal_porcupine_001_source.png,FALSE,,
+wild_animal_mongoose_001,animals,wild_animals,mongoose,MONGOOSE,नेवला,ᱪᱮᱢᱮᱸᱧ,ᱪᱮᱢᱮaᱧ,labels/animals/wild/wild_animal_mongoose_001_santali.png,7,raw/animals/wild/wild_animal_mongoose_001_source.png,FALSE,,
+bird_hen_001,birds,,hen,HEN,मुर्गी,ᱥᱤᱢ,ᱥᱤᱢ,labels/birds/bird_hen_001_santali.png,8,raw/birds/bird_hen_001_source.png,FALSE,,
+bird_duck_001,birds,,duck,DUCK,बत्तख,ᱜᱮᱰᱮ,ᱜᱮᱰᱮ,labels/birds/bird_duck_001_santali.png,8,raw/birds/bird_duck_001_source.png,FALSE,,
+bird_pigeon_001,birds,,pigeon,BABOON,लंगुर,ᱯᱟᱨᱣᱟ,ᱯᱟᱨᱣᱟ,labels/birds/bird_pigeon_001_santali.png,8,raw/birds/bird_pigeon_001_source.png,FALSE,,SOURCE ERROR: printed BABOON/लंगुर but the photo is a pigeon (Santali text layer: ᱯᱟᱨᱣᱟ)
+bird_peacock_001,birds,,peacock,PEACOCK,मोर,ᱢᱟᱨᱟᱜ,ᱢᱟᱨᱟᱜ,labels/birds/bird_peacock_001_santali.png,8,raw/birds/bird_peacock_001_source.png,FALSE,,
+bird_parrot_001,birds,,parrot,PARROT,तोता,ᱢᱤᱨᱩ,ᱢᱤᱨᱩ,labels/birds/bird_parrot_001_santali.png,8,raw/birds/bird_parrot_001_source.png,FALSE,,
+bird_cuckoo_001,birds,,cuckoo,CUCKOO,कोयल,ᱠᱩᱭᱞᱤ,ᱠᱩᱭᱞᱤ,labels/birds/bird_cuckoo_001_santali.png,8,raw/birds/bird_cuckoo_001_source.png,FALSE,,
+bird_partridge_001,birds,,partridge,SCATTER,तितर,ᱪᱤᱛᱨᱤ,ᱪᱤᱛᱨᱤ,labels/birds/bird_partridge_001_santali.png,8,raw/birds/bird_partridge_001_source.png,FALSE,,printed SCATTER; Hindi तितर = partridge
+bird_quail_001,birds,,quail,QUAIL,बटेर,ᱜᱩᱸᱰᱽᱨᱤ,ᱜᱩaᱰᱽᱨᱤ,labels/birds/bird_quail_001_santali.png,8,raw/birds/bird_quail_001_source.png,FALSE,,
+bird_sparrow_001,birds,,sparrow,SPARROW,गौरेया,ᱜᱷᱟᱲᱣᱟ,ᱜᱷᱟᱲᱣᱟ,labels/birds/bird_sparrow_001_santali.png,8,raw/birds/bird_sparrow_001_source.png,FALSE,,
+bird_heron_001,birds,,heron,HERON,बगुला,ᱠᱚᱜ,ᱠᱚᱜ,labels/birds/bird_heron_001_santali.png,8,raw/birds/bird_heron_001_source.png,FALSE,,
+bird_vulture_001,birds,,vulture,VULTURE,गिद्ध,ᱜᱤᱫᱤ,ᱜᱤᱫᱤ,labels/birds/bird_vulture_001_santali.png,8,raw/birds/bird_vulture_001_source.png,FALSE,,
+bird_kite_001,birds,,kite,BEAGLE,चील,ᱠᱩᱲᱤᱫ,ᱠᱩᱲᱤᱫ,labels/birds/bird_kite_001_santali.png,8,raw/birds/bird_kite_001_source.png,FALSE,,printed BEAGLE; Hindi चील = kite (bird of prey)
+bird_dove_001,birds,,dove,DOVE,पड़की,ᱯᱚᱛᱟᱢ,ᱯᱚᱛᱟᱢ,labels/birds/bird_dove_001_santali.png,8,raw/birds/bird_dove_001_source.png,FALSE,,
+bird_crow_001,birds,,crow,CROW,कौआ,ᱠᱟᱦᱩ,ᱠᱟᱦᱩ,labels/birds/bird_crow_001_santali.png,8,raw/birds/bird_crow_001_source.png,FALSE,,
+bird_swan_001,birds,,swan,SWAN,हंस,ᱸᱦᱟᱹᱥ,aᱦᱟᱥ+,labels/birds/bird_swan_001_santali.png,8,raw/birds/bird_swan_001_source.png,FALSE,,
+vegetable_potato_001,vegetables,,potato,POTATO,आलु,ᱹᱟ ᱞᱸᱩ,+ᱟ ᱞᱩa,labels/vegetables/vegetable_potato_001_santali.png,9,raw/vegetables/vegetable_potato_001_source.png,FALSE,,
+vegetable_tomato_001,vegetables,,tomato,TOMATO,टमाटर,ᱵᱤᱞᱟᱛᱤ / ᱠᱩᱲᱪᱟᱹ,ᱵᱤᱞᱟᱛᱤ / ᱠᱩᱲᱪᱟᱹ,labels/vegetables/vegetable_tomato_001_santali.png,9,raw/vegetables/vegetable_tomato_001_source.png,FALSE,,
+vegetable_brinjal_001,vegetables,,brinjal,BRINJAL,बैंगन,ᱵᱮॱᱜᱟᱲ,ᱵᱮॱᱜᱟᱲ,labels/vegetables/vegetable_brinjal_001_santali.png,9,raw/vegetables/vegetable_brinjal_001_source.png,FALSE,,
+vegetable_ladyfinger_001,vegetables,,ladyfinger,LADYFINGER,भिंडी,ᱵᱷᱮᱰᱣᱟ,ᱵᱷᱮᱰᱣᱟ,labels/vegetables/vegetable_ladyfinger_001_santali.png,9,raw/vegetables/vegetable_ladyfinger_001_source.png,FALSE,,
+vegetable_chili_001,vegetables,,chili,CHILI,मिर्च,ᱢᱟᱨᱹᱤᱪᱽ,ᱢᱟᱨᱤᱪᱽ+,labels/vegetables/vegetable_chili_001_santali.png,9,raw/vegetables/vegetable_chili_001_source.png,FALSE,,
+vegetable_bitter_gourd_001,vegetables,,bitter gourd,BITTER GOURD,करेला,ᱠᱟᱨᱞᱟ,ᱠᱟᱨᱞᱟ,labels/vegetables/vegetable_bitter_gourd_001_santali.png,9,raw/vegetables/vegetable_bitter_gourd_001_source.png,FALSE,,
+vegetable_cabbage_001,vegetables,,cabbage,CABBAGE,बंदगोभी,ᱯᱚᱴᱚᱢᱠᱩᱵᱤ,ᱯᱚᱴᱚᱢᱠᱩᱵᱤ,labels/vegetables/vegetable_cabbage_001_santali.png,9,raw/vegetables/vegetable_cabbage_001_source.png,FALSE,,
+vegetable_cauliflower_001,vegetables,,cauliflower,CAULIFLOWER,फुलगोभी,ᱵᱟᱦᱟᱠᱩᱵᱤ,ᱵᱟᱦᱟᱠᱩᱵᱤ,labels/vegetables/vegetable_cauliflower_001_santali.png,9,raw/vegetables/vegetable_cauliflower_001_source.png,FALSE,,
+vegetable_pumpkin_001,vegetables,,pumpkin,PUMPKIN,बैंगन,ᱠᱚᱸᱦᱱᱰᱟᱹ,ᱠᱚaᱦᱱᱰᱟ+,labels/vegetables/vegetable_pumpkin_001_santali.png,9,raw/vegetables/vegetable_pumpkin_001_source.png,FALSE,,SOURCE ERROR: Hindi printed as बैंगन (brinjal); English and photo = pumpkin
+vegetable_onion_001,vegetables,,onion,ONION,प्याज,ᱯᱮᱭᱟᱡᱽ,ᱯᱮᱭᱟᱡᱽ,labels/vegetables/vegetable_onion_001_santali.png,9,raw/vegetables/vegetable_onion_001_source.png,FALSE,,
+vegetable_garlic_001,vegetables,,garlic,GARLIC,लहसुन,ᱹᱨᱟᱹᱥᱹᱩᱱ,+ᱨᱟᱹᱥᱩᱱ+,labels/vegetables/vegetable_garlic_001_santali.png,9,raw/vegetables/vegetable_garlic_001_source.png,FALSE,,
+vegetable_long_bean_001,vegetables,,long bean,LONG BEAN,बोदी,ᱜᱷᱟᱜᱸᱷᱨᱟ,ᱜᱷᱟᱜᱷᱨᱟa,labels/vegetables/vegetable_long_bean_001_santali.png,9,raw/vegetables/vegetable_long_bean_001_source.png,FALSE,,
+vegetable_ridge_gourd_001,vegetables,,ridge gourd,RIDGE GOURD,प्याज,ᱡᱷᱤᱜᱟ,ᱡᱷᱤᱜᱟ,labels/vegetables/vegetable_ridge_gourd_001_santali.png,9,raw/vegetables/vegetable_ridge_gourd_001_source.png,FALSE,,SOURCE ERROR: Hindi printed as प्याज (onion); English and photo = ridge gourd
+vegetable_bottle_gourd_001,vegetables,,bottle gourd,BOTTEL GOURD,लौकी,ᱹᱦᱳᱛᱚᱫ,+ᱦᱳᱛᱚᱫ,labels/vegetables/vegetable_bottle_gourd_001_santali.png,9,raw/vegetables/vegetable_bottle_gourd_001_source.png,FALSE,,printed spelling BOTTEL
+vegetable_radish_001,vegetables,,radish,RADISH,मुली,ᱢᱩᱨᱟᱹᱭ / ᱢᱩᱞᱤ,ᱢᱩᱨᱟᱹᱭ / ᱢᱩᱞᱤ,labels/vegetables/vegetable_radish_001_santali.png,9,raw/vegetables/vegetable_radish_001_source.png,FALSE,,
+fruit_mango_001,fruits,,mango,MANGO,आम,ᱩᱞ,ᱩᱞ,labels/fruits/fruit_mango_001_santali.png,10,raw/fruits/fruit_mango_001_source.png,FALSE,,
+fruit_apple_001,fruits,,apple,APPLE,सेव,ᱥᱵᱽ,ᱥᱵᱽ,labels/fruits/fruit_apple_001_santali.png,10,raw/fruits/fruit_apple_001_source.png,FALSE,,
+fruit_banana_001,fruits,,banana,BANANA,केला,ᱠᱟ,ᱠᱟ,labels/fruits/fruit_banana_001_santali.png,10,raw/fruits/fruit_banana_001_source.png,FALSE,,
+fruit_kendu_001,fruits,,kendu,MANGO,केंद,ᱛ,ᱛ,labels/fruits/fruit_kendu_001_santali.png,10,raw/fruits/fruit_kendu_001_source.png,FALSE,,"SOURCE ERROR: printed MANGO; Hindi केंद = kendu (Diospyros / persimmon-like fruit), matches photo"
+fruit_custard_apple_001,fruits,,custard apple,CUSTARD APPLE,सरीफा,ᱢᱟᱫᱟᱨᱜᱚᱢ,ᱢᱟᱫᱟᱨᱜᱚᱢ,labels/fruits/fruit_custard_apple_001_santali.png,10,raw/fruits/fruit_custard_apple_001_source.png,FALSE,,
+fruit_guava_001,fruits,,guava,GUAVA,अमरूद,ᱟᱡᱤᱨ,ᱟᱡᱤᱨ,labels/fruits/fruit_guava_001_santali.png,10,raw/fruits/fruit_guava_001_source.png,FALSE,,
+fruit_jamun_001,fruits,,jamun,BERRY,जामुन,ᱠᱩᱫᱽ,ᱠᱩᱫᱽ,labels/fruits/fruit_jamun_001_santali.png,10,raw/fruits/fruit_jamun_001_source.png,FALSE,,printed BERRY; Hindi जामुन = jamun / java plum
+fruit_pomegranate_001,fruits,,pomegranate,POMGRANATE,अनार,ᱟᱱᱟᱨ,ᱟᱱᱟᱨ,labels/fruits/fruit_pomegranate_001_santali.png,10,raw/fruits/fruit_pomegranate_001_source.png,FALSE,,printed spelling POMGRANATE
+fruit_jackfruit_001,fruits,,jackfruit,JACKFRUIT,कटहल,ᱠᱟ,ᱠᱟ,labels/fruits/fruit_jackfruit_001_santali.png,10,raw/fruits/fruit_jackfruit_001_source.png,FALSE,,
+fruit_orange_001,fruits,,orange,ORANGE,संतरा,ᱥᱟᱱᱛᱨᱟ,ᱥᱟᱱᱛᱨᱟ,labels/fruits/fruit_orange_001_santali.png,10,raw/fruits/fruit_orange_001_source.png,FALSE,,
+fruit_pear_001,fruits,,pear,PEAR,नशपाती,ᱱᱟᱥᱯᱟᱹᱛᱤ,ᱱᱟᱥᱯᱟ+ᱛᱤ,labels/fruits/fruit_pear_001_santali.png,10,raw/fruits/fruit_pear_001_source.png,FALSE,,
+fruit_palm_fruit_001,fruits,,palm fruit,PALM,ताड़,ᱛ,ᱛ,labels/fruits/fruit_palm_fruit_001_santali.png,10,raw/fruits/fruit_palm_fruit_001_source.png,FALSE,,ताड़ = palmyra palm fruit
+fruit_tamarind_001,fruits,,tamarind,TAMARIND,इमली,ᱡᱚᱡᱚ,ᱡᱚᱡᱚ,labels/fruits/fruit_tamarind_001_santali.png,10,raw/fruits/fruit_tamarind_001_source.png,FALSE,,
+fruit_bhelwa_001,fruits,,bhelwa,HYPOCARP,भेलवा,ᱥᱚᱥᱚ,ᱥᱚᱥᱚ,labels/fruits/fruit_bhelwa_001_santali.png,10,raw/fruits/fruit_bhelwa_001_source.png,FALSE,,printed HYPOCARP; Hindi भेलवा = marking nut (Semecarpus anacardium)
+fruit_ber_001,fruits,,ber,PULM,बेर,ᱡᱟᱹᱱᱩᱢ / ᱰᱤᱰᱷᱣᱲᱤ,ᱡᱟᱹᱱᱩᱢ / ᱰᱤᱰᱷᱣᱲᱤ,labels/fruits/fruit_ber_001_santali.png,10,raw/fruits/fruit_ber_001_source.png,FALSE,,printed PULM; Hindi बेर = Indian jujube
+flower_rose_001,flowers,,rose,ROSE,गुलाब,ᱜᱩᱞᱟᱹᱵ,ᱜᱩᱞᱟᱵᱹ,labels/flowers/flower_rose_001_santali.png,11,raw/flowers/flower_rose_001_source.png,FALSE,,
+flower_hibiscus_001,flowers,,hibiscus,HIBISCUS,जोबा,ᱡᱚᱵᱟ,ᱡᱚᱵᱟ,labels/flowers/flower_hibiscus_001_santali.png,11,raw/flowers/flower_hibiscus_001_source.png,FALSE,,
+flower_marigold_001,flowers,,marigold,MARIGOLD,गेंदा,ᱠᱩᱥ ᱟᱢᱵᱤ,ᱠᱩᱥ ᱟᱢᱵᱤ,labels/flowers/flower_marigold_001_santali.png,11,raw/flowers/flower_marigold_001_source.png,FALSE,,
+flower_palash_001,flowers,,palash,PALAS,पलास,ᱢᱩᱨᱩᱫ,ᱢᱩᱨᱩᱫ,labels/flowers/flower_palash_001_santali.png,11,raw/flowers/flower_palash_001_source.png,FALSE,,flame of the forest (Butea monosperma)
+flower_lotus_001,flowers,,lotus,LOTUS,कमल,ᱩᱯᱟᱹᱞ,ᱩᱯᱟᱹᱞ,labels/flowers/flower_lotus_001_santali.png,11,raw/flowers/flower_lotus_001_source.png,FALSE,,
+flower_sunflower_001,flowers,,sunflower,SUNFLOWER,सुर्यमुखी,ᱥᱩᱨᱩᱡᱽᱢᱩᱠᱷᱤ,ᱥᱩᱨᱩᱡᱽᱢᱩᱠᱷᱤ,labels/flowers/flower_sunflower_001_santali.png,11,raw/flowers/flower_sunflower_001_source.png,FALSE,,
+flower_sal_flower_001,flowers,,sal flower,SAL,सखुआ,ᱥᱟᱨᱡᱚᱢ,ᱥᱟᱨᱡᱚᱢ,labels/flowers/flower_sal_flower_001_santali.png,11,raw/flowers/flower_sal_flower_001_source.png,FALSE,,flowers of the sal tree (Shorea robusta)
+flower_jasmine_001,flowers,,jasmine,JASMINE,चमेली,ᱢᱟᱹᱞᱤ,ᱢᱟᱹᱞᱤ,labels/flowers/flower_jasmine_001_santali.png,11,raw/flowers/flower_jasmine_001_source.png,FALSE,,
+flower_frangipani_001,flowers,,frangipani,FRANGIPANI,गुलैन्ची,ᱜᱩᱞᱟᱡᱽ,ᱜᱩᱞᱟᱡᱽ,labels/flowers/flower_frangipani_001_santali.png,11,raw/flowers/flower_frangipani_001_source.png,FALSE,,
+flower_magnolia_001,flowers,,magnolia,MAGNOLIA,चम्पा,ᱪᱟᱢᱯᱟ,ᱪᱟᱢᱯᱟ,labels/flowers/flower_magnolia_001_santali.png,11,raw/flowers/flower_magnolia_001_source.png,FALSE,,
+flower_gulmohar_001,flowers,,gulmohar,DELONIX,गुलमोहर,ᱨᱚᱠᱚᱡᱪᱚᱸᱫᱚᱱ,ᱨᱚᱠᱚᱡᱪᱚᱸᱫᱚᱱ,labels/flowers/flower_gulmohar_001_santali.png,11,raw/flowers/flower_gulmohar_001_source.png,FALSE,,Delonix regia / gulmohar
+flower_red_oleander_001,flowers,,red oleander,RED OLEANDER,गुलैन्ची,ᱨᱟᱡᱵᱟᱦᱟ,ᱨᱟᱡᱵᱟᱦᱟ,labels/flowers/flower_red_oleander_001_santali.png,11,raw/flowers/flower_red_oleander_001_source.png,FALSE,,Hindi repeats गुलैन्ची (probable source error; oleander = कनेर)
+water_animal_fish_001,water_animals,,fish,FISH,मछली,ᱦᱟᱹᱠᱩ,ᱦᱟ.ᱠᱩ,labels/water_animals/water_animal_fish_001_santali.png,12,raw/water_animals/water_animal_fish_001_source.png,FALSE,,
+water_animal_frog_001,water_animals,,frog,FROG,मेढक,ᱨᱚᱴᱮ,ᱨᱚᱴᱮ,labels/water_animals/water_animal_frog_001_santali.png,12,raw/water_animals/water_animal_frog_001_source.png,FALSE,,
+water_animal_crocodile_001,water_animals,,crocodile,CORCODILE,मगरमच्छ,ᱛᱟᱭᱟᱱ,ᱛᱟᱭᱟᱱ,labels/water_animals/water_animal_crocodile_001_santali.png,12,raw/water_animals/water_animal_crocodile_001_source.png,FALSE,,printed spelling CORCODILE
+water_animal_snake_001,water_animals,,snake,SNAKE,सांप,ᱵᱤᱝ,ᱵᱤᱝ,labels/water_animals/water_animal_snake_001_santali.png,12,raw/water_animals/water_animal_snake_001_source.png,FALSE,,
+water_animal_tortoise_001,water_animals,,tortoise,TORTOISE,कछुआ,ᱦᱚᱨᱚ,ᱦᱚᱨᱚ,labels/water_animals/water_animal_tortoise_001_santali.png,12,raw/water_animals/water_animal_tortoise_001_source.png,FALSE,,
+water_animal_crab_001,water_animals,,crab,CRAB,केकड़ा,ᱠᱟᱴᱠᱚᱢ,ᱠᱟᱴᱠᱚᱢ,labels/water_animals/water_animal_crab_001_santali.png,12,raw/water_animals/water_animal_crab_001_source.png,FALSE,,
+water_animal_snail_001,water_animals,,snail,SNAIL,घोंघा,ᱜᱷᱚᱸᱜᱷᱟ,ᱜᱷᱚᱸᱜᱷᱟ,labels/water_animals/water_animal_snail_001_santali.png,12,raw/water_animals/water_animal_snail_001_source.png,FALSE,,
+water_animal_mussel_001,water_animals,,mussel,MUSSEL,शंबुक,ᱡᱷᱤᱱᱩᱠ,ᱡᱷᱤᱱᱩᱠ,labels/water_animals/water_animal_mussel_001_santali.png,12,raw/water_animals/water_animal_mussel_001_source.png,FALSE,,
+water_animal_prawn_001,water_animals,,prawn,PRAWN,झींगा,ᱤᱪᱟᱹᱠ,ᱤᱪᱟ.ᱠ,labels/water_animals/water_animal_prawn_001_santali.png,12,raw/water_animals/water_animal_prawn_001_source.png,FALSE,,
+water_animal_hippopotamus_001,water_animals,,hippopotamus,HIPPOPOTAMUS,दरिया घोड़ा,ᱫᱟᱜ ᱦᱟᱹᱛᱤ,ᱫᱟᱜ ᱦᱟᱹᱛᱤ,labels/water_animals/water_animal_hippopotamus_001_santali.png,12,raw/water_animals/water_animal_hippopotamus_001_source.png,FALSE,,
+water_animal_eel_001,water_animals,,eel,EEL FISH,सर्प मछली,ᱫᱩᱸᱲᱤ,ᱫᱩᱸᱲᱤ,labels/water_animals/water_animal_eel_001_santali.png,12,raw/water_animals/water_animal_eel_001_source.png,FALSE,,
+water_animal_blue_whale_001,water_animals,,blue whale,BLUE WHEELS,व्हेल,ᱡᱚᱞᱟ ᱦᱟᱠᱩ,ᱡᱚᱞᱟ ᱦᱟᱠᱩ,labels/water_animals/water_animal_blue_whale_001_santali.png,12,raw/water_animals/water_animal_blue_whale_001_source.png,FALSE,,printed BLUE WHEELS; Hindi व्हेल = whale
+insect_silkworm_001,insects,,silkworm,SILKWORM,रेशम कीट,ᱞᱩᱢᱟᱹᱝ ᱹᱛᱤᱡᱩ,ᱞᱩᱢᱟᱹᱝ ᱛᱤᱡᱩ+,labels/insects/insect_silkworm_001_santali.png,13,raw/insects/insect_silkworm_001_source.png,FALSE,,
+insect_centipede_001,insects,,centipede,CENTIPEDE,कनखजूरा,ᱥᱸᱮॱᱜᱮᱞᱢᱟᱨᱢᱟᱨ,ᱥᱮॱᱜᱮᱞᱢᱟᱨᱢᱟᱨa,labels/insects/insect_centipede_001_santali.png,13,raw/insects/insect_centipede_001_source.png,FALSE,,
+insect_earthworm_001,insects,,earthworm,EARTHWORM,केंचुआ,ᱞᱮᱸᱰᱮᱛ,ᱞᱮᱸᱰᱮᱛ,labels/insects/insect_earthworm_001_santali.png,13,raw/insects/insect_earthworm_001_source.png,FALSE,,
+insect_millipede_001,insects,,millipede,MILLIPEDES,गोजर,ᱜᱮᱜᱮᱛᱮᱨᱮᱝ,ᱜᱮᱜᱮᱛᱮᱨᱮᱝ,labels/insects/insect_millipede_001_santali.png,13,raw/insects/insect_millipede_001_source.png,FALSE,,
+insect_beetle_001,insects,,beetle,BUG BEETLE,भृंग,ᱩᱨᱩ,ᱩᱨᱩ,labels/insects/insect_beetle_001_santali.png,13,raw/insects/insect_beetle_001_source.png,FALSE,,
+insect_dragonfly_001,insects,,dragonfly,DRAGONFLY,व्याध पतंग,ᱵᱟᱜᱽᱰᱩᱞᱩᱝ,ᱵᱟᱜᱽᱰᱩᱞᱩᱝ,labels/insects/insect_dragonfly_001_santali.png,13,raw/insects/insect_dragonfly_001_source.png,FALSE,,
+insect_butterfly_001,insects,,butterfly,MILLIPEDES,तितली,ᱯᱤᱯᱲᱤᱭᱟᱝ,ᱯᱤᱯᱲᱤᱭᱟᱝ,labels/insects/insect_butterfly_001_santali.png,13,raw/insects/insect_butterfly_001_source.png,FALSE,,SOURCE ERROR: printed MILLIPEDES; Hindi तितली and photo = butterfly
+insect_grasshopper_001,insects,,grasshopper,GRASSHOPPER,टिड्डा,ᱥᱚᱥᱨᱚᱡ,ᱥᱚᱥᱨᱚᱡ,labels/insects/insect_grasshopper_001_santali.png,13,raw/insects/insect_grasshopper_001_source.png,FALSE,,
+insect_mosquito_001,insects,,mosquito,MOSQUITO,मच्छर,ᱥᱤॱᱠᱬᱤᱡ,ᱥᱤॱᱠᱬᱤᱡ,labels/insects/insect_mosquito_001_santali.png,13,raw/insects/insect_mosquito_001_source.png,FALSE,,
+insect_spider_001,insects,,spider,MILLIPEDES,मकड़ी,ᱵᱤᱸᱫᱤ,ᱵᱤᱸᱫᱤ,labels/insects/insect_spider_001_santali.png,13,raw/insects/insect_spider_001_source.png,FALSE,,SOURCE ERROR: printed MILLIPEDES; Hindi मकड़ी and photo = spider
+insect_ant_001,insects,,ant,ANT,चींटी,ᱢᱩᱸᱡ,ᱢᱩᱸᱡ,labels/insects/insect_ant_001_santali.png,13,raw/insects/insect_ant_001_source.png,FALSE,,
+insect_termite_001,insects,,termite,TERMITE,दीमक,ᱩᱯᱤ,ᱩᱯᱤ,labels/insects/insect_termite_001_santali.png,13,raw/insects/insect_termite_001_source.png,FALSE,,
+residence_home_001,residence,,home,HOME,घर,ᱚᱲᱟᱜ,ᱚᱲᱟᱜ,labels/residence/residence_home_001_santali.png,14,raw/residence/residence_home_001_source.png,FALSE,,traditional village house
+residence_house_001,residence,,house,HOME,मकान,ᱫᱚᱞᱟॱᱱ,ᱫᱚᱞᱟॱᱱ,labels/residence/residence_house_001_santali.png,14,raw/residence/residence_house_001_source.png,FALSE,,printed HOME; Hindi मकान = (brick) house
+residence_hut_001,residence,,hut,COTTAGE,झोपड़ी,ᱠᱩᱸᱵᱟ,ᱠᱩᱸᱵᱟ,labels/residence/residence_hut_001_santali.png,14,raw/residence/residence_hut_001_source.png,FALSE,,
+residence_cow_shed_001,residence,,cow shed,COW SHED,गोहाल,ᱰᱸᱟᱸᱜᱽᱨᱤ ᱜᱚᱲᱟ,ᱰᱟᱸᱜᱽᱨᱤᱸ ᱜᱚᱲᱟ,labels/residence/residence_cow_shed_001_santali.png,14,raw/residence/residence_cow_shed_001_source.png,FALSE,,
+residence_goat_shed_001,residence,,goat shed,GOAT SHED,बाड़ा,ᱜᱩᱫᱽᱲᱤ / ᱢᱮᱨᱚᱢ ᱜᱚᱲᱟ,ᱜᱩᱫᱽᱲᱤ / ᱢᱮᱨᱚᱢ ᱜᱚᱲᱟ,labels/residence/residence_goat_shed_001_santali.png,14,raw/residence/residence_goat_shed_001_source.png,FALSE,,
+residence_pig_shed_001,residence,,pig shed,PIG SHED,बाड़ा,ᱵᱟᱸᱲᱟᱹ / ᱥᱩᱠᱨᱤᱜᱚᱲᱟ,ᱵᱟᱸᱲᱟᱹ / ᱥᱩᱠᱨᱤᱜᱚᱲᱟ,labels/residence/residence_pig_shed_001_santali.png,14,raw/residence/residence_pig_shed_001_source.png,FALSE,,
+residence_burrow_001,residence,,burrow,Hole,छेद,ᱵᱷᱩᱜᱟᱹᱜ,ᱵᱷᱩᱜᱟ.ᱜ,labels/residence/residence_burrow_001_santali.png,14,raw/residence/residence_burrow_001_source.png,FALSE,,animal hole / burrow as a home
+residence_forest_001,residence,,forest,Forest,जंगल,ᱵᱤᱨ,ᱵᱤᱨ,labels/residence/residence_forest_001_santali.png,14,raw/residence/residence_forest_001_source.png,FALSE,,forest as home of wild animals
+residence_tree_001,residence,,tree,TREE,पेड़,ᱫᱟᱨᱮ,ᱫᱟᱨᱮ,labels/residence/residence_tree_001_santali.png,14,raw/residence/residence_tree_001_source.png,FALSE,,tree as home of birds
+residence_fish_in_water_001,residence,,fish in water,FISH,मछली,ᱦᱟᱠᱩ,ᱦᱟᱠᱩ,labels/residence/residence_fish_in_water_001_santali.png,14,raw/residence/residence_fish_in_water_001_source.png,FALSE,,residence page: water as home of fish
+residence_yak_in_snow_001,residence,,yak in snow,YAK,जंगली बैल,ᱵᱤᱨ ᱰᱟᱸᱜᱽᱨᱤ,ᱵᱤᱨ ᱰᱟᱸᱜᱽᱨᱤ,labels/residence/residence_yak_in_snow_001_santali.png,14,raw/residence/residence_yak_in_snow_001_source.png,FALSE,,residence page: snowy mountains as home of yak
+residence_camel_in_desert_001,residence,,camel in desert,CAMEL,ऊंट,ᱩᱸᱴ,ᱩᱸᱴ,labels/residence/residence_camel_in_desert_001_santali.png,14,raw/residence/residence_camel_in_desert_001_source.png,FALSE,,residence page: desert as home of camel
+transport_bullock_cart_001,transport,,bullock cart,BULLOCK CART,बैलगाड़ी,ᱥᱟᱜᱟᱲ ᱜᱟᱹᱰᱤ,ᱥᱟᱜᱟᱲ ᱜᱟᱹᱰᱤ,labels/transport/transport_bullock_cart_001_santali.png,15,raw/transport/transport_bullock_cart_001_source.png,FALSE,,
+transport_horse_cart_001,transport,,horse cart,HORSE CART,घोड़ागाड़ी,ᱥᱫᱚᱢ ᱜᱟᱹᱰᱤ,ᱥᱫᱚᱢ ᱜᱟᱹᱰᱤ,labels/transport/transport_horse_cart_001_santali.png,15,raw/transport/transport_horse_cart_001_source.png,FALSE,,
+transport_boat_001,transport,,boat,BOAT,नाव,ᱞᱟᱹᱣᱠᱟᱹ / ᱰᱷᱝᱜᱟ,ᱞᱟ.ᱣᱠᱟᱹ / ᱰᱷᱝᱜᱟ,labels/transport/transport_boat_001_santali.png,15,raw/transport/transport_boat_001_source.png,FALSE,,
+transport_bicycle_001,transport,,bicycle,CYCLE,साइकिल,ᱰᱩᱞᱩᱸᱜᱜᱟᱹᱰᱤ,ᱰᱩᱞᱩᱸᱜᱜᱟ.ᱰᱤ,labels/transport/transport_bicycle_001_santali.png,15,raw/transport/transport_bicycle_001_source.png,FALSE,,
+transport_motorcycle_001,transport,,motorcycle,MOTORCYCLE,मोटरसाइकिल,ᱯᱷᱚᱴ-ᱯᱷᱩᱴᱤ,ᱯᱷᱚᱴ-ᱯᱷᱩᱴᱤ,labels/transport/transport_motorcycle_001_santali.png,15,raw/transport/transport_motorcycle_001_source.png,FALSE,,
+transport_bus_001,transport,,bus,BUS,बस,ᱵᱟᱹᱥ,ᱵᱟ.ᱥ,labels/transport/transport_bus_001_santali.png,15,raw/transport/transport_bus_001_source.png,FALSE,,
+transport_train_001,transport,,train,RAIL,रेलगाड़ी,ᱨᱮᱞᱜᱟᱹᱰᱤ,ᱨᱮᱞᱜᱟ.ᱰᱤ,labels/transport/transport_train_001_santali.png,15,raw/transport/transport_train_001_source.png,FALSE,,
+transport_aeroplane_001,transport,,aeroplane,AEROPLANE,हवाई जहाज,ᱩᱰᱟᱹᱱ ᱜᱟᱹᱰᱤ,ᱩᱰᱟ.ᱱ ᱜᱟ.ᱰᱤ,labels/transport/transport_aeroplane_001_santali.png,15,raw/transport/transport_aeroplane_001_source.png,FALSE,,
+transport_ship_001,transport,,ship,SHIP,पानी जहाज,ᱫᱟᱜᱡᱟᱦᱟᱡ,ᱫᱟᱜᱡᱟᱦᱟᱡ,labels/transport/transport_ship_001_santali.png,15,raw/transport/transport_ship_001_source.png,FALSE,,
+transport_tractor_001,transport,,tractor,TRACTURE,ट्रैक्टर,ᱴᱮᱨᱮᱠᱴᱨ,ᱴᱮᱨᱮᱠᱴᱨ,labels/transport/transport_tractor_001_santali.png,15,raw/transport/transport_tractor_001_source.png,FALSE,,printed spelling TRACTURE
+transport_truck_001,transport,,truck,TRUCK,ट्रक,ᱴᱮᱨᱟᱠ,ᱴᱮᱨᱟᱠ,labels/transport/transport_truck_001_santali.png,15,raw/transport/transport_truck_001_source.png,FALSE,,
+transport_auto_rickshaw_001,transport,,auto rickshaw,AUTO,टेम्पु,ᱴᱤᱢᱯᱩ,ᱴᱤᱢᱯᱩ,labels/transport/transport_auto_rickshaw_001_santali.png,15,raw/transport/transport_auto_rickshaw_001_source.png,FALSE,,
+relation_mother_001,relations,,mother,MOTHER,माँ,ᱜᱚᱜᱚ / ᱟᱭᱚ,ᱜᱚᱜᱚ / ᱟᱭᱚ,labels/relations/relation_mother_001_santali.png,16,raw/relations/relation_mother_001_source.png,FALSE,,
+relation_father_001,relations,,father,FATHER,पिता,ᱵᱟᱵᱟ,ᱵᱟᱵᱟ,labels/relations/relation_father_001_santali.png,16,raw/relations/relation_father_001_source.png,FALSE,,
+relation_paternal_grandfather_001,relations,,paternal grandfather,GRAND FATHER,दादा,ᱜᱚᱲᱚᱢ ᱵᱟ,ᱜᱚᱲᱚᱢ ᱵᱟ,labels/relations/relation_paternal_grandfather_001_santali.png,16,raw/relations/relation_paternal_grandfather_001_source.png,FALSE,,दादा = father's father
+relation_paternal_grandmother_001,relations,,paternal grandmother,GRAND MOTHER,दादी,ᱜᱚᱲᱚᱢ ᱵᱩᱰᱷᱤ,ᱜᱚᱲᱚᱢ ᱵᱩᱰᱷᱤ,labels/relations/relation_paternal_grandmother_001_santali.png,16,raw/relations/relation_paternal_grandmother_001_source.png,FALSE,,दादी = father's mother
+relation_brother_001,relations,,brother,BROTHER,भाई,ᱵᱚᱭᱦᱟ,ᱵᱚᱭᱦᱟ,labels/relations/relation_brother_001_santali.png,16,raw/relations/relation_brother_001_source.png,FALSE,,
+relation_sister_001,relations,,sister,SISTER,बहन,ᱢᱤᱥᱨᱟ,ᱢᱤᱥᱨᱟ,labels/relations/relation_sister_001_santali.png,16,raw/relations/relation_sister_001_source.png,FALSE,,
+relation_maternal_grandfather_001,relations,,maternal grandfather,GRAND FATHER,नाना,ᱢᱟᱢᱟᱵᱟ,ᱢᱟᱢᱟᱵᱟ,labels/relations/relation_maternal_grandfather_001_santali.png,16,raw/relations/relation_maternal_grandfather_001_source.png,FALSE,,नाना = mother's father
+relation_maternal_grandmother_001,relations,,maternal grandmother,GRAND MOTHER,नानी,ᱢᱟᱢᱟᱜᱚ,ᱢᱟᱢᱟᱜᱚ,labels/relations/relation_maternal_grandmother_001_santali.png,16,raw/relations/relation_maternal_grandmother_001_source.png,FALSE,,नानी = mother's mother
+body_part_head_001,body_parts,,head,head,,ᱵᱚᱦᱚᱜ,ᱵᱚᱦᱚᱜ,labels/body_parts/body_part_head_001_santali.png,17,raw/body_parts/body_part_head_001_source.png,FALSE,,
+body_part_nose_001,body_parts,,nose,nose,,ᱢᱩ,ᱢᱩ,labels/body_parts/body_part_nose_001_santali.png,17,raw/body_parts/body_part_nose_001_source.png,FALSE,,
+body_part_ear_001,body_parts,,ear,ear,,ᱞᱩᱛᱩᱨ,ᱞᱩᱛᱩᱨ,labels/body_parts/body_part_ear_001_santali.png,17,raw/body_parts/body_part_ear_001_source.png,FALSE,,
+body_part_eye_001,body_parts,,eye,eye,,ᱢᱮᱫ,ᱢᱮᱫ,labels/body_parts/body_part_eye_001_santali.png,17,raw/body_parts/body_part_eye_001_source.png,FALSE,,
+body_part_teeth_001,body_parts,,teeth,tooth,,ᱰᱟᱴᱟ,ᱰᱟᱴᱟ,labels/body_parts/body_part_teeth_001_santali.png,17,raw/body_parts/body_part_teeth_001_source.png,FALSE,,
+body_part_mouth_001,body_parts,,mouth,mouth,,ᱢᱚᱪᱟ,ᱢᱚᱪᱟ,labels/body_parts/body_part_mouth_001_santali.png,17,raw/body_parts/body_part_mouth_001_source.png,FALSE,,
+body_part_neck_001,body_parts,,neck,neck,,ᱦᱚᱴᱚᱠ,ᱦᱚᱴᱚᱠ,labels/body_parts/body_part_neck_001_santali.png,17,raw/body_parts/body_part_neck_001_source.png,FALSE,,
+body_part_shoulder_001,body_parts,,shoulder,shoulder,,ᱛᱟᱨᱮᱱ,ᱛᱟᱨᱮᱱ,labels/body_parts/body_part_shoulder_001_santali.png,17,raw/body_parts/body_part_shoulder_001_source.png,FALSE,,
+body_part_chest_001,body_parts,,chest,chest,,ᱠᱚᱲᱟᱢ,ᱠᱚᱲᱟᱢ,labels/body_parts/body_part_chest_001_santali.png,17,raw/body_parts/body_part_chest_001_source.png,FALSE,,
+body_part_elbow_001,body_parts,,elbow,elbow,,ᱢᱚᱠᱟ,ᱢᱚᱠᱟ,labels/body_parts/body_part_elbow_001_santali.png,17,raw/body_parts/body_part_elbow_001_source.png,FALSE,,cell shows a bent arm; diagram term chosen by position (Santali ᱢᱚᱠᱟ) - verify
+body_part_arm_001,body_parts,,arm,arm,,ᱥᱚᱯᱚ,ᱥᱚᱯᱚ,labels/body_parts/body_part_arm_001_santali.png,17,raw/body_parts/body_part_arm_001_source.png,FALSE,,cell shows a flexed upper arm; diagram term chosen by position (Santali ᱥᱚᱯᱚ) - verify
+body_part_finger_001,body_parts,,finger,finger,,ᱠᱟᱴᱩᱯ,ᱠᱟᱴᱩᱯ,labels/body_parts/body_part_finger_001_santali.png,17,raw/body_parts/body_part_finger_001_source.png,FALSE,,
+body_part_hand_001,body_parts,,hand,hand,,ᱛᱤ,ᱛᱤ,labels/body_parts/body_part_hand_001_santali.png,17,raw/body_parts/body_part_hand_001_source.png,FALSE,,
+body_part_toe_001,body_parts,,toe,toe,,ᱡᱟᱸᱜᱟ ᱠᱟᱴᱩᱯ,ᱡᱟᱸᱜᱟ ᱠᱟᱴᱩᱯ,labels/body_parts/body_part_toe_001_santali.png,17,raw/body_parts/body_part_toe_001_source.png,FALSE,,
+body_part_leg_001,body_parts,,leg,leg,,ᱡᱟᱸᱜᱟ,ᱡᱟᱸᱜᱟ,labels/body_parts/body_part_leg_001_santali.png,17,raw/body_parts/body_part_leg_001_source.png,FALSE,,
+body_part_knee_001,body_parts,,knee,knee,,ᱴᱷᱚᱸᱲᱮ,ᱴᱷᱚᱸᱲᱮ,labels/body_parts/body_part_knee_001_santali.png,17,raw/body_parts/body_part_knee_001_source.png,FALSE,,
+body_part_human_body_diagram_001,body_parts,,human body diagram,PARTS OF BODY,अंगों के नाम,,,,17,raw/body_parts/body_part_human_body_diagram_001_source.png,FALSE,,"central labelled diagram: head, hair, ear, eye, mouth, nose, neck, tooth, chest, shoulder, breast, arm, elbow, finger, hand, hip, leg, knee, ankle, foot, toe"
+colour_red_001,colours,,red,RED,लाल,ᱟᱨᱟᱜ,ᱟᱨᱟᱜ,labels/colours/colour_red_001_santali.png,18,raw/colours/colour_red_001_source.png,FALSE,,
+colour_blue_001,colours,,blue,BULE,नीला,ᱞᱤᱞ,ᱞᱤᱞ,labels/colours/colour_blue_001_santali.png,18,raw/colours/colour_blue_001_source.png,FALSE,,printed spelling BULE
+colour_yellow_001,colours,,yellow,YELLOW,पीला,ᱥᱟᱥᱟᱸᱜ,ᱥᱟᱥᱟᱸᱜ,labels/colours/colour_yellow_001_santali.png,18,raw/colours/colour_yellow_001_source.png,FALSE,,
+colour_black_001,colours,,black,BLACK,काला,ᱦᱮᱸᱫᱮ,ᱦᱮᱸᱫᱮ,labels/colours/colour_black_001_santali.png,18,raw/colours/colour_black_001_source.png,FALSE,,
+colour_green_001,colours,,green,GREEN,हरा,ᱦᱟᱹᱨᱭᱟᱹᱲ,ᱦᱟᱹᱨᱭᱟᱹᱲ,labels/colours/colour_green_001_santali.png,18,raw/colours/colour_green_001_source.png,FALSE,,
+colour_white_001,colours,,white,WHITE,सफेद,ᱯᱚᱸᱲ,ᱯᱚᱸᱲ,labels/colours/colour_white_001_santali.png,18,raw/colours/colour_white_001_source.png,FALSE,,

@@ -1,0 +1,22 @@
+{
+  "schema_version": "review_v1",
+  "content_id": "GC-G1-NUM-033-01-bi-v1",
+  "blueprint_id": "BP-G1-NUM-033-01",
+  "curriculum_id": "G1-NUM-033",
+  "content_sha256": "5d09c49d56ab0c31295841ca226b21daf5f9cecf41b29ae2581daeeea0505bcf",
+  "validator_report": {
+    "validator_version": "1.0.0",
+    "passed": true,
+    "warnings": 0
+  },
+  "review_status": "pending",
+  "gates": {
+    "hindi": "pending",
+    "santali": "pending",
+    "curriculum": "pending",
+    "answer_key": "pending",
+    "provisional_range": "pending"
+  },
+  "santali_script_confirmed": null,
+  "reviewer_notes": []
+}

@@ -1,0 +1,4 @@
+# Core validation dependency for JSON Schema Draft 2020-12
+jsonschema>=4.20.0
+google-genai
+sarvamai>=0.1.34

@@ -1,0 +1,2621 @@
+{
+  "generated_at": "2026-09-27T15:56:39+05:30",
+  "report_path": "reports\\onnx_asr_benchmark.json",
+  "environment": {
+    "python": "3.11.5",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "onnx": "1.23.0",
+    "onnxruntime": "1.30.0",
+    "torch": "2.14.0+cpu"
+  },
+  "repeats": 5,
+  "rnnt_export": {
+    "status": "unsupported",
+    "detail": "exported ['encoder'] of ['encoder', 'decoder_joint']. Failures: all: ModuleNotFoundError: No module named 'onnxscript'; decoder_joint: ValueError: `fuse_loss_wer` is set, therefore encoder and target lengths must be provided as well!. list_export_subnets()=['encoder', 'decoder_joint'] and all attributes are resolvable, so the RNNT path is reachable in principle, but NeMo's Exportable.export cannot build it here because it calls torch.onnx.export without dynamo=False and torch 2.14's dynamo=True path needs the missing onnxscript package. The single-graph CTC export is unaffected and is what ships. Subnet(s) ['decoder_joint'] still fail on their own: this checkpoint's joint has fuse_loss_wer enabled, and that wrapper requires encoder_lengths in addition to the five inputs RNNTDecoderJoint.input_types documents (encoder_outputs, targets, target_length, input_states_1, input_states_2). Tracing it would need fuse_loss_wer disabled in the checkpoint config, i.e. a change to the model, which is out of scope here. The standalone encoder graph did export.",
+    "list_export_subnets": [
+      "encoder",
+      "decoder_joint"
+    ],
+    "subnet_attributes_present": {
+      "encoder": true,
+      "decoder_joint": true
+    },
+    "output_module": "RNNTDecoder",
+    "attempts": [
+      {
+        "subnet": "all",
+        "path": "nemo_model.export",
+        "status": "failed",
+        "error": "ModuleNotFoundError: No module named 'onnxscript'"
+      },
+      {
+        "subnet": "encoder",
+        "path": "torch.onnx.export(dynamo=False)",
+        "status": "ok"
+      },
+      {
+        "subnet": "decoder_joint",
+        "path": "torch.onnx.export(dynamo=False)",
+        "status": "failed",
+        "error": "ValueError: `fuse_loss_wer` is set, therefore encoder and target lengths must be provided as well!"
+      }
+    ],
+    "error": "all: ModuleNotFoundError: No module named 'onnxscript'; decoder_joint: ValueError: `fuse_loss_wer` is set, therefore encoder and target lengths must be provided as well!"
+  },
+  "languages": [
+    {
+      "language": "hindi",
+      "language_code": "hi",
+      "script": "Devanagari",
+      "original_model": "models\\indicconformer_stt_hi_hybrid_rnnt_large.nemo",
+      "onnx_fp32_model": "models\\onnx\\hindi\\model_fp32.onnx",
+      "onnx_int8_model": "models\\onnx\\hindi\\model.int8.onnx",
+      "model_load_s": {
+        "original": 79.28389570000581,
+        "fp32": 5.741921000066213,
+        "int8": 4.746673900051974
+      },
+      "model_file_sizes_bytes": {
+        "original_nemo": 523192320,
+        "onnx_fp32": 493060285,
+        "onnx_int8": 197677727
+      },
+      "model_file_sizes_mb": {
+        "original_nemo": 523.19,
+        "onnx_fp32": 493.06,
+        "onnx_int8": 197.68
+      },
+      "external_data_files": {
+        "fp32": [],
+        "int8": []
+      },
+      "results": [
+        {
+          "language": "hindi",
+          "language_code": "hi",
+          "script": "Devanagari",
+          "audio": "samples\\sample.wav",
+          "audio_duration_s": 4.86,
+          "sample_rate_hz": 16000,
+          "original_model": "models\\indicconformer_stt_hi_hybrid_rnnt_large.nemo",
+          "onnx_fp32_model": "models\\onnx\\hindi\\model_fp32.onnx",
+          "onnx_int8_model": "models\\onnx\\hindi\\model.int8.onnx",
+          "transcription_original": " उनिया युतुम दो ख्यामानी कना",
+          "original_model_load_s": 79.28389570000581,
+          "original_latency_s": 0.7793677999870852,
+          "original_latency_all_s": [
+            0.8822965000290424,
+            0.7793677999870852,
+            0.7624565999722108,
+            0.8272778999526054,
+            0.7465943000279367
+          ],
+          "original_rtf": 0.1603637448533097,
+          "original_mel_frames": 487,
+          "original_encoder_frames": 122,
+          "original_logprobs_shape": [
+            1,
+            122,
+            257
+          ],
+          "frontend_max_abs_diff_vs_nemo": 1.71661376953125e-05,
+          "frontend_frames": 487,
+          "frontend_frames_nemo": 487,
+          "frontend_shape_match": true,
+          "onnx_fp32_model_load_s": 5.741921000066213,
+          "onnx_fp32_latency_s": 0.9037262999918312,
+          "onnx_fp32_latency_all_s": [
+            0.9274602000368759,
+            0.9037262999918312,
+            0.894451699918136,
+            1.2918436999898404,
+            0.7948731000069529
+          ],
+          "onnx_fp32_rtf": 0.18595191357856608,
+          "transcription_fp32": " उनिया युतुम दो ख्यामानी कना",
+          "onnx_fp32_logprobs_shape": [
+            1,
+            122,
+            5633
+          ],
+          "onnx_fp32_mel_frames": 487,
+          "onnx_fp32_encoder_frames": 122,
+          "onnx_int8_model_load_s": 4.746673900051974,
+          "onnx_int8_latency_s": 0.5993975999299437,
+          "onnx_int8_latency_all_s": [
+            0.7689097999827936,
+            0.7420283999526873,
+            0.5272024000296369,
+            0.5951285000192001,
+            0.5993975999299437
+          ],
+          "onnx_int8_rtf": 0.12333283949175795,
+          "transcription_int8": " उनिया युतुम दो ख्यामानी कना",
+          "onnx_int8_logprobs_shape": [
+            1,
+            122,
+            5633
+          ],
+          "onnx_int8_mel_frames": 487,
+          "onnx_int8_encoder_frames": 122,
+          "parity_fp32_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 27,
+            "hypothesis_chars": 27,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 5,
+            "hypothesis_words": 5,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "उनिया युतुम दो ख्यामानी कना",
+            "hypothesis": "उनिया युतुम दो ख्यामानी कना"
+          },
+          "parity_int8_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 27,
+            "hypothesis_chars": 27,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 5,
+            "hypothesis_words": 5,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "उनिया युतुम दो ख्यामानी कना",
+            "hypothesis": "उनिया युतुम दो ख्यामानी कना"
+          },
+          "parity_int8_vs_fp32": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 27,
+            "hypothesis_chars": 27,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 5,
+            "hypothesis_words": 5,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "उनिया युतुम दो ख्यामानी कना",
+            "hypothesis": "उनिया युतुम दो ख्यामानी कना"
+          },
+          "onnx_fp32_logprob_max_abs_diff_vs_nemo": 0.4853471517562866,
+          "onnx_fp32_logprob_mean_abs_diff_vs_nemo": 0.06439157575368881,
+          "onnx_fp32_argmax_frame_agreement_vs_nemo": 1.0,
+          "onnx_int8_logprob_max_abs_diff_vs_nemo": 1.5406875610351562,
+          "onnx_int8_logprob_mean_abs_diff_vs_nemo": 0.13164198398590088,
+          "onnx_int8_argmax_frame_agreement_vs_nemo": 1.0
+        },
+        {
+          "language": "hindi",
+          "language_code": "hi",
+          "script": "Devanagari",
+          "audio": "C:\\Users\\guess\\Downloads\\new test 2\\generated_audio\\tts_hin_Deva_2f8f85311a.wav",
+          "audio_duration_s": 1.5325625,
+          "sample_rate_hz": 16000,
+          "original_model": "models\\indicconformer_stt_hi_hybrid_rnnt_large.nemo",
+          "onnx_fp32_model": "models\\onnx\\hindi\\model_fp32.onnx",
+          "onnx_int8_model": "models\\onnx\\hindi\\model.int8.onnx",
+          "transcription_original": " मेरा नाम वेद है",
+          "original_model_load_s": 79.28389570000581,
+          "original_latency_s": 0.2904578000307083,
+          "original_latency_all_s": [
+            0.2904578000307083,
+            0.23867849993985146,
+            0.2308642000425607,
+            0.29204570001456887,
+            0.3599996000993997
+          ],
+          "original_rtf": 0.189524277170235,
+          "original_mel_frames": 154,
+          "original_encoder_frames": 39,
+          "original_logprobs_shape": [
+            1,
+            39,
+            257
+          ],
+          "frontend_max_abs_diff_vs_nemo": 1.6391277313232422e-05,
+          "frontend_frames": 154,
+          "frontend_frames_nemo": 154,
+          "frontend_shape_match": true,
+          "onnx_fp32_model_load_s": 5.741921000066213,
+          "onnx_fp32_latency_s": 0.46246239996980876,
+          "onnx_fp32_latency_all_s": [
+            0.5834022000199184,
+            0.46246239996980876,
+            0.4824971000198275,
+            0.44048440002370626,
+            0.45771139999851584
+          ],
+          "onnx_fp32_rtf": 0.3017576118232103,
+          "transcription_fp32": " मेरा नाम वेद है",
+          "onnx_fp32_logprobs_shape": [
+            1,
+            39,
+            5633
+          ],
+          "onnx_fp32_mel_frames": 154,
+          "onnx_fp32_encoder_frames": 39,
+          "onnx_int8_model_load_s": 4.746673900051974,
+          "onnx_int8_latency_s": 0.32705970003735274,
+          "onnx_int8_latency_all_s": [
+            0.805365200038068,
+            0.4612974999472499,
+            0.32705970003735274,
+            0.29057109996210784,
+            0.29423779994249344
+          ],
+          "onnx_int8_rtf": 0.21340708782666465,
+          "transcription_int8": " मेरा नाम वेद है",
+          "onnx_int8_logprobs_shape": [
+            1,
+            39,
+            5633
+          ],
+          "onnx_int8_mel_frames": 154,
+          "onnx_int8_encoder_frames": 39,
+          "parity_fp32_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 15,
+            "hypothesis_chars": 15,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "मेरा नाम वेद है",
+            "hypothesis": "मेरा नाम वेद है"
+          },
+          "parity_int8_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 15,
+            "hypothesis_chars": 15,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "मेरा नाम वेद है",
+            "hypothesis": "मेरा नाम वेद है"
+          },
+          "parity_int8_vs_fp32": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 15,
+            "hypothesis_chars": 15,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "मेरा नाम वेद है",
+            "hypothesis": "मेरा नाम वेद है"
+          },
+          "onnx_fp32_logprob_max_abs_diff_vs_nemo": 0.0014286041259765625,
+          "onnx_fp32_logprob_mean_abs_diff_vs_nemo": 0.00020013892208226025,
+          "onnx_fp32_argmax_frame_agreement_vs_nemo": 1.0,
+          "onnx_int8_logprob_max_abs_diff_vs_nemo": 0.9507312774658203,
+          "onnx_int8_logprob_mean_abs_diff_vs_nemo": 0.11140699684619904,
+          "onnx_int8_argmax_frame_agreement_vs_nemo": 1.0
+        },
+        {
+          "language": "hindi",
+          "language_code": "hi",
+          "script": "Devanagari",
+          "audio": "C:\\Users\\guess\\Downloads\\new test 2\\generated_audio\\tts_hin_Deva_484f404068.wav",
+          "audio_duration_s": 1.68,
+          "sample_rate_hz": 16000,
+          "original_model": "models\\indicconformer_stt_hi_hybrid_rnnt_large.nemo",
+          "onnx_fp32_model": "models\\onnx\\hindi\\model_fp32.onnx",
+          "onnx_int8_model": "models\\onnx\\hindi\\model.int8.onnx",
+          "transcription_original": " मेरा नाम वेद है",
+          "original_model_load_s": 79.28389570000581,
+          "original_latency_s": 0.22516989998985082,
+          "original_latency_all_s": [
+            0.24914730002637953,
+            0.25467199995182455,
+            0.22516989998985082,
+            0.17648820008616894,
+            0.2085495999781415
+          ],
+          "original_rtf": 0.1340297023749112,
+          "original_mel_frames": 169,
+          "original_encoder_frames": 43,
+          "original_logprobs_shape": [
+            1,
+            43,
+            257
+          ],
+          "frontend_max_abs_diff_vs_nemo": 4.693865776062012e-06,
+          "frontend_frames": 169,
+          "frontend_frames_nemo": 169,
+          "frontend_shape_match": true,
+          "onnx_fp32_model_load_s": 5.741921000066213,
+          "onnx_fp32_latency_s": 0.1735845000948757,
+          "onnx_fp32_latency_all_s": [
+            0.6518955000210553,
+            0.1735845000948757,
+            0.19736789993476123,
+            0.16913679998833686,
+            0.16482489998452365
+          ],
+          "onnx_fp32_rtf": 0.10332410719933077,
+          "transcription_fp32": " मेरा नाम वेद है",
+          "onnx_fp32_logprobs_shape": [
+            1,
+            43,
+            5633
+          ],
+          "onnx_fp32_mel_frames": 169,
+          "onnx_fp32_encoder_frames": 43,
+          "onnx_int8_model_load_s": 4.746673900051974,
+          "onnx_int8_latency_s": 0.43778669997118413,
+          "onnx_int8_latency_all_s": [
+            0.8462125000078231,
+            0.47798900003544986,
+            0.43548930005636066,
+            0.3929800000041723,
+            0.43778669997118413
+          ],
+          "onnx_int8_rtf": 0.26058732141141916,
+          "transcription_int8": " मेरा नाम वेद है",
+          "onnx_int8_logprobs_shape": [
+            1,
+            43,
+            5633
+          ],
+          "onnx_int8_mel_frames": 169,
+          "onnx_int8_encoder_frames": 43,
+          "parity_fp32_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 15,
+            "hypothesis_chars": 15,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "मेरा नाम वेद है",
+            "hypothesis": "मेरा नाम वेद है"
+          },
+          "parity_int8_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 15,
+            "hypothesis_chars": 15,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "मेरा नाम वेद है",
+            "hypothesis": "मेरा नाम वेद है"
+          },
+          "parity_int8_vs_fp32": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 15,
+            "hypothesis_chars": 15,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "मेरा नाम वेद है",
+            "hypothesis": "मेरा नाम वेद है"
+          },
+          "onnx_fp32_logprob_max_abs_diff_vs_nemo": 0.0012502670288085938,
+          "onnx_fp32_logprob_mean_abs_diff_vs_nemo": 0.00014910307072568685,
+          "onnx_fp32_argmax_frame_agreement_vs_nemo": 1.0,
+          "onnx_int8_logprob_max_abs_diff_vs_nemo": 1.3862652778625488,
+          "onnx_int8_logprob_mean_abs_diff_vs_nemo": 0.10478520393371582,
+          "onnx_int8_argmax_frame_agreement_vs_nemo": 1.0
+        },
+        {
+          "language": "hindi",
+          "language_code": "hi",
+          "script": "Devanagari",
+          "audio": "C:\\Users\\guess\\Downloads\\new test 2\\generated_audio\\tts_hin_Deva_641c0e1a15.wav",
+          "audio_duration_s": 2.171125,
+          "sample_rate_hz": 16000,
+          "original_model": "models\\indicconformer_stt_hi_hybrid_rnnt_large.nemo",
+          "onnx_fp32_model": "models\\onnx\\hindi\\model_fp32.onnx",
+          "onnx_int8_model": "models\\onnx\\hindi\\model.int8.onnx",
+          "transcription_original": " उसका नाम खमेली है",
+          "original_model_load_s": 79.28389570000581,
+          "original_latency_s": 0.47302900010254234,
+          "original_latency_all_s": [
+            0.47302900010254234,
+            0.5563322999514639,
+            0.5609454000368714,
+            0.4406540000345558,
+            0.4280951999826357
+          ],
+          "original_rtf": 0.21787276186426038,
+          "original_mel_frames": 218,
+          "original_encoder_frames": 55,
+          "original_logprobs_shape": [
+            1,
+            55,
+            257
+          ],
+          "frontend_max_abs_diff_vs_nemo": 7.271766662597656e-06,
+          "frontend_frames": 218,
+          "frontend_frames_nemo": 218,
+          "frontend_shape_match": true,
+          "onnx_fp32_model_load_s": 5.741921000066213,
+          "onnx_fp32_latency_s": 0.560720800072886,
+          "onnx_fp32_latency_all_s": [
+            0.5814122000010684,
+            0.558117099921219,
+            0.5480641999747604,
+            0.560720800072886,
+            0.6787928000558168
+          ],
+          "onnx_fp32_rtf": 0.2582627900617818,
+          "transcription_fp32": " उसका नाम खमेली है",
+          "onnx_fp32_logprobs_shape": [
+            1,
+            55,
+            5633
+          ],
+          "onnx_fp32_mel_frames": 218,
+          "onnx_fp32_encoder_frames": 55,
+          "onnx_int8_model_load_s": 4.746673900051974,
+          "onnx_int8_latency_s": 0.5139428999973461,
+          "onnx_int8_latency_all_s": [
+            0.6250731000909582,
+            0.559016199898906,
+            0.5139428999973461,
+            0.4998887999681756,
+            0.5021944000618532
+          ],
+          "onnx_int8_rtf": 0.2367173239667666,
+          "transcription_int8": " उसका नाम खमेली है",
+          "onnx_int8_logprobs_shape": [
+            1,
+            55,
+            5633
+          ],
+          "onnx_int8_mel_frames": 218,
+          "onnx_int8_encoder_frames": 55,
+          "parity_fp32_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 17,
+            "hypothesis_chars": 17,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "उसका नाम खमेली है",
+            "hypothesis": "उसका नाम खमेली है"
+          },
+          "parity_int8_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 17,
+            "hypothesis_chars": 17,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "उसका नाम खमेली है",
+            "hypothesis": "उसका नाम खमेली है"
+          },
+          "parity_int8_vs_fp32": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 17,
+            "hypothesis_chars": 17,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "उसका नाम खमेली है",
+            "hypothesis": "उसका नाम खमेली है"
+          },
+          "onnx_fp32_logprob_max_abs_diff_vs_nemo": 0.0018672943115234375,
+          "onnx_fp32_logprob_mean_abs_diff_vs_nemo": 0.00016918411711230874,
+          "onnx_fp32_argmax_frame_agreement_vs_nemo": 1.0,
+          "onnx_int8_logprob_max_abs_diff_vs_nemo": 2.7155561447143555,
+          "onnx_int8_logprob_mean_abs_diff_vs_nemo": 0.13791817426681519,
+          "onnx_int8_argmax_frame_agreement_vs_nemo": 1.0
+        }
+      ],
+      "int8_quantization": {
+        "method": "dynamic_weight_int8_matmul_gemm",
+        "accepted": true,
+        "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0000 (worst 0.0000), mean WER = 0.0000, exact-match 6/6, argmax frame agreement 100.00%, size 197.7 MB = 40.1% of FP32",
+        "bytes": 197677727,
+        "size_ratio_vs_fp32": 0.40091999500629016,
+        "mean_cer_vs_fp32": 0.0,
+        "worst_cer_vs_fp32": 0.0,
+        "mean_wer_vs_fp32": 0.0,
+        "exact_match_clips": 6,
+        "mean_argmax_frame_agreement_vs_fp32": 1.0,
+        "max_logprob_abs_diff_vs_fp32": 2.71566104888916,
+        "per_clip": [
+          {
+            "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+            "int8_text": " उनिया युतुम दो ख्यामानी कना",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact_match": true
+          },
+          {
+            "fp32_text": " मेरा नाम वेद है",
+            "int8_text": " मेरा नाम वेद है",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact_match": true
+          },
+          {
+            "fp32_text": " मेरा नाम वेद है",
+            "int8_text": " मेरा नाम वेद है",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact_match": true
+          },
+          {
+            "fp32_text": " उसका नाम खमेली है",
+            "int8_text": " उसका नाम खमेली है",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact_match": true
+          },
+          {
+            "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+            "int8_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact_match": true
+          },
+          {
+            "fp32_text": " उसका नाम खमेली है",
+            "int8_text": " उसका नाम खमेली है",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact_match": true
+          }
+        ],
+        "recipes_evaluated": [
+          {
+            "method": "static_qdq_per_channel",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 150700450,
+            "size_ratio_vs_fp32": 0.3056430513360045,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.006172839506172839,
+            "worst_cer_vs_fp32": 0.037037037037037035,
+            "mean_wer_vs_fp32": 0.06666666666666667,
+            "exact_match_clips": 5,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9822683171629306,
+            "max_logprob_abs_diff_vs_fp32": 16.386098861694336,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0062 (worst 0.0370), mean WER = 0.0667, exact-match 5/6, argmax frame agreement 98.23%, size 150.7 MB = 30.6% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+                "int8_text": " उनिया यु तुम दो ख्यामानी कना",
+                "cer": 0.037037037037037035,
+                "wer": 0.4,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "int8_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          },
+          {
+            "method": "static_qdq_per_channel_no_weight_copy",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 150700450,
+            "size_ratio_vs_fp32": 0.3056430513360045,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.006172839506172839,
+            "worst_cer_vs_fp32": 0.037037037037037035,
+            "mean_wer_vs_fp32": 0.06666666666666667,
+            "exact_match_clips": 5,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9822683171629306,
+            "max_logprob_abs_diff_vs_fp32": 16.386098861694336,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0062 (worst 0.0370), mean WER = 0.0667, exact-match 5/6, argmax frame agreement 98.23%, size 150.7 MB = 30.6% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+                "int8_text": " उनिया यु तुम दो ख्यामानी कना",
+                "cer": 0.037037037037037035,
+                "wer": 0.4,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "int8_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          },
+          {
+            "method": "static_qdq_per_channel_entropy",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 150700450,
+            "size_ratio_vs_fp32": 0.3056430513360045,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.006172839506172839,
+            "worst_cer_vs_fp32": 0.037037037037037035,
+            "mean_wer_vs_fp32": 0.06666666666666667,
+            "exact_match_clips": 5,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9822683171629306,
+            "max_logprob_abs_diff_vs_fp32": 16.386098861694336,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0062 (worst 0.0370), mean WER = 0.0667, exact-match 5/6, argmax frame agreement 98.23%, size 150.7 MB = 30.6% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+                "int8_text": " उनिया यु तुम दो ख्यामानी कना",
+                "cer": 0.037037037037037035,
+                "wer": 0.4,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "int8_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          },
+          {
+            "method": "static_qdq_per_channel_percentile",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 150700510,
+            "size_ratio_vs_fp32": 0.30564317302497807,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.005050505050505051,
+            "worst_cer_vs_fp32": 0.030303030303030304,
+            "mean_wer_vs_fp32": 0.023809523809523808,
+            "exact_match_clips": 5,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9585420074663581,
+            "max_logprob_abs_diff_vs_fp32": 15.545793533325195,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0051 (worst 0.0303), mean WER = 0.0238, exact-match 5/6, argmax frame agreement 95.85%, size 150.7 MB = 30.6% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+                "int8_text": " उनिया युतुम दो ख्यामानी कना",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "int8_text": " आज मुझे बच्चों को हिदी पढ़ाना है",
+                "cer": 0.030303030303030304,
+                "wer": 0.14285714285714285,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          },
+          {
+            "method": "static_qdq_per_tensor_minmax",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 149575415,
+            "size_ratio_vs_fp32": 0.3033613120959438,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.02356902356902357,
+            "worst_cer_vs_fp32": 0.1111111111111111,
+            "mean_wer_vs_fp32": 0.15714285714285714,
+            "exact_match_clips": 4,
+            "mean_argmax_frame_agreement_vs_fp32": 0.973198815236286,
+            "max_logprob_abs_diff_vs_fp32": 13.547784805297852,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0236 (worst 0.1111), mean WER = 0.1571, exact-match 4/6, argmax frame agreement 97.32%, size 149.6 MB = 30.3% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+                "int8_text": " उननिया य तुम दो ख्यामनी कना",
+                "cer": 0.1111111111111111,
+                "wer": 0.8,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "int8_text": " आज मुझे बच्चों को हिदी पढ़ाना है",
+                "cer": 0.030303030303030304,
+                "wer": 0.14285714285714285,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          },
+          {
+            "method": "static_qoperator_per_channel",
+            "kind": "static",
+            "status": "failed",
+            "error": "RuntimeError: Invalid model with unknown initializers/tensors.{'/layers.0/self_attn/Softmax_output_0', '/layers.8/self_attn/Softmax_output_0', '/layers.16/self_attn/Softmax_output_0', '/layers.7/self_attn/Softmax_output_0', '/layers.9/self_attn/Softmax_output_0', '/layers.14/self_attn/Softmax_output_0', '/layers.3/self_attn/Softmax_output_0', '/layers.2/self_attn/Softmax_output_0', '/layers.4/self_attn/Softmax_output_0', '/layers.10/self_attn/Softmax_output_0', '/layers.13/self_attn/Softmax_output_0', '/layers.1/self_attn/Softmax_output_0', '/layers.5/self_attn/Softmax_output_0', '/layers.15/self_attn/Softmax_output_0', '/layers.12/self_attn/Softmax_output_0', '/layers.6/self_attn/Softmax_output_0', '/layers.11/self_attn/Softmax_output_0'}"
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_gemm",
+            "kind": "dynamic",
+            "status": "ok",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.0,
+            "worst_cer_vs_fp32": 0.0,
+            "mean_wer_vs_fp32": 0.0,
+            "exact_match_clips": 6,
+            "mean_argmax_frame_agreement_vs_fp32": 1.0,
+            "max_logprob_abs_diff_vs_fp32": 2.71566104888916,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0000 (worst 0.0000), mean WER = 0.0000, exact-match 6/6, argmax frame agreement 100.00%, size 197.7 MB = 40.1% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+                "int8_text": " उनिया युतुम दो ख्यामानी कना",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "int8_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_gemm_reduce_range",
+            "kind": "dynamic",
+            "status": "ok",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.0,
+            "worst_cer_vs_fp32": 0.0,
+            "mean_wer_vs_fp32": 0.0,
+            "exact_match_clips": 6,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9898410332836561,
+            "max_logprob_abs_diff_vs_fp32": 12.648086547851562,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0000 (worst 0.0000), mean WER = 0.0000, exact-match 6/6, argmax frame agreement 98.98%, size 197.7 MB = 40.1% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+                "int8_text": " उनिया युतुम दो ख्यामानी कना",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "int8_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_only_reduce_range",
+            "kind": "dynamic",
+            "status": "ok",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.0,
+            "worst_cer_vs_fp32": 0.0,
+            "mean_wer_vs_fp32": 0.0,
+            "exact_match_clips": 6,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9898410332836561,
+            "max_logprob_abs_diff_vs_fp32": 12.648086547851562,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0000 (worst 0.0000), mean WER = 0.0000, exact-match 6/6, argmax frame agreement 98.98%, size 197.7 MB = 40.1% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+                "int8_text": " उनिया युतुम दो ख्यामानी कना",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "int8_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          },
+          {
+            "method": "dynamic_weight_int8_all_weighted_ops",
+            "kind": "dynamic",
+            "status": "ok",
+            "bytes": 149758138,
+            "size_ratio_vs_fp32": 0.30373190166796743,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.02356902356902357,
+            "worst_cer_vs_fp32": 0.1111111111111111,
+            "mean_wer_vs_fp32": 0.15714285714285714,
+            "exact_match_clips": 4,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9652244855883002,
+            "max_logprob_abs_diff_vs_fp32": 14.460756301879883,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0236 (worst 0.1111), mean WER = 0.1571, exact-match 4/6, argmax frame agreement 96.52%, size 149.8 MB = 30.4% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " उनिया युतुम दो ख्यामानी कना",
+                "int8_text": " पनिया य तुम दो ख्यामनी कना",
+                "cer": 0.1111111111111111,
+                "wer": 0.8,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " मेरा नाम वेद है",
+                "int8_text": " मेरा नाम वेद है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " आज मुझे बच्चों को हिंदी पढ़ाना है",
+                "int8_text": " आज मुझे बच्चों को हिदी पढ़ाना है",
+                "cer": 0.030303030303030304,
+                "wer": 0.14285714285714285,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " उसका नाम खमेली है",
+                "int8_text": " उसका नाम खमेली है",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          }
+        ],
+        "alternatives": [
+          {
+            "method": "static_qdq_per_channel",
+            "bytes": 150700450,
+            "size_ratio_vs_fp32": 0.3056430513360045,
+            "mean_cer_vs_fp32": 0.006172839506172839,
+            "exact_match_clips": 5,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9822683171629306
+          },
+          {
+            "method": "static_qdq_per_channel_no_weight_copy",
+            "bytes": 150700450,
+            "size_ratio_vs_fp32": 0.3056430513360045,
+            "mean_cer_vs_fp32": 0.006172839506172839,
+            "exact_match_clips": 5,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9822683171629306
+          },
+          {
+            "method": "static_qdq_per_channel_entropy",
+            "bytes": 150700450,
+            "size_ratio_vs_fp32": 0.3056430513360045,
+            "mean_cer_vs_fp32": 0.006172839506172839,
+            "exact_match_clips": 5,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9822683171629306
+          },
+          {
+            "method": "static_qdq_per_channel_percentile",
+            "bytes": 150700510,
+            "size_ratio_vs_fp32": 0.30564317302497807,
+            "mean_cer_vs_fp32": 0.005050505050505051,
+            "exact_match_clips": 5,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9585420074663581
+          },
+          {
+            "method": "static_qdq_per_tensor_minmax",
+            "bytes": 149575415,
+            "size_ratio_vs_fp32": 0.3033613120959438,
+            "mean_cer_vs_fp32": 0.02356902356902357,
+            "exact_match_clips": 4,
+            "mean_argmax_frame_agreement_vs_fp32": 0.973198815236286
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_gemm",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "mean_cer_vs_fp32": 0.0,
+            "exact_match_clips": 6,
+            "mean_argmax_frame_agreement_vs_fp32": 1.0
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_gemm_reduce_range",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "mean_cer_vs_fp32": 0.0,
+            "exact_match_clips": 6,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9898410332836561
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_only_reduce_range",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "mean_cer_vs_fp32": 0.0,
+            "exact_match_clips": 6,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9898410332836561
+          },
+          {
+            "method": "dynamic_weight_int8_all_weighted_ops",
+            "bytes": 149758138,
+            "size_ratio_vs_fp32": 0.30373190166796743,
+            "mean_cer_vs_fp32": 0.02356902356902357,
+            "exact_match_clips": 4,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9652244855883002
+          }
+        ],
+        "excluded_nodes": [
+          "/decoder_layers/decoder_layers.0/Conv"
+        ],
+        "calibration_samples": 6,
+        "validation_clips": 6,
+        "fp32_bytes": 493060285,
+        "selection_preference": "parity",
+        "acceptance_gate": "decoded text must match FP32 on every real clip (mean CER <= 0.05, worst CER <= 0.40, mean argmax frame agreement >= 50%) AND the artifact must be smaller than FP32"
+      },
+      "export": {
+        "fp32_export_path_used": "torch.onnx.export(dynamo=False)",
+        "opset": 16,
+        "dynamic_axes": {
+          "audio_signal": {
+            "0": "audio_signal_dynamic_axes_1",
+            "2": "audio_signal_dynamic_axes_2"
+          },
+          "length": {
+            "0": "length_dynamic_axes_1"
+          },
+          "logprobs": {
+            "0": "logprobs_dynamic_axes_1",
+            "1": "logprobs_dynamic_axes_2"
+          }
+        },
+        "onnx_io": {
+          "onnx_checker": "ok",
+          "ir_version": 8,
+          "opset": [
+            {
+              "domain": "ai.onnx",
+              "version": 16
+            }
+          ],
+          "producer": "pytorch 2.14.0",
+          "n_nodes": 4222,
+          "n_initializers": 603,
+          "uses_external_data": false,
+          "input_names": [
+            "audio_signal",
+            "length"
+          ],
+          "output_names": [
+            "logprobs"
+          ],
+          "input_shapes": [
+            {
+              "name": "audio_signal",
+              "shape": [
+                "audio_signal_dynamic_axes_1",
+                "80",
+                "audio_signal_dynamic_axes_2"
+              ],
+              "type": "tensor(float)"
+            },
+            {
+              "name": "length",
+              "shape": [
+                "length_dynamic_axes_1"
+              ],
+              "type": "tensor(int64)"
+            }
+          ],
+          "output_shapes": [
+            {
+              "name": "logprobs",
+              "shape": [
+                "logprobs_dynamic_axes_1",
+                "logprobs_dynamic_axes_2",
+                "5633"
+              ],
+              "type": "tensor(float)"
+            }
+          ],
+          "dynamic_shape_probe_173": [
+            1,
+            44,
+            5633
+          ],
+          "dynamic_shape_probe_401": [
+            1,
+            101,
+            5633
+          ],
+          "parity_max_abs_diff": 8.296966552734375e-05,
+          "parity_mean_abs_diff": 2.943877461802913e-06,
+          "parity_argmax_agreement": 1.0,
+          "mel_frames": 487,
+          "encoder_frames": 122,
+          "subsampling_factor": 4,
+          "expected_encoder_frames": 122,
+          "onnx_text": " उनिया युतुम दो ख्यामानी कना",
+          "pytorch_text": " उनिया युतुम दो ख्यामानी कना",
+          "text_match": true
+        },
+        "fp32_vs_pytorch_max_abs_diff": 8.296966552734375e-05
+      }
+    },
+    {
+      "language": "santali",
+      "language_code": "sat",
+      "script": "Ol Chiki",
+      "original_model": "models\\indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+      "onnx_fp32_model": "models\\onnx\\santali\\model_fp32.onnx",
+      "onnx_int8_model": "models\\onnx\\santali\\model.int8.onnx",
+      "model_load_s": {
+        "original": 42.10689179995097,
+        "fp32": 6.416492199990898,
+        "int8": 4.395843700040132
+      },
+      "model_file_sizes_bytes": {
+        "original_nemo": 523192320,
+        "onnx_fp32": 493060285,
+        "onnx_int8": 197677727
+      },
+      "model_file_sizes_mb": {
+        "original_nemo": 523.19,
+        "onnx_fp32": 493.06,
+        "onnx_int8": 197.68
+      },
+      "external_data_files": {
+        "fp32": [],
+        "int8": []
+      },
+      "results": [
+        {
+          "language": "santali",
+          "language_code": "sat",
+          "script": "Ol Chiki",
+          "audio": "samples\\sample.wav",
+          "audio_duration_s": 4.86,
+          "sample_rate_hz": 16000,
+          "original_model": "models\\indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+          "onnx_fp32_model": "models\\onnx\\santali\\model_fp32.onnx",
+          "onnx_int8_model": "models\\onnx\\santali\\model.int8.onnx",
+          "transcription_original": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+          "original_model_load_s": 42.10689179995097,
+          "original_latency_s": 0.7289282999699935,
+          "original_latency_all_s": [
+            0.6509253000840545,
+            1.165114900097251,
+            0.6880174999823794,
+            0.7485744000878185,
+            0.7289282999699935
+          ],
+          "original_rtf": 0.14998524690740606,
+          "original_mel_frames": 487,
+          "original_encoder_frames": 122,
+          "original_logprobs_shape": [
+            1,
+            122,
+            257
+          ],
+          "frontend_max_abs_diff_vs_nemo": 1.71661376953125e-05,
+          "frontend_frames": 487,
+          "frontend_frames_nemo": 487,
+          "frontend_shape_match": true,
+          "onnx_fp32_model_load_s": 6.416492199990898,
+          "onnx_fp32_latency_s": 1.156345700030215,
+          "onnx_fp32_latency_all_s": [
+            1.1496733999811113,
+            1.2244243000168353,
+            1.237247999990359,
+            0.9940424999222159,
+            1.156345700030215
+          ],
+          "onnx_fp32_rtf": 0.23793121399798664,
+          "transcription_fp32": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+          "onnx_fp32_logprobs_shape": [
+            1,
+            122,
+            5633
+          ],
+          "onnx_fp32_mel_frames": 487,
+          "onnx_fp32_encoder_frames": 122,
+          "onnx_int8_model_load_s": 4.395843700040132,
+          "onnx_int8_latency_s": 0.966437799972482,
+          "onnx_int8_latency_all_s": [
+            0.966437799972482,
+            0.893917000037618,
+            0.8244900000281632,
+            1.055682300007902,
+            1.0186897000530735
+          ],
+          "onnx_int8_rtf": 0.19885551439763002,
+          "transcription_int8": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+          "onnx_int8_logprobs_shape": [
+            1,
+            122,
+            5633
+          ],
+          "onnx_int8_mel_frames": 487,
+          "onnx_int8_encoder_frames": 122,
+          "parity_fp32_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 29,
+            "hypothesis_chars": 29,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 5,
+            "hypothesis_words": 5,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+            "hypothesis": "ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾"
+          },
+          "parity_int8_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 29,
+            "hypothesis_chars": 29,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 5,
+            "hypothesis_words": 5,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+            "hypothesis": "ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾"
+          },
+          "parity_int8_vs_fp32": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 29,
+            "hypothesis_chars": 29,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 5,
+            "hypothesis_words": 5,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+            "hypothesis": "ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾"
+          },
+          "onnx_fp32_logprob_max_abs_diff_vs_nemo": 0.0934591293334961,
+          "onnx_fp32_logprob_mean_abs_diff_vs_nemo": 0.008462443947792053,
+          "onnx_fp32_argmax_frame_agreement_vs_nemo": 1.0,
+          "onnx_int8_logprob_max_abs_diff_vs_nemo": 2.283205032348633,
+          "onnx_int8_logprob_mean_abs_diff_vs_nemo": 0.14534124732017517,
+          "onnx_int8_argmax_frame_agreement_vs_nemo": 1.0
+        },
+        {
+          "language": "santali",
+          "language_code": "sat",
+          "script": "Ol Chiki",
+          "audio": "C:\\Users\\guess\\Downloads\\new test 2\\generated_audio\\tts_sat_Olck_22439c3ec9.wav",
+          "audio_duration_s": 1.296,
+          "sample_rate_hz": 16000,
+          "original_model": "models\\indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+          "onnx_fp32_model": "models\\onnx\\santali\\model_fp32.onnx",
+          "onnx_int8_model": "models\\onnx\\santali\\model.int8.onnx",
+          "transcription_original": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+          "original_model_load_s": 42.10689179995097,
+          "original_latency_s": 0.29085750004742295,
+          "original_latency_all_s": [
+            0.3009295000229031,
+            0.37344600004144013,
+            0.2718499000184238,
+            0.29085750004742295,
+            0.2875257999403402
+          ],
+          "original_rtf": 0.22442708336992512,
+          "original_mel_frames": 130,
+          "original_encoder_frames": 33,
+          "original_logprobs_shape": [
+            1,
+            33,
+            257
+          ],
+          "frontend_max_abs_diff_vs_nemo": 4.112720489501953e-06,
+          "frontend_frames": 130,
+          "frontend_frames_nemo": 130,
+          "frontend_shape_match": true,
+          "onnx_fp32_model_load_s": 6.416492199990898,
+          "onnx_fp32_latency_s": 0.48050619999412447,
+          "onnx_fp32_latency_all_s": [
+            0.540294999955222,
+            0.5581458000233397,
+            0.42508910002652556,
+            0.42348540003877133,
+            0.48050619999412447
+          ],
+          "onnx_fp32_rtf": 0.37076095678558985,
+          "transcription_fp32": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+          "onnx_fp32_logprobs_shape": [
+            1,
+            33,
+            5633
+          ],
+          "onnx_fp32_mel_frames": 130,
+          "onnx_fp32_encoder_frames": 33,
+          "onnx_int8_model_load_s": 4.395843700040132,
+          "onnx_int8_latency_s": 0.4002336000557989,
+          "onnx_int8_latency_all_s": [
+            0.729004199965857,
+            0.34846140001900494,
+            0.39351930003613234,
+            0.4002336000557989,
+            0.4872759999707341
+          ],
+          "onnx_int8_rtf": 0.3088222222652769,
+          "transcription_int8": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+          "onnx_int8_logprobs_shape": [
+            1,
+            33,
+            5633
+          ],
+          "onnx_int8_mel_frames": 130,
+          "onnx_int8_encoder_frames": 33,
+          "parity_fp32_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 15,
+            "hypothesis_chars": 15,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+            "hypothesis": "ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ"
+          },
+          "parity_int8_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 15,
+            "hypothesis_chars": 15,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+            "hypothesis": "ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ"
+          },
+          "parity_int8_vs_fp32": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 15,
+            "hypothesis_chars": 15,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 4,
+            "hypothesis_words": 4,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+            "hypothesis": "ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ"
+          },
+          "onnx_fp32_logprob_max_abs_diff_vs_nemo": 0.9445571899414062,
+          "onnx_fp32_logprob_mean_abs_diff_vs_nemo": 0.2902449667453766,
+          "onnx_fp32_argmax_frame_agreement_vs_nemo": 1.0,
+          "onnx_int8_logprob_max_abs_diff_vs_nemo": 1.303689956665039,
+          "onnx_int8_logprob_mean_abs_diff_vs_nemo": 0.29526451230049133,
+          "onnx_int8_argmax_frame_agreement_vs_nemo": 1.0
+        },
+        {
+          "language": "santali",
+          "language_code": "sat",
+          "script": "Ol Chiki",
+          "audio": "C:\\Users\\guess\\Downloads\\new test 2\\generated_audio\\tts_sat_Olck_2d306a4e9d.wav",
+          "audio_duration_s": 1.744,
+          "sample_rate_hz": 16000,
+          "original_model": "models\\indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+          "onnx_fp32_model": "models\\onnx\\santali\\model_fp32.onnx",
+          "onnx_int8_model": "models\\onnx\\santali\\model.int8.onnx",
+          "transcription_original": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+          "original_model_load_s": 42.10689179995097,
+          "original_latency_s": 0.3752807999262586,
+          "original_latency_all_s": [
+            0.5124578999821097,
+            0.3730092999758199,
+            0.37951649993192405,
+            0.3638296000426635,
+            0.3752807999262586
+          ],
+          "original_rtf": 0.21518394491184553,
+          "original_mel_frames": 175,
+          "original_encoder_frames": 44,
+          "original_logprobs_shape": [
+            1,
+            44,
+            257
+          ],
+          "frontend_max_abs_diff_vs_nemo": 5.0067901611328125e-06,
+          "frontend_frames": 175,
+          "frontend_frames_nemo": 175,
+          "frontend_shape_match": true,
+          "onnx_fp32_model_load_s": 6.416492199990898,
+          "onnx_fp32_latency_s": 0.5225340001052245,
+          "onnx_fp32_latency_all_s": [
+            0.5225340001052245,
+            0.6088348000776023,
+            0.5364002999849617,
+            0.5012070999946445,
+            0.48458550008945167
+          ],
+          "onnx_fp32_rtf": 0.2996181193263902,
+          "transcription_fp32": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+          "onnx_fp32_logprobs_shape": [
+            1,
+            44,
+            5633
+          ],
+          "onnx_fp32_mel_frames": 175,
+          "onnx_fp32_encoder_frames": 44,
+          "onnx_int8_model_load_s": 4.395843700040132,
+          "onnx_int8_latency_s": 0.49065819999668747,
+          "onnx_int8_latency_all_s": [
+            0.7415400999598205,
+            0.49065819999668747,
+            0.43986299994867295,
+            0.674527500057593,
+            0.43167459999676794
+          ],
+          "onnx_int8_rtf": 0.2813407110072749,
+          "transcription_int8": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+          "onnx_int8_logprobs_shape": [
+            1,
+            44,
+            5633
+          ],
+          "onnx_int8_mel_frames": 175,
+          "onnx_int8_encoder_frames": 44,
+          "parity_fp32_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 19,
+            "hypothesis_chars": 19,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 5,
+            "hypothesis_words": 5,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+            "hypothesis": "ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ"
+          },
+          "parity_int8_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 19,
+            "hypothesis_chars": 19,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 5,
+            "hypothesis_words": 5,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+            "hypothesis": "ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ"
+          },
+          "parity_int8_vs_fp32": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 19,
+            "hypothesis_chars": 19,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 5,
+            "hypothesis_words": 5,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+            "hypothesis": "ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ"
+          },
+          "onnx_fp32_logprob_max_abs_diff_vs_nemo": 0.48540210723876953,
+          "onnx_fp32_logprob_mean_abs_diff_vs_nemo": 0.08849118649959564,
+          "onnx_fp32_argmax_frame_agreement_vs_nemo": 1.0,
+          "onnx_int8_logprob_max_abs_diff_vs_nemo": 8.022293090820312,
+          "onnx_int8_logprob_mean_abs_diff_vs_nemo": 0.2891601324081421,
+          "onnx_int8_argmax_frame_agreement_vs_nemo": 0.9545454545454546
+        },
+        {
+          "language": "santali",
+          "language_code": "sat",
+          "script": "Ol Chiki",
+          "audio": "C:\\Users\\guess\\Downloads\\new test 2\\generated_audio\\tts_sat_Olck_42d1254699.wav",
+          "audio_duration_s": 4.112,
+          "sample_rate_hz": 16000,
+          "original_model": "models\\indicconformer_stt_sat_hybrid_rnnt_large.nemo",
+          "onnx_fp32_model": "models\\onnx\\santali\\model_fp32.onnx",
+          "onnx_int8_model": "models\\onnx\\santali\\model.int8.onnx",
+          "transcription_original": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+          "original_model_load_s": 42.10689179995097,
+          "original_latency_s": 0.6548392000840977,
+          "original_latency_all_s": [
+            0.7758035000879318,
+            0.6390678999014199,
+            0.6548392000840977,
+            0.6330308999167755,
+            0.7613788000307977
+          ],
+          "original_rtf": 0.1592507782305685,
+          "original_mel_frames": 412,
+          "original_encoder_frames": 103,
+          "original_logprobs_shape": [
+            1,
+            103,
+            257
+          ],
+          "frontend_max_abs_diff_vs_nemo": 9.119510650634766e-06,
+          "frontend_frames": 412,
+          "frontend_frames_nemo": 412,
+          "frontend_shape_match": true,
+          "onnx_fp32_model_load_s": 6.416492199990898,
+          "onnx_fp32_latency_s": 0.8587716999463737,
+          "onnx_fp32_latency_all_s": [
+            0.8679141999455169,
+            0.8587716999463737,
+            0.7582642000634223,
+            0.6317628999240696,
+            0.8615617000032216
+          ],
+          "onnx_fp32_rtf": 0.20884525776905974,
+          "transcription_fp32": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+          "onnx_fp32_logprobs_shape": [
+            1,
+            103,
+            5633
+          ],
+          "onnx_fp32_mel_frames": 412,
+          "onnx_fp32_encoder_frames": 103,
+          "onnx_int8_model_load_s": 4.395843700040132,
+          "onnx_int8_latency_s": 0.7763907000189647,
+          "onnx_int8_latency_all_s": [
+            0.7763907000189647,
+            0.8582068999530748,
+            0.7656958000734448,
+            0.7576209000544623,
+            0.8320329999551177
+          ],
+          "onnx_int8_rtf": 0.18881096790344473,
+          "transcription_int8": " ᱮᱦᱮᱭ ᱮᱟᱹᱜᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+          "onnx_int8_logprobs_shape": [
+            1,
+            103,
+            5633
+          ],
+          "onnx_int8_mel_frames": 412,
+          "onnx_int8_encoder_frames": 103,
+          "parity_fp32_vs_nemo": {
+            "exact_match": true,
+            "exact_match_raw": true,
+            "reference_chars": 52,
+            "hypothesis_chars": 52,
+            "changed_characters": 0,
+            "cer": 0.0,
+            "reference_words": 11,
+            "hypothesis_words": 11,
+            "changed_tokens": 0,
+            "wer": 0.0,
+            "reference": "ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+            "hypothesis": "ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾"
+          },
+          "parity_int8_vs_nemo": {
+            "exact_match": false,
+            "exact_match_raw": false,
+            "reference_chars": 52,
+            "hypothesis_chars": 53,
+            "changed_characters": 3,
+            "cer": 0.057692307692307696,
+            "reference_words": 11,
+            "hypothesis_words": 11,
+            "changed_tokens": 1,
+            "wer": 0.09090909090909091,
+            "reference": "ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+            "hypothesis": "ᱮᱦᱮᱭ ᱮᱟᱹᱜᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾"
+          },
+          "parity_int8_vs_fp32": {
+            "exact_match": false,
+            "exact_match_raw": false,
+            "reference_chars": 52,
+            "hypothesis_chars": 53,
+            "changed_characters": 3,
+            "cer": 0.057692307692307696,
+            "reference_words": 11,
+            "hypothesis_words": 11,
+            "changed_tokens": 1,
+            "wer": 0.09090909090909091,
+            "reference": "ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+            "hypothesis": "ᱮᱦᱮᱭ ᱮᱟᱹᱜᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾"
+          },
+          "onnx_fp32_logprob_max_abs_diff_vs_nemo": 0.4701194763183594,
+          "onnx_fp32_logprob_mean_abs_diff_vs_nemo": 0.07036834210157394,
+          "onnx_fp32_argmax_frame_agreement_vs_nemo": 1.0,
+          "onnx_int8_logprob_max_abs_diff_vs_nemo": 2.0229873657226562,
+          "onnx_int8_logprob_mean_abs_diff_vs_nemo": 0.172469824552536,
+          "onnx_int8_argmax_frame_agreement_vs_nemo": 0.9805825242718447
+        }
+      ],
+      "int8_quantization": {
+        "method": "dynamic_weight_int8_matmul_gemm_reduce_range",
+        "accepted": true,
+        "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0495 (worst 0.1724), mean WER = 0.1374, exact-match 3/6, argmax frame agreement 97.82%, size 197.7 MB = 40.1% of FP32",
+        "bytes": 197677727,
+        "size_ratio_vs_fp32": 0.40091999500629016,
+        "mean_cer_vs_fp32": 0.049462127910403775,
+        "worst_cer_vs_fp32": 0.1724137931034483,
+        "mean_wer_vs_fp32": 0.13737373737373737,
+        "exact_match_clips": 3,
+        "mean_argmax_frame_agreement_vs_fp32": 0.978153740870077,
+        "max_logprob_abs_diff_vs_fp32": 7.621959686279297,
+        "per_clip": [
+          {
+            "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+            "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact_match": true
+          },
+          {
+            "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+            "int8_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact_match": true
+          },
+          {
+            "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+            "int8_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact_match": true
+          },
+          {
+            "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+            "int8_text": " ᱮᱦᱮᱭ ᱮᱟᱹᱜᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+            "cer": 0.057692307692307696,
+            "wer": 0.09090909090909091,
+            "exact_match": false
+          },
+          {
+            "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+            "int8_text": " ᱮᱭᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱳᱣ ᱠᱟᱱᱦᱲ",
+            "cer": 0.1724137931034483,
+            "wer": 0.4,
+            "exact_match": false
+          },
+          {
+            "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+            "int8_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭᱴ",
+            "cer": 0.06666666666666667,
+            "wer": 0.3333333333333333,
+            "exact_match": false
+          }
+        ],
+        "recipes_evaluated": [
+          {
+            "method": "static_qdq_per_channel",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 150700431,
+            "size_ratio_vs_fp32": 0.30564301280116285,
+            "decodes_like_fp32": false,
+            "smaller_than_fp32": true,
+            "accepted": false,
+            "mean_cer_vs_fp32": 0.12508104921898025,
+            "worst_cer_vs_fp32": 0.3333333333333333,
+            "mean_wer_vs_fp32": 0.36767676767676766,
+            "exact_match_clips": 2,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9394667652379974,
+            "max_logprob_abs_diff_vs_fp32": 9.493063926696777,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.1251 (worst 0.3333), mean WER = 0.3677, exact-match 2/6, argmax frame agreement 93.95%, size 150.7 MB = 30.6% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "int8_text": " ᱡᱮ ᱡᱢᱳᱵᱟᱭᱤᱞ",
+                "cer": 0.3333333333333333,
+                "wer": 1.0,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "int8_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "int8_text": " ᱮᱦᱤᱭ ᱮᱜᱤ ᱫᱚᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "cer": 0.07692307692307693,
+                "wer": 0.2727272727272727,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "int8_text": " ᱮᱭᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱳ ᱠᱟᱱᱦᱟᱨ",
+                "cer": 0.20689655172413793,
+                "wer": 0.6,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "int8_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭᱡᱽ",
+                "cer": 0.13333333333333333,
+                "wer": 0.3333333333333333,
+                "exact_match": false
+              }
+            ]
+          },
+          {
+            "method": "static_qdq_per_channel_no_weight_copy",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 150700431,
+            "size_ratio_vs_fp32": 0.30564301280116285,
+            "decodes_like_fp32": false,
+            "smaller_than_fp32": true,
+            "accepted": false,
+            "mean_cer_vs_fp32": 0.12508104921898025,
+            "worst_cer_vs_fp32": 0.3333333333333333,
+            "mean_wer_vs_fp32": 0.36767676767676766,
+            "exact_match_clips": 2,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9394667652379974,
+            "max_logprob_abs_diff_vs_fp32": 9.493063926696777,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.1251 (worst 0.3333), mean WER = 0.3677, exact-match 2/6, argmax frame agreement 93.95%, size 150.7 MB = 30.6% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "int8_text": " ᱡᱮ ᱡᱢᱳᱵᱟᱭᱤᱞ",
+                "cer": 0.3333333333333333,
+                "wer": 1.0,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "int8_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "int8_text": " ᱮᱦᱤᱭ ᱮᱜᱤ ᱫᱚᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "cer": 0.07692307692307693,
+                "wer": 0.2727272727272727,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "int8_text": " ᱮᱭᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱳ ᱠᱟᱱᱦᱟᱨ",
+                "cer": 0.20689655172413793,
+                "wer": 0.6,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "int8_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭᱡᱽ",
+                "cer": 0.13333333333333333,
+                "wer": 0.3333333333333333,
+                "exact_match": false
+              }
+            ]
+          },
+          {
+            "method": "static_qdq_per_channel_entropy",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 150700431,
+            "size_ratio_vs_fp32": 0.30564301280116285,
+            "decodes_like_fp32": false,
+            "smaller_than_fp32": true,
+            "accepted": false,
+            "mean_cer_vs_fp32": 0.12508104921898025,
+            "worst_cer_vs_fp32": 0.3333333333333333,
+            "mean_wer_vs_fp32": 0.36767676767676766,
+            "exact_match_clips": 2,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9394667652379974,
+            "max_logprob_abs_diff_vs_fp32": 9.493063926696777,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.1251 (worst 0.3333), mean WER = 0.3677, exact-match 2/6, argmax frame agreement 93.95%, size 150.7 MB = 30.6% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "int8_text": " ᱡᱮ ᱡᱢᱳᱵᱟᱭᱤᱞ",
+                "cer": 0.3333333333333333,
+                "wer": 1.0,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "int8_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "int8_text": " ᱮᱦᱤᱭ ᱮᱜᱤ ᱫᱚᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "cer": 0.07692307692307693,
+                "wer": 0.2727272727272727,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "int8_text": " ᱮᱭᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱳ ᱠᱟᱱᱦᱟᱨ",
+                "cer": 0.20689655172413793,
+                "wer": 0.6,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "int8_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭᱡᱽ",
+                "cer": 0.13333333333333333,
+                "wer": 0.3333333333333333,
+                "exact_match": false
+              }
+            ]
+          },
+          {
+            "method": "static_qdq_per_channel_percentile",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 150700490,
+            "size_ratio_vs_fp32": 0.3056431324619869,
+            "decodes_like_fp32": false,
+            "smaller_than_fp32": true,
+            "accepted": false,
+            "mean_cer_vs_fp32": 0.10685273085454573,
+            "worst_cer_vs_fp32": 0.27586206896551724,
+            "mean_wer_vs_fp32": 0.2871212121212121,
+            "exact_match_clips": 1,
+            "mean_argmax_frame_agreement_vs_fp32": 0.963107467145278,
+            "max_logprob_abs_diff_vs_fp32": 11.412294387817383,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.1069 (worst 0.2759), mean WER = 0.2871, exact-match 1/6, argmax frame agreement 96.31%, size 150.7 MB = 30.6% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱱᱤᱤ ᱠᱟᱱᱟ᱾",
+                "cer": 0.06896551724137931,
+                "wer": 0.2,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "int8_text": " ᱜᱮᱭᱟ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "cer": 0.13333333333333333,
+                "wer": 0.25,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "int8_text": " ᱜᱮᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "cer": 0.10526315789473684,
+                "wer": 0.2,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "int8_text": " ᱮᱦᱤᱭ ᱮᱜᱮ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱽᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "cer": 0.057692307692307696,
+                "wer": 0.2727272727272727,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "int8_text": " ᱮᱭᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫ ᱦᱲᱳ ᱠᱟᱱᱦᱟᱨ",
+                "cer": 0.27586206896551724,
+                "wer": 0.8,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "int8_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          },
+          {
+            "method": "static_qdq_per_tensor_minmax",
+            "kind": "static",
+            "status": "ok",
+            "bytes": 149575432,
+            "size_ratio_vs_fp32": 0.3033613465744863,
+            "decodes_like_fp32": false,
+            "smaller_than_fp32": true,
+            "accepted": false,
+            "mean_cer_vs_fp32": 0.21485139683869267,
+            "worst_cer_vs_fp32": 0.4827586206896552,
+            "mean_wer_vs_fp32": 0.5964646464646465,
+            "exact_match_clips": 0,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9049896913204735,
+            "max_logprob_abs_diff_vs_fp32": 15.64506721496582,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.2149 (worst 0.4828), mean WER = 0.5965, exact-match 0/6, argmax frame agreement 90.50%, size 149.6 MB = 30.3% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮ ᱢᱞᱤ ᱠᱟᱱᱟ",
+                "cer": 0.10344827586206896,
+                "wer": 0.6,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "int8_text": " ᱜᱮ ᱡ ᱢᱳᱵᱟᱭᱤᱞ",
+                "cer": 0.2,
+                "wer": 0.5,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "int8_text": " ᱜᱮᱭᱟ ᱦ ᱡᱮᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "cer": 0.2631578947368421,
+                "wer": 0.6,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "int8_text": " ᱮᱦᱤ ᱮᱜᱮ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱟᱜᱽ ᱦᱢᱨᱩ ᱠᱟ ᱠᱟᱱᱟ",
+                "cer": 0.17307692307692307,
+                "wer": 0.5454545454545454,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "int8_text": " ᱮᱭᱟᱹᱦ ᱭ ᱠᱚᱫ ᱦᱲ ᱠᱟᱱᱦᱟᱨ",
+                "cer": 0.4827586206896552,
+                "wer": 1.0,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "int8_text": " ᱤᱧᱟᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "cer": 0.06666666666666667,
+                "wer": 0.3333333333333333,
+                "exact_match": false
+              }
+            ]
+          },
+          {
+            "method": "static_qoperator_per_channel",
+            "kind": "static",
+            "status": "failed",
+            "error": "RuntimeError: Invalid model with unknown initializers/tensors.{'/layers.0/self_attn/Softmax_output_0', '/layers.8/self_attn/Softmax_output_0', '/layers.16/self_attn/Softmax_output_0', '/layers.7/self_attn/Softmax_output_0', '/layers.9/self_attn/Softmax_output_0', '/layers.14/self_attn/Softmax_output_0', '/layers.3/self_attn/Softmax_output_0', '/layers.2/self_attn/Softmax_output_0', '/layers.4/self_attn/Softmax_output_0', '/layers.10/self_attn/Softmax_output_0', '/layers.13/self_attn/Softmax_output_0', '/layers.1/self_attn/Softmax_output_0', '/layers.5/self_attn/Softmax_output_0', '/layers.15/self_attn/Softmax_output_0', '/layers.12/self_attn/Softmax_output_0', '/layers.6/self_attn/Softmax_output_0', '/layers.11/self_attn/Softmax_output_0'}"
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_gemm",
+            "kind": "dynamic",
+            "status": "ok",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "decodes_like_fp32": false,
+            "smaller_than_fp32": true,
+            "accepted": false,
+            "mean_cer_vs_fp32": 0.06341771759194627,
+            "worst_cer_vs_fp32": 0.10526315789473684,
+            "mean_wer_vs_fp32": 0.19419191919191917,
+            "exact_match_clips": 1,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9817220324818469,
+            "max_logprob_abs_diff_vs_fp32": 7.169078826904297,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0634 (worst 0.1053), mean WER = 0.1942, exact-match 1/6, argmax frame agreement 98.17%, size 197.7 MB = 40.1% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "int8_text": " ᱡᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "cer": 0.06666666666666667,
+                "wer": 0.25,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "int8_text": " ᱜᱮᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "cer": 0.10526315789473684,
+                "wer": 0.2,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "int8_text": " ᱮᱦᱤᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱟᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "cer": 0.038461538461538464,
+                "wer": 0.18181818181818182,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "int8_text": " ᱮᱭᱟᱟᱹᱦ ᱭᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "cer": 0.10344827586206896,
+                "wer": 0.2,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "int8_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭᱴ",
+                "cer": 0.06666666666666667,
+                "wer": 0.3333333333333333,
+                "exact_match": false
+              }
+            ]
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_gemm_reduce_range",
+            "kind": "dynamic",
+            "status": "ok",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.049462127910403775,
+            "worst_cer_vs_fp32": 0.1724137931034483,
+            "mean_wer_vs_fp32": 0.13737373737373737,
+            "exact_match_clips": 3,
+            "mean_argmax_frame_agreement_vs_fp32": 0.978153740870077,
+            "max_logprob_abs_diff_vs_fp32": 7.621959686279297,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0495 (worst 0.1724), mean WER = 0.1374, exact-match 3/6, argmax frame agreement 97.82%, size 197.7 MB = 40.1% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "int8_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "int8_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "int8_text": " ᱮᱦᱮᱭ ᱮᱟᱹᱜᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "cer": 0.057692307692307696,
+                "wer": 0.09090909090909091,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "int8_text": " ᱮᱭᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱳᱣ ᱠᱟᱱᱦᱲ",
+                "cer": 0.1724137931034483,
+                "wer": 0.4,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "int8_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭᱴ",
+                "cer": 0.06666666666666667,
+                "wer": 0.3333333333333333,
+                "exact_match": false
+              }
+            ]
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_only_reduce_range",
+            "kind": "dynamic",
+            "status": "ok",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "decodes_like_fp32": true,
+            "smaller_than_fp32": true,
+            "accepted": true,
+            "mean_cer_vs_fp32": 0.049462127910403775,
+            "worst_cer_vs_fp32": 0.1724137931034483,
+            "mean_wer_vs_fp32": 0.13737373737373737,
+            "exact_match_clips": 3,
+            "mean_argmax_frame_agreement_vs_fp32": 0.978153740870077,
+            "max_logprob_abs_diff_vs_fp32": 7.621959686279297,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.0495 (worst 0.1724), mean WER = 0.1374, exact-match 3/6, argmax frame agreement 97.82%, size 197.7 MB = 40.1% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "int8_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "int8_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              },
+              {
+                "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "int8_text": " ᱮᱦᱮᱭ ᱮᱟᱹᱜᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "cer": 0.057692307692307696,
+                "wer": 0.09090909090909091,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "int8_text": " ᱮᱭᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱳᱣ ᱠᱟᱱᱦᱲ",
+                "cer": 0.1724137931034483,
+                "wer": 0.4,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "int8_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭᱴ",
+                "cer": 0.06666666666666667,
+                "wer": 0.3333333333333333,
+                "exact_match": false
+              }
+            ]
+          },
+          {
+            "method": "dynamic_weight_int8_all_weighted_ops",
+            "kind": "dynamic",
+            "status": "ok",
+            "bytes": 149758138,
+            "size_ratio_vs_fp32": 0.30373190166796743,
+            "decodes_like_fp32": false,
+            "smaller_than_fp32": true,
+            "accepted": false,
+            "mean_cer_vs_fp32": 0.2811124296151519,
+            "worst_cer_vs_fp32": 0.8,
+            "mean_wer_vs_fp32": 0.5909090909090909,
+            "exact_match_clips": 1,
+            "mean_argmax_frame_agreement_vs_fp32": 0.8859035360490287,
+            "max_logprob_abs_diff_vs_fp32": 11.441490173339844,
+            "detail": "decoded 6 real clips; mean CER vs FP32 = 0.2811 (worst 0.8000), mean WER = 0.5909, exact-match 1/6, argmax frame agreement 88.59%, size 149.8 MB = 30.4% of FP32",
+            "per_clip": [
+              {
+                "fp32_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+                "int8_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮ ᱢᱱᱤᱤ ᱠᱟᱱᱟ",
+                "cer": 0.13793103448275862,
+                "wer": 0.6,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱜᱮ ᱦ ᱡᱠ ᱢᱳᱵᱟᱭᱤᱞ",
+                "int8_text": " ᱡᱵᱭ",
+                "cer": 0.8,
+                "wer": 1.0,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱭᱟ ᱦᱤᱧ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "int8_text": " ᱜᱮᱭᱟ ᱦᱤ ᱣ ᱧᱩᱛᱩᱢ ᱵᱟᱨᱮ",
+                "cer": 0.15789473684210525,
+                "wer": 0.4,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱦᱮᱭ ᱮᱜᱮᱭ ᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱦᱟᱜᱽ ᱦᱩᱢᱨᱩ ᱠᱟᱱᱟ ᱾",
+                "int8_text": " ᱤᱦᱤ ᱜᱤᱫᱟᱹᱭ ᱠᱟᱱᱟ ᱦᱤᱱᱫᱤ ᱥᱮᱪᱮᱫ ᱮ ᱢᱟᱜᱽ ᱦᱢᱨᱩ ᱠᱟᱱᱟ",
+                "cer": 0.21153846153846154,
+                "wer": 0.5454545454545454,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱮᱭᱟᱟᱹᱦ ᱤᱭᱟᱹᱳ ᱩᱫᱟᱹ ᱦᱲᱟᱹᱣ ᱠᱟᱱᱦᱲ",
+                "int8_text": " ᱮᱭᱟᱹᱦ ᱭᱳ ᱩ ᱰ ᱦ ᱠᱟᱱᱦᱲ",
+                "cer": 0.3793103448275862,
+                "wer": 1.0,
+                "exact_match": false
+              },
+              {
+                "fp32_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "int8_text": " ᱤᱧᱟᱹᱜ ᱧᱩᱛᱩᱢ ᱵᱳᱭ",
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact_match": true
+              }
+            ]
+          }
+        ],
+        "alternatives": [
+          {
+            "method": "static_qdq_per_channel",
+            "bytes": 150700431,
+            "size_ratio_vs_fp32": 0.30564301280116285,
+            "mean_cer_vs_fp32": 0.12508104921898025,
+            "exact_match_clips": 2,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9394667652379974
+          },
+          {
+            "method": "static_qdq_per_channel_no_weight_copy",
+            "bytes": 150700431,
+            "size_ratio_vs_fp32": 0.30564301280116285,
+            "mean_cer_vs_fp32": 0.12508104921898025,
+            "exact_match_clips": 2,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9394667652379974
+          },
+          {
+            "method": "static_qdq_per_channel_entropy",
+            "bytes": 150700431,
+            "size_ratio_vs_fp32": 0.30564301280116285,
+            "mean_cer_vs_fp32": 0.12508104921898025,
+            "exact_match_clips": 2,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9394667652379974
+          },
+          {
+            "method": "static_qdq_per_channel_percentile",
+            "bytes": 150700490,
+            "size_ratio_vs_fp32": 0.3056431324619869,
+            "mean_cer_vs_fp32": 0.10685273085454573,
+            "exact_match_clips": 1,
+            "mean_argmax_frame_agreement_vs_fp32": 0.963107467145278
+          },
+          {
+            "method": "static_qdq_per_tensor_minmax",
+            "bytes": 149575432,
+            "size_ratio_vs_fp32": 0.3033613465744863,
+            "mean_cer_vs_fp32": 0.21485139683869267,
+            "exact_match_clips": 0,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9049896913204735
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_gemm",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "mean_cer_vs_fp32": 0.06341771759194627,
+            "exact_match_clips": 1,
+            "mean_argmax_frame_agreement_vs_fp32": 0.9817220324818469
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_gemm_reduce_range",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "mean_cer_vs_fp32": 0.049462127910403775,
+            "exact_match_clips": 3,
+            "mean_argmax_frame_agreement_vs_fp32": 0.978153740870077
+          },
+          {
+            "method": "dynamic_weight_int8_matmul_only_reduce_range",
+            "bytes": 197677727,
+            "size_ratio_vs_fp32": 0.40091999500629016,
+            "mean_cer_vs_fp32": 0.049462127910403775,
+            "exact_match_clips": 3,
+            "mean_argmax_frame_agreement_vs_fp32": 0.978153740870077
+          },
+          {
+            "method": "dynamic_weight_int8_all_weighted_ops",
+            "bytes": 149758138,
+            "size_ratio_vs_fp32": 0.30373190166796743,
+            "mean_cer_vs_fp32": 0.2811124296151519,
+            "exact_match_clips": 1,
+            "mean_argmax_frame_agreement_vs_fp32": 0.8859035360490287
+          }
+        ],
+        "excluded_nodes": [
+          "/decoder_layers/decoder_layers.0/Conv"
+        ],
+        "calibration_samples": 6,
+        "validation_clips": 6,
+        "fp32_bytes": 493060285,
+        "selection_preference": "parity",
+        "acceptance_gate": "decoded text must match FP32 on every real clip (mean CER <= 0.05, worst CER <= 0.40, mean argmax frame agreement >= 50%) AND the artifact must be smaller than FP32"
+      },
+      "export": {
+        "fp32_export_path_used": "torch.onnx.export(dynamo=False)",
+        "opset": 16,
+        "dynamic_axes": {
+          "audio_signal": {
+            "0": "audio_signal_dynamic_axes_1",
+            "2": "audio_signal_dynamic_axes_2"
+          },
+          "length": {
+            "0": "length_dynamic_axes_1"
+          },
+          "logprobs": {
+            "0": "logprobs_dynamic_axes_1",
+            "1": "logprobs_dynamic_axes_2"
+          }
+        },
+        "onnx_io": {
+          "onnx_checker": "ok",
+          "ir_version": 8,
+          "opset": [
+            {
+              "domain": "ai.onnx",
+              "version": 16
+            }
+          ],
+          "producer": "pytorch 2.14.0",
+          "n_nodes": 4222,
+          "n_initializers": 603,
+          "uses_external_data": false,
+          "input_names": [
+            "audio_signal",
+            "length"
+          ],
+          "output_names": [
+            "logprobs"
+          ],
+          "input_shapes": [
+            {
+              "name": "audio_signal",
+              "shape": [
+                "audio_signal_dynamic_axes_1",
+                "80",
+                "audio_signal_dynamic_axes_2"
+              ],
+              "type": "tensor(float)"
+            },
+            {
+              "name": "length",
+              "shape": [
+                "length_dynamic_axes_1"
+              ],
+              "type": "tensor(int64)"
+            }
+          ],
+          "output_shapes": [
+            {
+              "name": "logprobs",
+              "shape": [
+                "logprobs_dynamic_axes_1",
+                "logprobs_dynamic_axes_2",
+                "5633"
+              ],
+              "type": "tensor(float)"
+            }
+          ],
+          "dynamic_shape_probe_173": [
+            1,
+            44,
+            5633
+          ],
+          "dynamic_shape_probe_401": [
+            1,
+            101,
+            5633
+          ],
+          "parity_max_abs_diff": 6.4849853515625e-05,
+          "parity_mean_abs_diff": 3.3962503493967233e-06,
+          "parity_argmax_agreement": 1.0,
+          "mel_frames": 487,
+          "encoder_frames": 122,
+          "subsampling_factor": 4,
+          "expected_encoder_frames": 122,
+          "onnx_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+          "pytorch_text": " ᱩᱱᱤᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱠᱷᱮᱢᱟᱞᱤ ᱠᱟᱱᱟ᱾",
+          "text_match": true
+        },
+        "fp32_vs_pytorch_max_abs_diff": 6.4849853515625e-05
+      }
+    }
+  ],
+  "notes": [
+    "Latency is the median of the timed runs and covers feature extraction + ONNX forward + CTC greedy decode. Model/session load time is measured separately and is NOT included.",
+    "RTF = latency / audio duration. Values below 1.0 are faster than realtime.",
+    "The .nemo reference uses the identical features, encoder, ctc_decoder and ctc_decoding modules as the ONNX graph, so latency and text are directly comparable.",
+    "CER/WER here are parity metrics against the .nemo CTC output, NOT accuracy against a human transcript. No ground-truth transcripts exist in this workspace, so no accuracy claim is made.",
+    "The ONNX graph outputs log-probabilities for all 22 languages at once (5633 classes); the decoder selects the target language's columns plus the blank column.",
+    "Export used model.cur_decoder='ctc' so the whole encoder+CTC head becomes ONE onnx graph.",
+    "NeMo's own model.export() was tried first and failed with ModuleNotFoundError: onnxscript, because torch 2.14's torch.onnx.export defaults to dynamo=True. The graph was therefore exported with dynamo=False, which is the same TorchScript exporter NeMo calls, using NeMo's input/output names and dynamic axes.",
+    "INT8 qualifies only if it decodes like FP32 on every real validation clip (mean CER <= 0.05, worst clip CER <= 0.40, mean argmax frame agreement >= 50%) AND the artifact is smaller than FP32. Several recipes usually qualify; --int8-prefer picks between them. A rejected INT8 is deleted rather than shipped.",
+    "No accuracy improvement is claimed: the only reference available is the .nemo CTC output itself.",
+    "RNNT ONNX export: unsupported -- exported ['encoder'] of ['encoder', 'decoder_joint']. Failures: all: ModuleNotFoundError: No module named 'onnxscript'; decoder_joint: ValueError: `fuse_loss_wer` is set, therefore encoder and target lengths must be provided as well!. list_export_subnets()=['encoder', 'decoder_joint'] and all attributes are resolvable, so the RNNT path is reachable in principle, but NeMo's Exportable.export cannot build it here because it calls torch.onnx.export without dynamo=False and torch 2.14's dynamo=True path needs the missing onnxscript package. The single-graph CTC export is unaffected and is what ships. Subnet(s) ['decoder_joint'] still fail on their own: this checkpoint's joint has fuse_loss_wer enabled, and that wrapper requires encoder_lengths in addition to the five inputs RNNTDecoderJoint.input_types documents (encoder_outputs, targets, target_length, input_states_1, input_states_2). Tracing it would need fuse_loss_wer disabled in the checkpoint config, i.e. a change to the model, which is out of scope here. The standalone encoder graph did export."
+  ]
+}

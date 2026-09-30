@@ -1,0 +1,1 @@
+Keep this folder in version control. Put bundled fonts for Hindi/Santali rendering here, e.g. NotoSansDevanagari-Regular.ttf (then register under pubspec.yaml fonts:).
